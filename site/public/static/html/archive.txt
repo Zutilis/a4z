@@ -1,0 +1,123 @@
+<div class="archives-page">
+	<div class="archives-container flex-container">
+		<div id="first-archive" class="archive flex-container">
+			<div class="archive-content">
+				<div class="archive-padding-content">
+					<div style="position: relative;">
+						<h2 class="archive-title subtitle">Urban party - Roanne</h2>
+						<div class="archive-images-container">
+							<div class="archive-images-rod-container"></div>
+							<div class="archive-images">
+								<div class="archive-image loaded" style="background-image: url('https://a4z.fr/static/img/urban-party/1.webp');"></div>
+								<div class="archive-image" style="background-image: url('https://a4z.fr/static/img/urban-party/2.webp');"></div>
+								<div class="archive-image" style="background-image: url('https://a4z.fr/static/img/urban-party/3.webp');"></div>
+								<div class="archive-image" style="background-image: url('https://a4z.fr/static/img/urban-party/4.webp');"></div>
+							</div>
+						</div>
+						<div class="archive-test">
+							<p class="archive-description">On a retourné Fontalon avec 300 personnes, 2 rappeurs, 1 dj, et on y retournera ..</p>
+						</div>
+					</div>
+				</div>
+				<div class="archive-button-container flex-container">
+					<a href="/projets/urban-party" class="archive-button blue-b loaded" aria-label="Voir en détails ce projet" data-link>👀</a>
+				</div>
+			</div>
+		</div>
+		<div id="second-archive" class="archive flex-container">
+			<div class="archive-content">
+				<div class="archive-padding-content">
+					<div style="position: relative;">
+						<h2 class="archive-title subtitle">Shoot Lybro - Lyon</h2>
+						<div class="archive-images-container">
+							<div class="archive-images-rod-container"></div>
+							<div class="archive-images">
+								<div class="archive-image loaded" style="background-image: url('https://a4z.fr/static/img/lybro/1.webp');"></div>
+								<div class="archive-image" style="background-image: url('https://a4z.fr/static/img/lybro/2.webp');"></div>
+								<div class="archive-image" style="background-image: url('https://a4z.fr/static/img/lybro/3.webp');"></div>
+							</div>
+						</div>
+						<div class="archive-test">
+							<p class="archive-description">Shooting de Lybro à son showcase à Lyon.</p>
+						</div>
+					</div>
+				</div>
+				<div class="archive-button-container flex-container">
+					<a href="/projets/lybro" class="archive-button blue-b" aria-label="Voir en détails ce projet" data-link>👀</a>
+				</div>
+			</div>
+		</div>
+		<div class="archive flex-container">
+			<div class="archive-content">
+				<div class="archive-padding-content">
+					<div style="position: relative;">
+						<h2 class="archive-title subtitle">Shoot Chorale - Roanne</h2>
+						<div class="archive-images-container">
+							<div class="archive-images-rod-container"></div>
+							<div class="archive-images">
+								<div class="archive-image loaded" style="background-image: url('https://a4z.fr/static/img/chorale/1.webp');"></div>
+								<div class="archive-image" style="background-image: url('https://a4z.fr/static/img/chorale/2.webp');"></div>
+								<div class="archive-image" style="background-image: url('https://a4z.fr/static/img/chorale/3.webp');"></div>
+							</div>
+						</div>
+						<div class="archive-test">
+							<p class="archive-description">Shootings en collaboration avec la Chorale de Roanne.</p>	
+						</div>
+					</div>
+				</div>
+				<div class="archive-button-container flex-container">
+					<a href="/projets/chorale" class="archive-button blue-b" aria-label="Voir en détails ce projet" data-link>👀</a>
+				</div>
+			</div>
+		</div>
+		<div class="archive flex-container">
+			<div class="archive-content">
+				<div class="archive-padding-content">
+					<div style="position: relative;">
+						<h2 class="archive-title subtitle">Shoot Bekar - Clermont</h2>
+						<div class="archive-images-container">
+							<div class="archive-images-rod-container"></div>
+							<div class="archive-images">
+								<div class="archive-image loaded" style="background-image: url('https://a4z.fr/static/img/bekar/1.webp');"></div>
+								<div class="archive-image" style="background-image: url('https://a4z.fr/static/img/bekar/2.webp');"></div>
+								<div class="archive-image" style="background-image: url('https://a4z.fr/static/img/bekar/3.webp');"></div>
+								<div class="archive-image" style="background-image: url('https://a4z.fr/static/img/bekar/4.webp');"></div>
+							</div>
+						</div>
+						<div class="archive-test">
+							<p class="archive-description">Shooting de Bekar à son showcase à Clermont.</p>
+						</div>
+					</div>
+				</div>
+				<div class="archive-button-container flex-container">
+					<a href="/projets/bekar" class="archive-button blue-b" aria-label="Voir en détails ce projet" data-link>👀</a>
+				</div>
+			</div>
+		</div>
+		<div class="archive flex-container">
+			<div class="archive-content">
+				<div class="archive-padding-content">
+					<div style="position: relative;">
+						<h2 class="archive-title subtitle">Shoot Favé - Lyon</h2>
+						<div class="archive-images-container">
+							<div class="archive-images-rod-container"></div>
+							<div class="archive-images">
+								<div class="archive-image loaded" style="background-image: url('https://a4z.fr/static/img/fave/1.webp');"></div>
+								<div class="archive-image" style="background-image: url('https://a4z.fr/static/img/fave/2.webp');"></div>
+								<div class="archive-image" style="background-image: url('https://a4z.fr/static/img/fave/3.webp');"></div>
+								<div class="archive-image" style="background-image: url('https://a4z.fr/static/img/fave/4.webp');"></div>
+								<div class="archive-image" style="background-image: url('https://a4z.fr/static/img/fave/5.webp');"></div>
+							</div>
+						</div>
+						<div class="archive-test">
+							<p class="archive-description">Shooting de Favé pour sa tournée à Lyon.</p>
+						</div>
+					</div>
+				</div>
+				<div class="archive-button-container flex-container">
+					<a href="/projets/fave" class="archive-button blue-b" aria-label="Voir en détails ce projet" data-link>👀</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,20 @@
+<div class="project-presentation">
+	<div class="project-presentation-content">
+		<div class="project-presentation-title">
+			<h1 class="title">SHOOT BEKAR - CLERMONT</h1>
+		</div>
+		<div class="project-presentation-images">
+			<div class="project-image lazy-image lazy-load" data-src="https://a4z.fr/static/img/bekar/1.webp"></div>
+			<div class="project-image lazy-image lazy-load" data-src="https://a4z.fr/static/img/bekar/2.webp"></div>
+			<div class="project-image lazy-image lazy-load" data-src="https://a4z.fr/static/img/bekar/3.webp"></div>
+			<div class="project-image lazy-image lazy-load" data-src="https://a4z.fr/static/img/bekar/4.webp"></div>
+			<div class="project-image lazy-image lazy-load" data-src="https://a4z.fr/static/img/bekar/5.webp"></div>
+			<div class="project-image lazy-image lazy-load" data-src="https://a4z.fr/static/img/bekar/6.webp"></div>
+			<div class="project-image lazy-image lazy-load" data-src="https://a4z.fr/static/img/bekar/7.webp"></div>
+			<div class="project-image lazy-image lazy-load" data-src="https://a4z.fr/static/img/bekar/8.webp"></div>
+			<div class="project-image lazy-image lazy-load" data-src="https://a4z.fr/static/img/bekar/9.webp"></div>
+			<div class="project-image lazy-image lazy-load" data-src="https://a4z.fr/static/img/bekar/10.webp"></div>
+			<div class="project-image lazy-image lazy-load" data-src="https://a4z.fr/static/img/bekar/11.webp"></div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,75 @@
+<div class="projects-page">
+	<div class="years-container">
+		<div class="year">
+			<div class="project-year-header">
+				<div class="project-content year-project-content">
+					<div class="project-arbos"></div>
+					<img src="https://a4z.fr/static/img/others/folder.png" alt="Dossier projets 2024" class="project-folder">
+					<p class="project-name year-name">2024</p>
+				</div>
+			</div>
+			<div class="projects-container loaded">
+				<a href="/projets/inter-bde-vichy" aria-label="Voir en détails le projet soirée inter bde au Palais des Congrès de Vichy" data-link>
+					<div class="project-content">
+						<div class="project-arbos"></div>
+						<img src="https://a4z.fr/static/img/others/folder.png" alt="Dossier projet soirée inter bde au Palais des Congrès de Vichy" class="project-folder">
+						<p class="project-name">Soirée Inter BDE Vichy</p>
+					</div>
+				</a>
+				<a href="/projets/gazo" aria-label="Voir en détails le projet shooting de Gazo et la BSB League à paris" data-link>
+					<div class="project-content">
+						<div class="project-arbos"></div>
+						<img src="https://a4z.fr/static/img/others/folder.png" alt="Dossier projet shooting de Gazo et la BSB League à paris" class="project-folder">
+						<p class="project-name">Shoot Gazo</p>
+					</div>
+				</a>
+			</div>
+		</div>
+		<div class="year">
+			<div class="project-year-header">
+				<div class="project-content year-project-content">
+					<div class="project-arbos"></div>
+					<img src="https://a4z.fr/static/img/others/folder.png" alt="Dossier projets 2023" class="project-folder">
+					<p class="project-name year-name">2023</p>
+				</div>
+			</div>
+			<div class="projects-container">
+				<a href="/projets/fave" aria-label="Voir en détails le projet Shoot Favé" data-link>
+					<div class="project-content">
+						<div class="project-arbos"></div>
+						<img src="https://a4z.fr/static/img/others/folder.png" alt="Dossier projet Shoot Favé" class="project-folder">
+						<p class="project-name">Shoot Favé</p>
+					</div>
+				</a>
+				<a href="/projets/bekar" aria-label="Voir en détails le projet Shoot Bekar" data-link>
+					<div class="project-content">
+						<div class="project-arbos"></div>
+						<img src="https://a4z.fr/static/img/others/folder.png" alt="Dossier projet Shoot Bekar" class="project-folder">
+						<p class="project-name">Shoot Bekar</p>
+					</div>
+				</a>
+				<a href="/projets/chorale" aria-label="Voir en détails le projet Shoot Chorale" data-link>
+					<div class="project-content">
+						<div class="project-arbos"></div>
+						<img src="https://a4z.fr/static/img/others/folder.png" alt="Dossier projet Shoot Chorale" class="project-folder">
+						<p class="project-name">Shoot Chorale</p>
+					</div>
+				</a>
+				<a href="/projets/lybro" aria-label="Voir en détails le projet Shoot Lybro" data-link>
+					<div class="project-content">
+						<div class="project-arbos"></div>
+						<img src="https://a4z.fr/static/img/others/folder.png" alt="Dossier projet Shoot Lybro" class="project-folder">
+						<p class="project-name">Shoot Lybro</p>
+					</div>
+				</a>
+				<a href="/projets/urban-party" aria-label="Voir en détails le projet Urban Party" data-link>
+					<div class="project-content">
+						<div class="project-arbos"></div>
+						<img src="https://a4z.fr/static/img/others/folder.png" alt="Dossier projet Urban Party" class="project-folder">
+						<p class="project-name">Urban Party</p>
+					</div>
+				</a>
+			</div>
+		</div>
+	</div>
+</div>

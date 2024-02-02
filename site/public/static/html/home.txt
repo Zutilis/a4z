@@ -1,0 +1,13 @@
+<div class="flex-container home-nav">
+	<div class="title-container">
+		<h1 class="title">Qu'est ce tu fous là ?</h1>
+	</div>
+	<div class="home-buttons flex-container">
+		<div class="home-button center-txt discover blue-b">
+			<a href="/archives/" class="flex-container white-txt" aria-label="En savoir plus sur notre association almost4zutified" data-link>Découvrir a4z</a>
+		</div>
+		<div class="home-button center-txt leave grey-b" tabindex="0" aria-label="Bouton factice sortez moi de là">
+			<p class="flex-container grey-txt">Sortez moi de là !</p>
+		</div>
+	</div>
+</div>
