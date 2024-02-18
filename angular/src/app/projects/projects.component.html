@@ -1,0 +1,23 @@
+<div class="projects-page">
+	<div class="years-container">
+	  <div *ngFor="let year of years" class="year">
+		<div class="project-year-header">
+		  <div class="project-content year-project-content">
+			<div class="project-arbos"></div>
+			<img src="assets/img/others/folder.png" alt="Dossier projets {{ year }}" class="project-folder">
+			<p class="project-name year-name">{{ year }}</p>
+		  </div>
+		</div>
+		<div class="projects-container">
+		  <a *ngFor="let project of projects_data[year]" [routerLink]="year + '/' + project.name">
+			<div class="project-content">
+			  <div class="project-arbos"></div>
+			  <img src="assets/img/others/folder.png" alt="Dossier projet {{ project.title }}" class="project-folder">
+			  <p class="project-name">{{ project.title }}</p>
+			</div>
+		  </a>
+		</div>
+	  </div>
+	</div>
+  </div>
+  

@@ -1,0 +1,54 @@
+{
+	"2023": [
+		{
+			"name": "urban-party",
+			"title": "URBAN PARTY",
+			"description": "",
+			"image_path": "assets/img/urban-party/",
+			"images": 10,
+			"year": 2023
+		},
+		{
+			"name": "lybro",
+			"title": "SHOOT LYBRO - LYON",
+			"description": "",
+			"image_path": "assets/img/lybro/",
+			"images": 10,
+			"year": 2023
+		},
+		{
+			"name": "chorale",
+			"title": "SHOOT CHORALE - ROANNE",
+			"description": "",
+			"image_path": "assets/img/chorale/",
+			"images": 8,
+			"year": 2023
+		},
+		{
+			"name": "bekar",
+			"title": "SHOOT BEKAR - CLERMONT",
+			"description": "",
+			"image_path": "assets/img/bekar/",
+			"images": 11,
+			"year": 2023
+		},
+		{
+			"name": "fave",
+			"title": "SHOOT FAVE - LYON",
+			"description": "",
+			"image_path": "assets/img/fave/",
+			"images": 9,
+			"year": 2023
+		}
+	],
+	"2024": [
+		{
+			"name": "gazo",
+			"title": "SHOOT GAZO - PARIS",
+			"description": "",
+			"image_path": "assets/img/gazo/",
+			"images": 12,
+			"year": 2024
+		}
+	]
+}

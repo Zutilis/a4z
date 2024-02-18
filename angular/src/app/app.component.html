@@ -1,0 +1,92 @@
+<div class="page flex-container">
+  <!-- <header>
+    <div class="flex-container center-txt">
+      <div id="logo-container" class="logo-container">
+        <a class="logo-link" aria-label="Revenir à l'accueil" routerLink="/"></a>
+        <img src="assets/img/others/logo.webp" alt="Logo a4z" class="logo">
+      </div>
+    </div>
+  </header> -->
+  <router-outlet class="#app"></router-outlet>
+  <div class="nav-container">
+    <nav class="nav-mobile">
+      <div class="nav-mobile-back">
+        <div class="nav-contain">
+          <div class="nav-mobile-link">
+            <a class="nav-mobile-item nav-mobile-logo" routerLink="/">
+              <img src="assets/img/others/logo.webp" alt="Logo a4z">
+            </a>
+            <a routerLink="projects" class="nav-mobile-item flex-container">
+              <div class="nav-mobile-text">PROJETS</div>
+            </a>
+            <a routerLink="blogs" class="nav-mobile-item flex-container">
+              <div class="nav-mobile-text">BLOGS</div>
+            </a>
+          </div>
+        </div>
+        <div class="nav-mobile-click">
+          <div class="nav-mobile-burger">
+            <img src="assets/img/others/menu.png" alt="Logo a4z" style="filter: invert(1);">
+          </div>
+        </div>
+      </div>
+      
+    </nav>
+    <nav class="nav-fixed flex-container">
+      <a class="nav-fixed-item nav-fixed-logo flex-container" routerLink="/">
+        <img src="assets/img/others/logo.webp" alt="Logo a4z">
+      </a>
+      <div class="nav-fixed-item nav-burger">
+        <img src="assets/img/others/menu.png" alt="Logo a4z" style="filter: invert(1);">
+      </div>
+      <div class="nav-fixed-link">
+          <a routerLink="projects" class="nav-fixed-item flex-container">
+            <div class="nav-fixed-text">PROJETS</div>
+          </a>
+          <a routerLink="blogs" class="nav-fixed-item flex-container">
+            <div class="nav-fixed-text">BLOGS</div>
+          </a>
+      </div>
+    </nav>
+    <div class="nav-mobile-transparent"></div>
+  </div>
+  <!-- <footer class="footer-menu-container flex-container">
+    <div class="menu-insta-container">
+      <div class="menu-logo" tabindex="0" aria-label="Ouvrir le menu de navigation">
+        <img src="assets/img/others/menu.png" alt="Logo menu de navigation" class="logo" id="logo-menu"
+          class="logo-menu">
+      </div>
+      <div class="menu-logo">
+        <a href="https://www.instagram.com/a4z.fr/" aria-label="Aller à la page instagram a4z" class="insta-menu-logo">
+          <img src="assets/img/others/insta.png" alt="Logo Instagram" class="logo">
+        </a>
+      </div>
+    </div>
+    <div class="menu-nav-container">
+      <div class="legal-container">
+        <div class="mentions-container flex-container center">
+          <div class="mention-container">
+            <a class="mentions subtitle flex-container center"
+              aria-label="Aller à la page des mentions légales de notre site" routerLink="/mentions-legales/">Mentions légales</a>
+          </div>
+        </div>
+        <div class="copryight-container flex-container center">
+          <div class="mention-container">
+            <p class="mentions subtitle flex-container center" aria-label="Tous droits réservés par a4z">Tous droits
+              réservés © 2023 - A4Z</p>
+          </div>
+        </div>
+      </div>
+      <div id="menu-nav" class="menu-nav flex-container">
+        <div class="menu-option white-b">
+          <a href="" class="menu-title flex-container subtitle blue-txt"
+            aria-label="Aller à la page des projets" routerLink="/projets/">Projets</a>
+        </div>
+        <div class="menu-option flex-container dark-grey-b">
+          <a class="menu-title flex-container subtitle white-txt"
+            aria-label="Aller à la page de nos blogs" routerLink="/blogs/">Blogs</a>
+        </div>
+      </div>
+    </div>
+  </footer> -->
+</div>

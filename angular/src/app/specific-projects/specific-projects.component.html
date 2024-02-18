@@ -1,0 +1,10 @@
+<div class="project-presentation">
+	<div class="project-presentation-content">
+		<div class="project-presentation-title">
+			<h1 class="title">{{ project_data.title }}</h1>
+		</div>
+		<div class="project-presentation-images loaded">
+			<div *ngFor="let index of images" [attr.class]="'project-image lazy-image lazy-load'" [attr.data-src]="project_data.image_path + index + '.webp'"></div>
+		</div>
+	</div>
+</div>

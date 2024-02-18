@@ -14,14 +14,6 @@ function initProjects() {
 				projects_container.style.opacity = "0";
 			else
 				projects_container.classList.add("loaded");
-
-			setTimeout(() => {
-				if (isShowed) {
-					projects_container.classList.remove("loaded");
-				} else {
-					projects_container.style.opacity = "1";
-				}
-			}, 300);
 		});
 	});
 }

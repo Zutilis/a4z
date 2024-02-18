@@ -1,0 +1,65 @@
+.legales-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.legales-content {
+	width: 55%;
+	margin-bottom: 15%;
+}
+
+.legales-parts {
+	opacity: 0;
+	width: 100%;
+	column-count: 2;
+	transition: opacity 1s ease;
+}
+
+.legales-part {
+	break-inside: avoid;
+	cursor: pointer;
+	padding: 0.5em;
+    margin: 0 0 1em;
+	background-color: var(--white);
+	width: 95%;
+	border-radius: 25px;
+	margin-bottom: 4%;
+}
+
+.legales-part:hover {
+	background-color: var(--grey);
+}
+
+.legales-title {
+	opacity: 0;
+	width: 100%;
+	margin-bottom: 10px;
+	transition: opacity 1s ease;
+}
+
+.legales-subtitle .subtitle {
+	text-decoration: underline;
+	color: var(--black);
+}
+
+.legales-texts {
+	margin: 20px;
+}
+
+.legales-text p {
+	color: var(--black);
+	font-size: 20px;
+}
+
+@media (max-width: 1000px) {
+	.legales-content {
+		width: 75%;
+	}
+}
+
+@media (max-width: 750px) {
+	.legales-parts {
+		column-count: 1;
+	}
+}

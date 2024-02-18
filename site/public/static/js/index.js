@@ -99,34 +99,6 @@ const router = async () => {
     lazyLoadBackgroundImages();
 };
 
-function lazyLoadBackgroundImages () {
-    const lazyLoadElements = document.querySelectorAll('.lazy-load');
-
-    lazyLoadElements.forEach(async (element) => {
-        if (isElementInViewport(element)) {
-            element.style.backgroundImage = 'url(' + element.getAttribute('data-src');
-
-            await new Promise(resolve => setTimeout(resolve, 300));
-
-            element.classList.remove('lazy-load');
-            element.classList.add('loaded');
-
-            await new Promise(resolve => setTimeout(resolve, 600));
-        }
-    });
-}
-
-function isElementInViewport(element) {
-    const rect = element.getBoundingClientRect();
-    return (
-        rect.top <= (window.innerHeight || document.documentElement.clientHeight) &&
-        rect.bottom >= 0
-    );
-}
-
-window.addEventListener('scroll', lazyLoadBackgroundImages);
-window.addEventListener('resize', lazyLoadBackgroundImages);
-
 window.addEventListener('popstate', async function(event) 
 {
     await new Promise(resolve => setTimeout(resolve, 100));
