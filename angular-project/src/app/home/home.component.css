@@ -1,64 +1,77 @@
-.home-nav {
+@import url('src/assets/css/projects.css');
+
+.section-soon {
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	width: 100%;
-	transition: margin 1s ease;
-}
+	margin: 20px 0;
+	z-index: 5;
 
-.title-container {
-	padding: 2%;
-	z-index: 2;
-	transform: scale(0.5);
-	opacity: 0;
-	animation: showContent .5s ease-in-out .3s forwards;
-}
+	.card-soon {
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		width: 90%;
+		max-width: 500px;
+		box-shadow: 5px 5px 20px 4px rgba(0,0,0,0.8);
+	}
 
-.home-button {
-	width: 100%;
-	height: 70px;
-	margin: 20px;
-	border-radius: 120px;
-	font-size: 40px;
-	transform: scale(0.5);
-	opacity: 0;
-	cursor: pointer;
-	animation: showContent .6s ease-in-out .5s forwards;
-}
+	.card-header {
+		display: flex;
+		justify-content: center;
+		border-radius: var(--border-rad) var(--border-rad) 0 0;
+		width: 100%;
+		height: 40px;
+	}
 
-.home-button a {
-	margin: 0 auto;
-	width: 100%;
-	height: 100%;
-	border-radius: 20px;
-}
+	.card-img {
+		display: flex;
+		position: relative;
+		justify-content: center;
+		margin-top: 10px;
 
-@media screen and (min-width: 1301px) {
-	.home-buttons {
-		width: 30%;
+		img {
+			object-fit: contain;
+			width: 100%;
+			height: 100%;
+			background-color: var(--black);
+		}
 	}
-}
 
-@media screen and (max-height: 800px) and (max-width: 500px) {
-	.home-nav {
-		margin-top: 8vh;
+	.card-img, .card-texts {
+		width: 85%;
+		max-width: 350px;
 	}
-}
 
-@keyframes error {
-	0% {
-	  transform: translateX(0);
+	.card-texts {
+		text-shadow: 1px 1px 5px var(--black);
 	}
-	20% {
-	  transform: translateX(-10%);
+
+	.card-key-words {
+		width: 70%;
+		margin: 20px 0;
+		display: flex;
+		flex-wrap: wrap;
+		gap: 7px;
+		text-shadow: 0px 0px 2px var(--off-white);
 	}
-	40% {
-	  transform: translateX(10%);
+
+	.card-buttons {
+		margin: 5px 0;
+		display: flex;
+		flex-direction: column;
+		width: 80%;
+		max-width: 280px;
+		gap: 8px;
 	}
-	60% {
-	  transform: translateX(-10%);
+
+	.card-footer {
+		margin: 20px 0;
+		transition-duration: 300ms;
 	}
-	80% {
-		transform: translate(10%);
-	}
-	100% {
-	  transform: translateX(0);
+
+	.card-footer:hover {
+		letter-spacing: 1px;
 	}
 }

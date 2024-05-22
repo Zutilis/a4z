@@ -5,9 +5,7 @@ export default class extends AbstractView {
         super(params);
         this.setTitle("a4z - Projets");
         this.setHtmlPath("projects.txt");
-        this.setDescription("Almost4zutified ou a4z est une association roannaise promouvant la photographie "
-                + "et organisant des évènements rap sur Roanne.");
-        this.addScript("Menu.js", "Projects.js");
+        this.addScript("Projects.js");
     }
 
     async load() {

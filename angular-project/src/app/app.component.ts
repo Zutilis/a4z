@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-declare function registerLoadImageEvents(): any;
-declare function registerGsap(): any;
+declare function nav(): any;
 
 @Component({
   selector: 'app-root',
@@ -12,7 +11,6 @@ export class AppComponent implements OnInit {
   title = 'a4z-angular';
 
   ngOnInit(): void {
-    registerLoadImageEvents();
-    registerGsap();
+    nav();
   }
 }

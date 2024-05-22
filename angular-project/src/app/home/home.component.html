@@ -1,13 +1,130 @@
-<div class="flex-container home-nav">
-	<div class="title-container loaded">
-		<h1 class="title">Qu'est ce tu fous là ?</h1>
-	</div>
-	<div class="home-buttons flex-container">
-		<div class="home-button center-txt discover loaded blue-b">
-			<a class="flex-container white-txt" aria-label="En savoir plus sur notre association almost4zutified" routerLink="/archives/">Découvrir a4z</a>
+<div class="space"></div>
+<section class="section-soon">
+	<div class="card-soon border-black border-rad bg-orange">
+		<div class="card-header border-black bg-black text-center">
+			<h1 class="font-size-xxl upper w-off-white marg-0">Prochainement</h1>
 		</div>
-		<div id="leave" class="home-button center-txt leave loaded grey-b" tabindex="0" aria-label="Bouton factice sortez moi de là">
-			<a class="flex-container grey-txt">Sortez moi de là !</a>
+		<div class="card-img">
+			<img class="border-rad" ngSrc="assets/img/others/a4ztrap.webp" alt="Logo de la soirée a4z trap" width="300" height="200">
+		</div>
+		<div class="card-texts">
+			<div class="card-desc text-left text-top">
+				<h2 class="font-size-xl upper w-off-white">Soiree Rap</h2>
+			</div>
+			<div class="card-info">
+				<div class="text-right text-top">
+					<h3 class="font-size-s upper w-off-white">Roanne</h3>
+				</div>
+				<div class="text-right text-top">
+					<h3 class="font-size-s upper w-off-white">Mai 2024</h3>
+				</div>
+			</div>
+		</div>
+		<div class="card-key-words">
+			<p class="font-size-s upper w-black">Marques</p>
+			<p class="font-size-s upper w-black">Food</p>
+			<p class="font-size-s upper w-black">Giveaways</p>
+			<p class="font-size-s upper w-black">Merch exclusif</p>
+			<p class="font-size-s upper w-black">DJSet Rap</p>
+			<p class="font-size-s upper w-black">Rappeurs</p>
+		</div>
+		<div class="card-buttons">
+			<div class="button border-black border-rad bg-white text-center">
+				<a aria-label="En savoir plus sur l'événement a4z Trap" routerLink="soon"></a>
+				<p class="font-size-m upper w-black">En savoir plus</p>
+			</div>
+			<div class="button border-black border-rad bg-black text-center">
+				<a aria-label="Redirection vers la billetterie de l'événement a4z Trap"  href="http://billetterie.a4z.fr" target="_blank"></a>
+				<p class="font-size-m upper w-off-white">Acheter mes places</p>
+			</div>
+		</div>
+		<div class="card-footer">
+			<p class="font-size-xs upper w-black">Faudra pas dire que t'étais pas au courant !</p>
 		</div>
 	</div>
-</div>
+</section>
+<section class="section-projects">
+	<div class="project-header">
+		<div id="project-head-1" class="project-head-text text-center">
+			<span class="project-head-to-remove bg-black"></span>
+			<h2 class="font-size-xxl upper w-black">Nos dernières</h2>
+			<span class="project-head-space bg-black"></span>
+			<span class="bg-black"></span>
+		</div>
+		<div id="project-head-2" class="project-head-text text-center">
+			<span class="bg-black"></span>
+			<span class="project-head-space bg-black"></span>
+			<h2 class="font-size-xxl upper w-white">Realisations</h2>
+			<span class="project-head-to-remove bg-black"></span>
+		</div>
+	</div>
+	<div class="projects-container">
+		<div class="projects">
+			<div id="gazo-project" class="project">
+				<a aria-label="En savoir plus sur notre événément Gazo" routerLink="projects/2024/gazo"></a>
+				<div class="project-img">
+					<img ngSrc="assets/img/gazo/1.webp" alt="Photo du rappeur Gazo" height="290" width="290">
+				</div>
+				<div class="project-texts">
+					<div class="project-desc text-left text-top">
+						<h3 class="font-size-xl upper w-black">Gazo</h3>
+					</div>
+					<div class="project-info">
+						<div class="text-right text-top">
+							<p class="font-size-s upper w-black">Paris</p>
+						</div>
+						<div class="text-right text-top">
+							<p class="font-size-s upper w-black">2024</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="fave-project" class="project">
+				<a aria-label="En savoir plus sur notre événément Favé"  routerLink="projects/2023/fave"></a>
+				<div class="project-img">
+					<img ngSrc="assets/img/fave/2.webp" alt="Photo du rappeur Favé" height="290" width="290">
+				</div>
+				<div class="project-texts">
+					<div class="project-desc text-left text-top">
+						<h3 class="font-size-xl upper w-black">Fave</h3>
+					</div>
+					<div class="project-info">
+						<div class="text-right text-top">
+							<p class="font-size-s upper w-black">Lyon</p>
+						</div>
+						<div class="text-right text-top">
+							<p class="font-size-s upper w-black">2023</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="lybro-project" class="project">
+				<a aria-label="En savoir plus sur notre événément Lybro" routerLink="projects/2023/lybro"></a>
+				<div class="project-img">
+					<img ngSrc="assets/img/lybro/4.webp" alt="Photo du rappeur Favé" height="290" width="290">
+				</div>
+				<div class="project-texts">
+					<div class="project-desc text-left text-top">
+						<h3 class="font-size-xl upper w-black">Lybro</h3>
+					</div>
+					<div class="project-info">
+						<div class="text-right text-top">
+							<p class="font-size-s upper w-black">Lyon</p>
+						</div>
+						<div class="text-right text-top">
+							<p class="font-size-s upper w-black">2023</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="project-footer">
+		<div class="project-button">
+			<div class="button border-black border-rad bg-white text-center">
+				<a aria-label="En savoir plus sur tous nos projets" routerLink="projects"></a>
+				<p class="font-size-m upper w-black">Voir tous les projets</p>
+			</div>
+		</div>
+	</div>
+</section>

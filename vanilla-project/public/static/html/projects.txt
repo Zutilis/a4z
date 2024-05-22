@@ -9,13 +9,6 @@
 				</div>
 			</div>
 			<div class="projects-container loaded">
-				<a href="/projets/inter-bde-vichy" aria-label="Voir en détails le projet soirée inter bde au Palais des Congrès de Vichy" data-link>
-					<div class="project-content">
-						<div class="project-arbos"></div>
-						<img src="https://a4z.fr/static/img/others/folder.png" alt="Dossier projet soirée inter bde au Palais des Congrès de Vichy" class="project-folder">
-						<p class="project-name">Soirée Inter BDE Vichy</p>
-					</div>
-				</a>
 				<a href="/projets/gazo" aria-label="Voir en détails le projet shooting de Gazo et la BSB League à paris" data-link>
 					<div class="project-content">
 						<div class="project-arbos"></div>

@@ -1,23 +1,29 @@
-<div class="projects-page">
-	<div class="years-container">
-	  <div *ngFor="let year of years" class="year">
-		<div class="project-year-header">
-		  <div class="project-content year-project-content">
-			<div class="project-arbos"></div>
-			<img src="assets/img/others/folder.png" alt="Dossier projets {{ year }}" class="project-folder">
-			<p class="project-name year-name">{{ year }}</p>
-		  </div>
-		</div>
-		<div class="projects-container">
-		  <a *ngFor="let project of projects_data[year]" [routerLink]="year + '/' + project.name">
-			<div class="project-content">
-			  <div class="project-arbos"></div>
-			  <img src="assets/img/others/folder.png" alt="Dossier projet {{ project.title }}" class="project-folder">
-			  <p class="project-name">{{ project.title }}</p>
+<div class="space"></div>
+<section class="section-projects">
+	<div class="projects-container">
+		<div class="projects">
+			<div class="projects-title">
+				<h1 class="font-size-xl upper w-black text-left">Tous nous projets</h1>
 			</div>
-		  </a>
+			<div *ngFor="let project of projects_data" class="project" [id]="project.path + '-project'">
+				<a [ariaLabel]="'En savoir plus sur l\'événement ' + project.title" [routerLink]="project.year + '/' + project.path"></a>
+				<div class="project-img">
+					<img [ngSrc]="project.image_path + '/' + project.image_pres + '.webp'" [alt]="'Photo de représentation de l\'événement ' + project.title" height="290" width="290">
+				</div>
+				<div class="project-texts">
+					<div class="project-desc text-left text-top">
+						<h2 class="font-size-xl upper w-black">{{ project.title }}</h2>
+					</div>
+					<div class="project-info">
+						<div class="text-right text-top">
+							<p class="font-size-s upper w-black">{{ project.location }}</p>
+						</div>
+						<div class="text-right text-top">
+							<p class="font-size-s upper w-black">{{ project.year }}</p>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
-	  </div>
 	</div>
-  </div>
-  
+</section>

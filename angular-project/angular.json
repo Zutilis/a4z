@@ -28,9 +28,7 @@
               "src/styles.css"
             ],
             "scripts": [
-              "src/assets/js/loadImage.js",
-              "src/assets/js/loadProjects.js",
-              "src/assets/js/loadMenu.js"
+
             ]
           },
           "configurations": {
@@ -94,9 +92,7 @@
               "src/styles.css"
             ],
             "scripts": [
-              "src/assets/js/loadImage.js",
-              "src/assets/js/loadProjects.js",
-              "src/assets/js/loadMenu.js"
+              
             ]
           }
         }

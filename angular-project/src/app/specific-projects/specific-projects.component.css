@@ -1,1 +1,58 @@
-@import url("../../assets/projects.css");
+.section-sp-project {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	margin: 50px 0;
+	width: 100%;
+
+	.sp-project-content {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		width: 85%;
+	}
+
+	.sp-project-texts {
+		display: flex;
+		flex-direction: row;
+		width: 100%;
+	}
+
+	@media (max-width: 767px) {
+		.sp-project-images {
+			column-count: 1;
+		}
+	}
+
+	@media (min-width: 768px) and (max-width: 1023px) {
+		.sp-project-images {
+			column-count: 2;
+		}
+	}
+
+	@media (min-width: 1024px) {
+		.sp-project-images {
+			column-count: 3;
+		}
+	}
+
+	.sp-project-images {
+		margin-top: 20px;
+		display: block;
+		gap: 20px;
+
+		.sp-project-image {
+			break-inside: avoid;
+			width: 100%;
+			margin-bottom: 20px;
+
+			img {
+				object-fit: contain;
+				width: 100%;
+				height: 100%;
+				background-color: var(--black);
+			}
+		}
+	}
+}
