@@ -6,9 +6,11 @@
 				<h1 class="font-size-xl upper w-black text-left">Tous nous projets</h1>
 			</div>
 			<div *ngFor="let project of projects_data" class="project" [id]="project.path + '-project'">
-				<a [ariaLabel]="'En savoir plus sur l\'événement ' + project.title" [routerLink]="project.year + '/' + project.path"></a>
+				<a [ariaLabel]="'En savoir plus sur l\'événement ' 
+					+ project.title" [routerLink]="project.year + '/' + project.path"></a>
 				<div class="project-img">
-					<img [ngSrc]="project.image_path + '/' + project.image_pres + '.webp'" [alt]="'Photo de représentation de l\'événement ' + project.title" height="290" width="290">
+					<img [ngSrc]="project.image_path + '/' + project.image_pres + '.webp'" 
+						[alt]="'Photo de représentation de l\'événement ' + project.title" height="290" width="290">
 				</div>
 				<div class="project-texts">
 					<div class="project-desc text-left text-top">
