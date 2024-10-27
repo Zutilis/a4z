@@ -16,6 +16,7 @@
 	<link rel="preload" fetchpriority="high" as="image" href="assets/img/others/a4ztrap.webp" type="image/webp">
 	<link rel="preload" fetchpriority="high" as="image" href="assets/img/others/logo.webp" type="image/webp">
 	<link rel="icon" type="image/x-icon" href="favicon.ico">
+	<link rel="canonical" href="https://a4z.fr">
 	<meta charset="utf-8">
 	<meta name="robots" content="index,follow">
 	<meta name="subject" content="Almost4zutified ou a4z : association Roanne">
@@ -39,18 +40,32 @@
 	<meta property="twitter:image" content="https://a4z.fr/assets/img/others/a4z.webp">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>a4z - Association Roanne</title>
+	<link rel="stylesheet" href="https://unpkg.com/lenis@1.1.9/dist/lenis.css">
 </head>
 
-<body class="bg-default marg-0">
+<body class="body bg-default marg-0">
 	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WBSX8D3C"
 		height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	<app-root></app-root>
-	<!-- <div class="screen"></div>
-	<div class="screen"></div>
-	<div class="screen"></div>
-	<div class="ball"></div> -->
 	<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-	<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+	<script src="https://unpkg.com/lenis@1.1.9/dist/lenis.min.js"></script> 
+    <script src=
+"https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+            integrity=
+"sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+    ></script>
+	<script>
+		const lenis = new Lenis();
+
+		function raf(time) {
+			lenis.raf(time)
+			requestAnimationFrame(raf)
+		}
+
+		requestAnimationFrame(raf)
+	</script>
 	<script>
 		function nav() 
 		{
@@ -82,26 +97,6 @@
 				}
 			});
 		}
-	</script>
-	<script>
-		let gsap_loaded = false;
-		document.addEventListener("DOMContentLoaded", (event) => 
-		{
-			gsap.registerPlugin(ScrollTrigger);
-			gsap_loaded = true;
-
-			// if (gsap_loaded) {
-			// 	gsap.set(".ball", {xPercent: -50, yPercent: -50});
-		
-			// 	let xTo = gsap.quickTo(".ball", "x", {duration: 0.6, ease: "power3"}),
-			// 		yTo = gsap.quickTo(".ball", "y", {duration: 0.6, ease: "power3"});
-		
-			// 	window.addEventListener("mousemove", e => {
-			// 		xTo(e.clientX);
-			// 		yTo(e.clientY);
-			// 	});
-			// }
-		});
 	</script>
 	<script>
 		const vh = (coef) => window.innerHeight * (coef/100);

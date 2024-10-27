@@ -73,9 +73,11 @@
 
 		.project {
 			position: relative;
+			border-radius: 10px;
 			display: flex;
 			align-items: center;
 			flex-direction: column;
+			padding: .6rem;
 			width: var(--project-size);
 
 			a {
@@ -84,6 +86,14 @@
 				height: 100%;
 				z-index: 15;
 			}
+		}
+
+		.project:hover {
+			background: rgba(255, 255, 255, 0.4);
+			border-radius: 16px;
+			box-shadow: 0 4px 30px rgba(255, 255, 255, 0.1);
+			backdrop-filter: blur(8px);
+			-webkit-backdrop-filter: blur(8px);
 		}
 		
 		.project-img {
@@ -135,6 +145,9 @@
 	z-index: -1;
 }
 
+#a4ztrap-project::before {
+	background: linear-gradient(to bottom right, rgba(106, 9, 19, 0.8), rgba(77, 86, 98, 0.8),  rgba(71, 70, 72, 0.8));
+}
 #gazo-project::before {
 	background: linear-gradient(to bottom right, rgba(106, 9, 19, 0.8), rgba(77, 86, 98, 0.8),  rgba(71, 70, 72, 0.8));
 }

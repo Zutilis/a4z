@@ -1,28 +1,28 @@
 <div class="space"></div>
 <section class="section-sp-project">
-	<div class="sp-project-content">
-		<div class="sp-project-texts">
-			<div class="transy-m25" style="width: 100%;">
-				<div class="text-left text-top">
-					<h1 class="font-size-xxl upper w-black">{{ project_data.title }}</h1>
-				</div>
-				<div class="text-left text-top transy-m7">
-					<p class="font-size-s upper w-black">By {{ project_data.author }}</p>
-				</div>
-			</div>
-			<div style="width: 100%;">
-				<div class="text-right text-top">
-					<h2 class="font-size-l upper w-white">{{ project_data.location }}</h2>
-				</div>
-				<div class="text-right text-top transy-m7">
-					<p class="font-size-l upper w-white">{{ project_data.year }}</p>
-				</div>
-			</div>
-		</div>
-		<div class="sp-project-images">
-			<div *ngFor="let index of images" class="sp-project-image">
-				<img [ngSrc]="project_data.image_path + index + '.webp'" [alt]="'Photo ' + index + ' de l\'événement ' + project_data.title" height="290" width="290">
-			</div>
-		</div>
-	</div>
+  <div class="sp-project-content">
+    <div class="sp-project-texts">
+      <div class="transy-m25" style="width: 100%;">
+        <div class="text-left text-top">
+          <h1 class="font-size-xxl upper w-black">{{ project_data.title }}</h1>
+        </div>
+        <div class="text-left text-top transy-m7">
+          <p class="font-size-s upper w-black">By {{ project_data.author }}</p>
+        </div>
+      </div>
+      <div style="width: 100%;">
+        <div class="text-right text-top">
+          <h2 class="font-size-l upper w-white">{{ project_data.location }}</h2>
+        </div>
+        <div class="text-right text-top transy-m7">
+          <p class="font-size-l upper w-white">{{ project_data.year }}</p>
+        </div>
+      </div>
+    </div>
+    <div class="sp-project-images">
+      <div *ngFor="let index of images" class="sp-project-image">
+        <img class="img-clean-load" [src]="project_data.image_path + index + '.webp'" [alt]="'Photo ' + index + ' de l\'événement ' + project_data.title" height="290" width="290" #imgCleanLoad>
+      </div>
+    </div>
+  </div>
 </section>
