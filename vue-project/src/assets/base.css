@@ -1,0 +1,81 @@
+@font-face {
+  font-family: PoppinsBold;
+  src: url('./fonts/Poppins-Bold.ttf');
+}
+
+@font-face {
+  font-family: PoppinsLight;
+  src: url('./fonts/Poppins-Light.ttf');
+}
+
+@font-face {
+  font-family: ThunderBold;
+  src: url('./fonts/Thunder-BoldLC.ttf');
+}
+
+:root {
+  --color-background: #24252A;
+  --color-black: #000000;
+  --color-white: #FFFFFF;
+  --color-red: #FF2828;
+  --color-blue: #2828FF;
+
+  --padding-vertical: 2vh;
+  --padding-horizontal: 5vh;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  font-weight: normal;
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--color-background);
+  color: var(--color-white);
+  font-family:
+    PoppinsLight,
+    PoppinsBold,
+    ThunderBold,
+    sans-serif;
+  font-size: 20px;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+main {
+  z-index: 10;
+}
+
+a {
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+h3 {
+  font-family: PoppinsBold;
+  font-size: 45px;
+  line-height: 40px;
+}
+
+h4 {
+  font-family: PoppinsLight;
+  font-size: 35px;
+  line-height: 30px;
+}
+
+p {
+  font-family: PoppinsLight;
+  font-size: 15px;
+  line-height: 15px;
+}
+
+img {
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+}

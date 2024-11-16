@@ -1,0 +1,22 @@
+{
+	"partners": [
+		{
+			"name": "Hugo Basile",
+			"description": "La maison Pralus est née à Roanne, où Auguste Pralus ouvre une pâtisserie en 1948",
+			"image_src": "/images/high/fave/1.webp",
+			"url": "https://a4z.fr"
+		},
+		{
+			"name": "Pralus",
+			"description": "La maison Pralus est née à Roanne, où Auguste Pralus ouvre une pâtisserie en 1948",
+			"image_src": "/images/high/bekar/1.webp",
+			"url": "https://a4z.fr"
+		},
+		{
+			"name": "Test",
+			"description": "La maison Test est née à Roanne, où Auguste Pralus ouvre une pâtisserie en 1948",
+			"image_src": "/images/high/lybro/1.webp",
+			"url": "https://a4z.fr"
+		}
+	]
+}
