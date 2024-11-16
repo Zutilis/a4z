@@ -1,13 +1,8 @@
 <template>
 	<div class="project-cover rounded shadow">
-		<ImageItem 
-      v-for="(index, idx) in onlyUsedIndexesMap" 
-      :key="idx" 
-      class="project-cover-img"
-			:src="getImageSrc(onlyUsedIndexesMap, index - 1)" 
-      :lowResSrc="getLowImageSrc(onlyUsedIndexesMap, index - 1)"
-			:style="{ opacity: getOpacity(index - 1) }"
-    />
+		<ImageItem v-for="(index, idx) in onlyUsedIndexesMap" :key="idx" class="project-cover-img"
+			:src="getImageSrc(onlyUsedIndexesMap, index - 1)" :lowResSrc="getLowImageSrc(onlyUsedIndexesMap, index - 1)"
+			:style="{ opacity: getOpacity(index - 1) }" />
 	</div>
 </template>
 
@@ -15,37 +10,37 @@
 import ImageItem from "@/components/ImageItem.vue";
 
 export default {
-  components: {
-    ImageItem,
-  },
-  props: {
-    onlyUsedIndexesMap: {
-      type: Array,
-      required: true,
-    },
-    project: {
-      type: Object,
-      required: true,
-    },
-    getOpacity: {
-      type: Function,
-      required: true,
-    },
-  },
-  methods: {
-    getImageSrc(map, index) {
-      const imageIndex = map[index];
-      return imageIndex !== null
-        ? `${this.project.image_src}${imageIndex}.webp`
-        : "";
-    },
-    getLowImageSrc(map, index) {
-      const imageIndex = map[index];
-      return imageIndex !== null
-        ? `${this.project.image_low_src}${imageIndex}.webp`
-        : "";
-    },
-  },
+	components: {
+		ImageItem,
+	},
+	props: {
+		onlyUsedIndexesMap: {
+			type: Array,
+			required: true,
+		},
+		project: {
+			type: Object,
+			required: true,
+		},
+		getOpacity: {
+			type: Function,
+			required: true,
+		},
+	},
+	methods: {
+		getImageSrc(map, index) {
+			const imageIndex = map[index];
+			return imageIndex !== null
+				? `${this.project.image_src}${imageIndex}.webp`
+				: "";
+		},
+		getLowImageSrc(map, index) {
+			const imageIndex = map[index];
+			return imageIndex !== null
+				? `${this.project.image_low_src}${imageIndex}.webp`
+				: "";
+		},
+	},
 };
 </script>
 

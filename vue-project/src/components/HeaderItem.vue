@@ -2,12 +2,8 @@
 	<header>
 		<div class="header-nav">
 			<router-link to="/" class="left" @click.native.stop="closeMenu">
-				<ImageItem 
-					src="/images/high/main/logo.webp" 
-					lowResSrc="/images/low/main/logo.webp" 
-					alt=""
-					class="header-logo"
-				/>
+				<ImageItem src="/images/high/main/logo.webp" lowResSrc="/images/low/main/logo.webp" alt=""
+					class="header-logo" />
 			</router-link>
 			<div class="right">
 				<p class="header-burger" @click="toggleHeaderContent">Menu</p>

@@ -1,21 +1,10 @@
 <template>
 	<div class="progressive-image-wrapper" ref="imageWrapper">
-		<img
-			v-if="startLoading && showLowRes"
-			:src="lowResSrc"
-			:class="['low-res', { loaded: lowResLoaded }, ...imgClassList]"
-			@load="onLowResLoad"
-			loading="lazy"
-			:alt="alt"
-		/>
-		<img
-			v-if="startLoading"
-			:src="src"
-			:class="['high-res', { loaded: highResLoaded }, ...imgClassList]"
-			@load="onHighResLoad"
-			loading="lazy"
-			:alt="alt"
-		/>
+		<img v-if="startLoading && showLowRes" :src="lowResSrc"
+			:class="['low-res', { loaded: lowResLoaded }, ...imgClassList]" @load="onLowResLoad" loading="lazy"
+			:alt="alt" />
+		<img v-if="startLoading" :src="src" :class="['high-res', { loaded: highResLoaded }, ...imgClassList]"
+			@load="onHighResLoad" loading="lazy" :alt="alt" />
 	</div>
 </template>
 
