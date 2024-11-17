@@ -38,6 +38,10 @@ span.notify.white {
   border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
+.glass.white {
+  background-color: rgb(255, 255, 255, .15);
+}
+
 .main-bg {
   position: fixed;
   width: 100%;

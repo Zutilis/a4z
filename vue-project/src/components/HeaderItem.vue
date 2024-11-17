@@ -9,7 +9,7 @@
 				<h4 class="header-burger" @click="toggleHeaderContent">Menu</h4>
 			</div>
 		</div>
-		<div class="header-content" :class="{ 'active': isHeaderContentVisible }">
+		<nav class="header-content" :class="{ 'active': isHeaderContentVisible }">
 			<div class="header-bg"></div>
 			<div class="header-links">
 				<div class="left">
@@ -19,9 +19,9 @@
 					<router-link to="/partners/" class="header-link" @click.native.stop="closeMenu">
 						<h3>Partenaires</h3>
 					</router-link>
-					<router-link to="/" class="header-link" @click.native.stop="closeMenu">
+					<a href="mailto:contact@a4z.fr" target="_blank" class="header-link">
 						<h3>Contact</h3>
-					</router-link>
+					</a>
 				</div>
 				<div class="right">
 					<router-link to="/project/gazo/" class="header-link" @click.native.stop="closeMenu">
@@ -39,10 +39,10 @@
 				</div>
 			</div>
 			<div class="header-socials">
-				<a href="https://a4z.fr" @click.native.stop="closeMenu" class="header-social">
+				<a href="https://www.instagram.com/a4z.fr/" target="_blank" @click.native.stop="closeMenu" class="header-social">
 					<img src="/svg/instagram.svg" alt="">
 				</a>
-				<a href="https://a4z.fr" @click.native.stop="closeMenu" class="header-social">
+				<a href="https://www.tiktok.com/@a4z.fr" target="_blank" @click.native.stop="closeMenu" class="header-social">
 					<img src="/svg/tiktok.svg" alt="">
 				</a>
 			</div>
@@ -50,7 +50,7 @@
 				<p>Copyright © 2024 Almost4zutified. Tous droits réservés.</p>
 				<p><router-link to="/legal/" @click.native.stop="closeMenu">Mentions Légales</router-link></p>
 			</div>
-		</div>
+		</nav>
 	</header>
 </template>
 
@@ -156,6 +156,11 @@ header,
 	text-align: right;
 }
 
+.header-link {
+	pointer-events: auto;
+	cursor: pointer;
+}
+
 .header-socials {
 	display: flex;
 	flex-direction: row;
@@ -244,13 +249,13 @@ header,
 
 	.header-links .left,
 	.header-links .right {
-		gap: 20px;
+		gap: 30px;
 	}
 
 	.header-links {
 		flex-direction: column;
 		padding-top: 15%;
-		gap: 20px;
+		gap: 30px;
 		width: auto;
 	}
 

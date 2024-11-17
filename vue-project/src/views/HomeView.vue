@@ -397,8 +397,18 @@ main {
 		flex-direction: column;
 	}
 	.slider-nav {
-		position: relative;
-		gap: 10%;
+		position: fixed;
+		bottom: var(--padding-vertical);
+		gap: 5%;
+		width: auto;
+		padding: 1rem 1.5em;
+
+		/* glass */
+		border-radius: 20px;
+		backdrop-filter: blur(20px);
+		--webkit-backdrop-filter: blur(20px);
+		background-color: rgb(0, 0, 0, .15);
+		border: 1px solid rgba(255, 255, 255, 0.2);
 	}
 	.slider-ds {
 		align-self: flex-start;
@@ -423,21 +433,19 @@ main {
 
 @media screen and (max-width: 768px) and (min-height: 651px) {
 	.slider-footer {
-		gap: 5vh;
+		bottom: calc(10% + 50%/6);
 	}
 }
 
 @media screen and (max-width: 768px) and (min-height: 751px) {
 	.slider-footer {
-		gap: 8vh;
-		bottom: 6%;
+		bottom: calc(10% + 50%/5);
 	}
 }
 
 @media screen and (max-width: 768px) and (min-height: 851px) {
 	.slider-footer {
-		gap: 8vh;
-		bottom: 7%;
+		bottom: calc(10% + 50%/4);
 	}
 }
 </style>

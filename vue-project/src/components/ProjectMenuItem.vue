@@ -164,7 +164,7 @@ export default {
 	}
 	.project-menu {
 		width: 100%;
-		height: 200px;
+		height: 150px;
 	}
 
 	.project-menu .left,
@@ -183,7 +183,7 @@ export default {
 @media screen and (max-width: 768px) {
 	.project-menu {
 		width: 100%;
-		height: 200px;
+		height: 150px;
 	}
 
 	.project-menu .left,
