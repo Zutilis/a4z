@@ -17,8 +17,12 @@ span.notify {
   display: block;
   border-radius: 50%;
   width: 5px;
-  aspect-ratio: 1 / 1;
+  height: 5px;
   background-color: var(--color-red);
+}
+
+span.notify.white {
+  background-color: var(--color-white);
 }
 
 .blur {
@@ -30,7 +34,7 @@ span.notify {
   border-radius: 20px;
   backdrop-filter: blur(20px);
   --webkit-backdrop-filter: blur(20px);
-  background-color: rgb(255, 255, 255, .15);
+  background-color: rgb(0, 0, 0, .15);
   border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
