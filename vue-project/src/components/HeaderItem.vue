@@ -24,16 +24,16 @@
 					</router-link>
 				</div>
 				<div class="right">
-					<router-link to="/project/gazo" class="header-link" @click.native.stop="closeMenu">
+					<router-link to="/project/gazo/" class="header-link" @click.native.stop="closeMenu">
 						<h4>Gazo</h4>
 					</router-link>
-					<router-link to="/project/fave" class="header-link" @click.native.stop="closeMenu">
+					<router-link to="/project/fave/" class="header-link" @click.native.stop="closeMenu">
 						<h4>Favé</h4>
 					</router-link>
-					<router-link to="/project/bekar" class="header-link" @click.native.stop="closeMenu">
+					<router-link to="/project/bekar/" class="header-link" @click.native.stop="closeMenu">
 						<h4>Bekar</h4>
 					</router-link>
-					<router-link to="/project/lybro" class="header-link" @click.native.stop="closeMenu">
+					<router-link to="/project/lybro/" class="header-link" @click.native.stop="closeMenu">
 						<h4>Lybro</h4>
 					</router-link>
 				</div>
@@ -47,7 +47,8 @@
 				</a>
 			</div>
 			<div class="header-footer">
-				<p>© almost4zutified tous droits réservés</p>
+				<p>Copyright © 2024 Almost4zutified. Tous droits réservés.</p>
+				<p><router-link to="/legal/" @click.native.stop="closeMenu">Mentions Légales</router-link></p>
 			</div>
 		</div>
 	</header>
@@ -105,9 +106,15 @@ header,
 .header-footer {
 	position: absolute;
 	text-align: center;
-	bottom: 5%;
-	left: 0;
-	right: 0;
+	text-wrap: nowrap;
+	bottom: var(--padding-vertical);
+	left: 50%;
+	transform: translateX(-50%);
+	gap: 5px;
+}
+
+.header-footer p {
+	opacity: 0.7;
 }
 
 .header-content {
@@ -207,7 +214,7 @@ header,
 	cursor: pointer;
 }
 
-@media screen and (max-width: 768px)  and (max-height: 550px) {
+@media screen and (max-width: 768px) and (max-height: 550px) {
 	.header-links .right {
 		display: none;
 	}
@@ -254,6 +261,12 @@ header,
 	.header-socials {
 		align-self: flex-end;
 	}
-}
 
+	.header-footer {
+		left: var(--padding-horizontal);
+		text-wrap: wrap;
+		text-align: left;
+		transform: none;
+	}
+}
 </style>

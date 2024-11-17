@@ -1,7 +1,7 @@
 <template>
 	<div class="partner-card" :ref="addRef">
 		<a :href="partner.url" target="_blank" class="partner-item rounded">
-			<img :src="partner.image_src" alt="" class="partner-cover rounded shadow" />
+			<img :src="partner.image_src" alt="" :class="['partner-cover', {'shadow rounded': partner.image_shadow}]" />
 			<div class="partner-ds">
 				<h3>
 					{{ partner.name }}
@@ -72,7 +72,7 @@ export default {
 	width: 20%;
 	min-width: 200px;
 	aspect-ratio: 1 / 1;
-	object-fit: cover;
+	object-fit: contain;
 	box-sizing: border-box;
 }
 

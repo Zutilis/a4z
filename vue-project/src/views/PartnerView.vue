@@ -13,9 +13,9 @@
 		<div class="partner-container">
 			<PartnerItem v-for="(item, index) in partnerItems" :key="index" :partner="item" :add-ref="addItemRef" />
 		</div>
-		<router-link to="/" class="partner-prospect glass shadow">
+		<a href="/pdf/partners.pdf" class="partner-prospect glass shadow">
 			<h5>Devenir Partenaire</h5>
-		</router-link>
+		</a>
 	</main>
 </template>
 
