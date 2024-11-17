@@ -70,6 +70,7 @@ export default {
 
 .partner-cover {
 	width: 20%;
+	min-width: 200px;
 	aspect-ratio: 1 / 1;
 	object-fit: cover;
 	box-sizing: border-box;
@@ -96,7 +97,7 @@ export default {
 	}
 
 	.partner-cover {
-		width: 60%;
+		width: 50%;
 	}
 }
 

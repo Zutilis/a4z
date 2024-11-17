@@ -156,7 +156,7 @@ header,
 }
 
 .header-social {
-	width: 50px;
+	width: 40px;
 	aspect-ratio: 1 / 1;
 }
 
@@ -207,6 +207,12 @@ header,
 	cursor: pointer;
 }
 
+@media screen and (max-width: 768px)  and (max-height: 550px) {
+	.header-links .right {
+		display: none;
+	}
+}
+
 @media screen and (max-height: 550px) {
 	.header-logo {
 		height: 100px;
@@ -226,15 +232,27 @@ header,
 
 	.header-content {
 		padding: 0 var(--padding-horizontal);
-		gap: 60px;
+		gap: 30px;
+	}
+
+	.header-links .left,
+	.header-links .right {
+		gap: 20px;
 	}
 
 	.header-links {
+		flex-direction: column;
+		padding-top: 15%;
+		gap: 20px;
 		width: auto;
 	}
 
 	.header-links .right {
-		display: none;
+		text-align: left;
+	}
+
+	.header-socials {
+		align-self: flex-end;
 	}
 }
 
