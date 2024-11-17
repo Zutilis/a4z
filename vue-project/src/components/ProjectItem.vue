@@ -131,4 +131,22 @@ export default {
 	background-repeat: no-repeat;
 	transition: opacity 0.5s ease;
 }
+
+@media screen and (max-width: 1024px) {
+	.project-content,
+	.project-menu  {
+		flex-direction: column;
+	}
+	.project-cover,
+	.project-menu {
+		width: 100%;
+	}
+	.project-menu .left,
+	.project-menu .right {
+		display: grid;
+		grid-template-columns: repeat(8, minmax(0, 1fr));
+		width: 100%;
+	}
+}
+
 </style>

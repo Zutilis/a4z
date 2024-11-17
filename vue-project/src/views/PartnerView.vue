@@ -14,7 +14,7 @@
 			<PartnerItem v-for="(item, index) in partnerItems" :key="index" :partner="item" :add-ref="addItemRef" />
 		</div>
 		<router-link to="/" class="partner-prospect glass shadow">
-			<h4>Devenir Partenaire</h4>
+			<h5>Devenir Partenaire</h5>
 		</router-link>
 	</main>
 </template>
@@ -101,7 +101,14 @@ export default {
 	padding: 1rem 1.5rem;
 }
 
-.partner-prospect h4 {
+.partner-prospect h5 {
+	text-align: center;
 	font-weight: bolder;
+}
+
+@media screen and (max-width: 600px) {
+	.partner-prospect {
+		width: 80%;
+	}
 }
 </style>

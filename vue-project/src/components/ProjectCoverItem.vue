@@ -105,4 +105,10 @@ export default {
 	z-index: 12;
 	transition: opacity 0.5s ease;
 }
+
+@media screen and (max-width: 768px) {
+	.project-description .right {
+		display: none;
+	}
+}
 </style>

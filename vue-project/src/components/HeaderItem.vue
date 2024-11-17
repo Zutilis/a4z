@@ -100,7 +100,6 @@ header,
 	height: 100vh;
 	backdrop-filter: blur(150px);
 	background-color: rgb(0, 0, 0, 0.2);
-	transition: all .2s ease-in-out;
 }
 
 .header-footer {
@@ -202,18 +201,40 @@ header,
 
 .header-burger {
 	font-family: PoppinsLight;
-	/* font-size: 40px;
-	line-height: 40px; */
 	margin: 0;
 	padding: 0;
 	transform: translateY(15px);
 	cursor: pointer;
 }
 
+@media screen and (max-height: 550px) {
+	.header-logo {
+		height: 100px;
+		width: 80px;
+	}
+
+	.header-socials {
+		display: none;
+	}
+}
+
 @media screen and (max-width: 768px) {
 	.header-logo {
 		height: 100px;
 		width: 80px;
+	}
+
+	.header-content {
+		padding: 0 var(--padding-horizontal);
+		gap: 60px;
+	}
+
+	.header-links {
+		width: auto;
+	}
+
+	.header-links .right {
+		display: none;
 	}
 }
 

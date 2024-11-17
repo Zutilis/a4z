@@ -2,14 +2,18 @@
 	<div class="project-menu">
 		<div class="project-selector" :style="selectorStyle"></div>
 		<div class="left">
-			<div v-for="(position, index) in leftPositions" :key="index" class="project-item"
+			<div v-for="(position, index) in leftPositions" 
+				:key="index" 
+				:class="['project-item', {'use': position.use}]"
 				@click="position.use && handleMoveSelector(index)">
 				<ImageItem v-if="position.use" :src="getImageSrc(usedIndexesMap, index)"
 					:lowResSrc="getLowImageSrc(usedIndexesMap, index)" alt="" class="project-img shadow" />
 			</div>
 		</div>
 		<div class="right">
-			<div v-for="(position, index) in rightPositions" :key="index" class="project-item"
+			<div v-for="(position, index) in rightPositions" 
+				:key="index" 
+				:class="['project-item', {'use': position.use}]"
 				@click="position.use && handleMoveSelector(leftPositions.length + index)">
 				<ImageItem v-if="position.use" :src="getImageSrc(usedIndexesMap, leftPositions.length + index)"
 					:lowResSrc="getLowImageSrc(usedIndexesMap, leftPositions.length + index)" alt=""
@@ -152,5 +156,51 @@ export default {
 	height: 100%;
 	cursor: pointer;
 	object-fit: cover;
+}
+
+@media screen and (max-width: 1024px) {
+	.project-menu  {
+		flex-direction: column;
+	}
+	.project-menu {
+		width: 100%;
+		height: 200px;
+	}
+
+	.project-menu .left,
+	.project-menu .right {
+		grid-template-columns: repeat(8, minmax(0, 1fr));
+		grid-template-rows: none;
+		width: 100%;
+	}
+
+	.project-selector {
+		width: calc(100% / 8);
+		height: 50%;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.project-menu {
+		width: 100%;
+		height: 200px;
+	}
+
+	.project-menu .left,
+	.project-menu .right {
+		display: flex;
+		flex-wrap: wrap;
+		overflow: hidden;
+		width: 100%;
+	}
+
+	.project-item,
+	.project-selector {
+		width: 20%;
+	}
+
+	.project-item:not(.use) {
+		display: none;
+	}
 }
 </style>

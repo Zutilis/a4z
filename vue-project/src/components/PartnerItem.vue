@@ -1,14 +1,14 @@
 <template>
 	<div class="partner-card" :ref="addRef">
 		<a :href="partner.url" target="_blank" class="partner-item rounded">
+			<img :src="partner.image_src" alt="" class="partner-cover rounded shadow" />
 			<div class="partner-ds">
 				<h3>
 					{{ partner.name }}
 					<img src="/svg/newtab.svg" alt="" class="partner-newtab" />
 				</h3>
-				<h4>{{ partner.description }}</h4>
+				<h5>{{ partner.description }}</h5>
 			</div>
-			<img :src="partner.image_src" alt="" class="partner-cover rounded shadow" />
 		</a>
 	</div>
 </template>
@@ -44,15 +44,11 @@ export default {
 	justify-content: center;
 	align-items: center;
 	flex-direction: row;
-	width: 90%;
+	width: 100%;
 	padding: 5% 0;
 	gap: 10%;
 	cursor: pointer;
 	transition: box-shadow 0.5s ease-in-out;
-}
-
-.partner-item:hover {
-	box-shadow: -2px 4px 20px 6px rgba(0, 0, 0, 0.3);
 }
 
 .partner-ds {
@@ -72,14 +68,45 @@ export default {
 	transform: translateX(5px);
 }
 
-.partner-ds h4 {
-	line-height: 40px;
-}
-
 .partner-cover {
 	width: 20%;
 	aspect-ratio: 1 / 1;
 	object-fit: cover;
 	box-sizing: border-box;
+}
+
+@media screen and (min-width: 350px) {
+	.partner-item:hover {
+		box-shadow: -2px 4px 20px 6px rgba(0, 0, 0, 0.3);
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.partner-item {
+		flex-direction: column;
+		gap: 5vh;
+	}
+
+	.partner-ds {
+		width: 95%;
+	}
+
+	.partner-prospect {
+		width: 90%;
+	}
+
+	.partner-cover {
+		width: 60%;
+	}
+}
+
+@media screen and (max-width: 350px) {
+	.partner-ds h5 {
+		display: none;
+	}
+
+	.partner-ds h3 img {
+		display: none;
+	}
 }
 </style>
