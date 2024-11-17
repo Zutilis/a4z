@@ -6,7 +6,7 @@
 					class="header-logo" />
 			</router-link>
 			<div class="right">
-				<p class="header-burger" @click="toggleHeaderContent">Menu</p>
+				<h4 class="header-burger" @click="toggleHeaderContent">Menu</h4>
 			</div>
 		</div>
 		<div class="header-content" :class="{ 'active': isHeaderContentVisible }">
@@ -202,11 +202,19 @@ header,
 
 .header-burger {
 	font-family: PoppinsLight;
-	font-size: 40px;
-	line-height: 40px;
+	/* font-size: 40px;
+	line-height: 40px; */
 	margin: 0;
 	padding: 0;
 	transform: translateY(15px);
 	cursor: pointer;
 }
+
+@media screen and (max-width: 768px) {
+	.header-logo {
+		height: 100px;
+		width: 80px;
+	}
+}
+
 </style>

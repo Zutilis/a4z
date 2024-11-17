@@ -165,7 +165,7 @@ main {
 	align-items: center;
 	width: 100%;
 	height: 100%;
-	bottom: 0;
+	top: 0;
 	overflow: hidden;
 }
 
@@ -263,7 +263,6 @@ main {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	flex-direction: row;
 	position: absolute;
 	width: 100%;
 	bottom: 5%;
@@ -385,5 +384,66 @@ main {
 .slider-next img:nth-child(2).bounce {
 	animation: bounceNext2 .4s ease-in-out;
 	animation-delay: 100ms;
+}
+
+@media screen and (max-width: 768px) {
+	.slider-img-item {
+		width: 40%;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.slider-images {
+		height: 90%;
+	}
+	.slider-img-item {
+		height: 50%;
+	}
+	.slider-footer {
+		flex-direction: column;
+	}
+	.slider-nav {
+		position: relative;
+		gap: 10%;
+	}
+	.slider-ds {
+		align-self: flex-start;
+		text-align: left;
+	}
+	.slider-img-item {
+		width: calc(100% - var(--padding-horizontal) * 2);
+	}
+	.slider-img-item.main {
+		transform: scale(1);
+	}
+}
+
+@media screen and (max-width: 600px) and (max-height: 650px) {
+	.slider-images {
+		height: 100%;
+	}
+	.slider-ds {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 600px) and (min-height: 651px) {
+	.slider-footer {
+		gap: 5vh;
+	}
+}
+
+@media screen and (max-width: 600px) and (min-height: 751px) {
+	.slider-footer {
+		gap: 8vh;
+		bottom: 6%;
+	}
+}
+
+@media screen and (max-width: 600px) and (min-height: 851px) {
+	.slider-footer {
+		gap: 8vh;
+		bottom: 7%;
+	}
 }
 </style>

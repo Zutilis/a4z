@@ -56,22 +56,44 @@ a {
   text-decoration: none;
 }
 
-h3 {
-  font-family: PoppinsBold;
-  font-size: 45px;
-  line-height: 40px;
+@media screen and (min-width: 769px) {
+  h3 {
+    font-family: PoppinsBold;
+    font-size: 45px;
+    line-height: 40px;
+  }
+
+  h4 {
+    font-family: PoppinsLight;
+    font-size: 35px;
+    line-height: 30px;
+  }
+
+  p {
+    font-family: PoppinsLight;
+    font-size: 15px;
+    line-height: 15px;
+  }
 }
 
-h4 {
-  font-family: PoppinsLight;
-  font-size: 35px;
-  line-height: 30px;
-}
+@media screen and (max-width: 768px) {
+  h3 {
+    font-family: PoppinsBold;
+    font-size: 40px;
+    line-height: 35px;
+  }
 
-p {
-  font-family: PoppinsLight;
-  font-size: 15px;
-  line-height: 15px;
+  h4 {
+    font-family: PoppinsLight;
+    font-size: 30px;
+    line-height: 25px;
+  }
+
+  p {
+    font-family: PoppinsLight;
+    font-size: 15px;
+    line-height: 15px;
+  }
 }
 
 img {
