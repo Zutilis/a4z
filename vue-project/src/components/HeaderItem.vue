@@ -106,7 +106,7 @@ header,
 .header-footer {
 	position: absolute;
 	text-align: center;
-	text-wrap: nowrap;
+	text-wrap: wrap;
 	bottom: var(--padding-vertical);
 	left: 50%;
 	transform: translateX(-50%);
@@ -246,7 +246,7 @@ header,
 	.header-content {
 		justify-content: flex-end;
 		padding: var(--padding-vertical) var(--padding-horizontal);
-		gap: 2vh;
+		gap: 4vh;
 	}
 
 	.header-links .left,
@@ -257,7 +257,7 @@ header,
 	.header-links {
 		flex-direction: column;
 		justify-content: center;
-		height: 70%;
+		height: 60%;
 		gap: 2.5vh;
 		width: auto;
 	}
