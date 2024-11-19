@@ -94,7 +94,7 @@
 				{ "pos": 1, "use": true },
 				{ "pos": 2, "use": true },
 				{ "pos": 3, "use": false },
-				{ "pos": 4, "use": false },
+				{ "pos": 4, "use": true },
 				{ "pos": 5, "use": true },
 				{ "pos": 6, "use": false },
 				{ "pos": 7, "use": true },

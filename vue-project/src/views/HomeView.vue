@@ -387,11 +387,16 @@ main {
 
 @media screen and (max-width: 768px) {
 	.slider {
-		gap: 2%;
+		padding-top: var(--padding-vertical);
+		gap: 2vh;
 	}
 	.slider-footer {
 		flex-direction: column;
 		gap: 5vh;
+	}
+
+	.slider-label {
+		display: none;
 	}
 
 	.slider-nav {

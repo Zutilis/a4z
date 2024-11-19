@@ -184,19 +184,19 @@ export default {
 	.project-menu {
 		width: 100%;
 		height: 150px;
+		overflow-x: scroll;
 	}
 
 	.project-menu .left,
 	.project-menu .right {
-		display: flex;
-		flex-wrap: wrap;
-		overflow: hidden;
+		display: inline-flex;
 		width: 100%;
 	}
 
 	.project-item,
 	.project-selector {
 		width: 20%;
+		min-width: 20%;
 	}
 
 	.project-item:not(.use) {

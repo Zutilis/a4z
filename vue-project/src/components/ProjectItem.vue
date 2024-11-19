@@ -119,7 +119,7 @@ export default {
 	flex-direction: row;
 	height: 100%;
 	width: 100%;
-	gap: 20px;
+	gap: 2vh;
 }
 
 .bg-layer {
