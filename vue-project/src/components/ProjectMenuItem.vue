@@ -2,18 +2,15 @@
 	<div class="project-menu">
 		<div class="project-selector" :style="selectorStyle"></div>
 		<div class="left">
-			<div v-for="(position, index) in leftPositions" 
-				:key="index" 
-				:class="['project-item', {'use': position.use}]"
-				@click="position.use && handleMoveSelector(index)">
+			<div v-for="(position, index) in leftPositions" :key="index"
+				:class="['project-item', { 'use': position.use }]" @click="position.use && handleMoveSelector(index)">
 				<ImageItem v-if="position.use" :src="getImageSrc(usedIndexesMap, index)"
 					:lowResSrc="getLowImageSrc(usedIndexesMap, index)" alt="" class="project-img shadow" />
 			</div>
 		</div>
 		<div class="right">
-			<div v-for="(position, index) in rightPositions" 
-				:key="index" 
-				:class="['project-item', {'use': position.use}]"
+			<div v-for="(position, index) in rightPositions" :key="index"
+				:class="['project-item', { 'use': position.use }]"
 				@click="position.use && handleMoveSelector(leftPositions.length + index)">
 				<ImageItem v-if="position.use" :src="getImageSrc(usedIndexesMap, leftPositions.length + index)"
 					:lowResSrc="getLowImageSrc(usedIndexesMap, leftPositions.length + index)" alt=""
@@ -62,15 +59,19 @@ export default {
 	},
 	methods: {
 		setSelectorPosition(index) {
+			const projectMenu = document.querySelector(".project-menu");
 			const projectItems = document.querySelectorAll(".project-item");
 			const targetItem = projectItems[index];
 
-			if (targetItem) {
-				const rect = targetItem.getBoundingClientRect();
-				const parentRect = targetItem.offsetParent.getBoundingClientRect();
+			if (targetItem && projectMenu) {
+				const itemRect = targetItem.getBoundingClientRect();
+				const menuRect = projectMenu.getBoundingClientRect();
+				const scrollLeft = projectMenu.scrollLeft;
+				const scrollTop = projectMenu.scrollTop;
+
 				this.selectorStyle = {
-					top: `${rect.top - parentRect.top}px`,
-					left: `${rect.left - parentRect.left}px`,
+					top: `${itemRect.top - menuRect.top + scrollTop}px`,
+					left: `${itemRect.left - menuRect.left + scrollLeft}px`,
 				};
 			}
 		},
@@ -159,9 +160,10 @@ export default {
 }
 
 @media screen and (max-width: 1024px) {
-	.project-menu  {
+	.project-menu {
 		flex-direction: column;
 	}
+
 	.project-menu {
 		width: 100%;
 		height: 150px;
@@ -185,6 +187,8 @@ export default {
 		width: 100%;
 		height: 150px;
 		overflow-x: scroll;
+		overflow-y: hidden;
+		scrollbar-width: none;
 	}
 
 	.project-menu .left,
