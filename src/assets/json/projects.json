@@ -38,7 +38,7 @@
             "image_count": 12,
             "image_cover": 1,
             "image_positions": [
-                { "pos": 1, "use": true, "object_pos": "50% 20%" },
+                { "pos": 1, "use": true, "object_pos": "50% 35%" },
                 { "pos": 2, "use": true, "object_pos": "50% 70%" },
                 { "pos": 3, "use": true, "object_pos": "50% 20%" },
                 { "pos": 4, "use": true, "object_pos": "50% 35%" },
