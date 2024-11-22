@@ -21,6 +21,10 @@ const routes = [
     path: '/legal/',
     name: 'legal',
     component: () => import('@/views/LegalView.vue'),
+  },
+  {
+    path: '/:pathMatch(.*)*',
+    redirect: '/',
   }
 ];
 

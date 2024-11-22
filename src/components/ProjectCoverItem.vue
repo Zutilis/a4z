@@ -1,8 +1,10 @@
 <template>
 	<div class="project-cover rounded shadow">
 		<ImageItem v-for="(index, idx) in onlyUsedIndexesMap" :key="idx" class="project-cover-img"
-			:src="getImageSrc(onlyUsedIndexesMap, index - 1)" :lowResSrc="getLowImageSrc(onlyUsedIndexesMap, index - 1)"
-			:style="{ opacity: getOpacity(index - 1) }" />
+			:src="getImageSrc(onlyUsedIndexesMap, index - 1)" 
+			:lowResSrc="getLowImageSrc(onlyUsedIndexesMap, index - 1)"
+			:style="{ opacity: getOpacity(index - 1)}" 
+			:imgStyle="{ objectPosition: getObjectPosition(onlyUsedIndexesMap, index - 1) }"/>
 		<div class="project-description">
 			<div class="left glass shadow">
 				<h3>{{ project.title }}</h3>
@@ -32,6 +34,10 @@ export default {
 			required: true,
 		},
 		getOpacity: {
+			type: Function,
+			required: true,
+		},
+		getObjectPosition: {
 			type: Function,
 			required: true,
 		},

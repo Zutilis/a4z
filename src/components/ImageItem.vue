@@ -3,7 +3,10 @@
 		<img v-if="startLoading && showLowRes" :src="lowResSrc"
 			:class="['low-res', { loaded: lowResLoaded }, ...imgClassList]" @load="onLowResLoad" loading="lazy"
 			:alt="alt" />
-		<img v-if="startLoading" :src="src" :class="['high-res', { loaded: highResLoaded }, ...imgClassList]"
+		<img v-if="startLoading" 
+			:src="src" 
+			:class="['high-res', { loaded: highResLoaded }, ...imgClassList]"
+			:style="imgStyle"
 			@load="onHighResLoad" loading="lazy" :alt="alt" />
 	</div>
 </template>
@@ -28,6 +31,10 @@ export default {
 			type: [String, Array],
 			default: '',
 		},
+		imgStyle: {
+			type: Object,
+			default: null,
+		}
 	},
 	data() {
 		return {

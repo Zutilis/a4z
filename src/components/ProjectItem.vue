@@ -9,7 +9,7 @@
 		<div v-if="project" class="project-container">
 			<div class="project-content">
 				<ProjectCoverItem :key="project.id" :onlyUsedIndexesMap="onlyUsedIndexesMap" :project="project"
-					:getOpacity="getOpacity" />
+					:getOpacity="getOpacity" :get-object-position="getObjectPosition" />
 				<ProjectMenuItem :key="project.id" :leftPositions="leftPositions" :rightPositions="rightPositions"
 					:project="project" :usedIndexesMap="usedIndexesMap" :onSelectorMove="handleSelectorMove" />
 			</div>
@@ -30,7 +30,7 @@ export default {
 	},
 	props: {
 		projectId: {
-			type: Number,
+			type: String,
 			required: true,
 		},
 	},
@@ -77,6 +77,13 @@ export default {
 		},
 		getOpacity(index) {
 			return index === this.filteredIndex ? 1 : 0;
+		},
+		getObjectPosition(map, index) {
+			const usedPositions = this.project.image_positions
+				.filter((pos) => pos.use && pos.object_pos) // Ne garder que celles avec `use: true` et un `object_pos` défini
+				.map((pos) => pos.object_pos);
+
+			return usedPositions[index] || "50% 50%"; // Si l'index dépasse, renvoyer une chaîne vide
 		},
 		getLowImageSrc(map, index) {
 			const imageIndex = map[index];
@@ -133,14 +140,17 @@ export default {
 }
 
 @media screen and (max-width: 1024px) {
+
 	.project-content,
-	.project-menu  {
+	.project-menu {
 		flex-direction: column;
 	}
+
 	.project-cover,
 	.project-menu {
 		width: 100%;
 	}
+
 	.project-menu .left,
 	.project-menu .right {
 		display: grid;
@@ -148,5 +158,4 @@ export default {
 		width: 100%;
 	}
 }
-
 </style>
