@@ -1,17 +1,28 @@
 <template>
 	<div class="project">
 		<div class="main-bg bg-none">
-			<div v-for="(index, idx) in onlyUsedIndexesMap" :key="idx" class="bg-layer blur" :style="{
-				backgroundImage: `url(${getLowImageSrc(onlyUsedIndexesMap, index - 1)})`,
-				opacity: getOpacity(index - 1),
-			}"></div>
+			<div v-for="(position, index) in project.image_positions">
+				<div v-if="position.use"
+					:key="index"
+					class="bg-layer blur"
+					:style="{
+						backgroundImage: `url(${getLowImageSrc(index)})`,
+						opacity: getOpacity(index),
+					}">
+				</div>
+			</div>
 		</div>
 		<div v-if="project" class="project-container">
 			<div class="project-content">
-				<ProjectCoverItem :key="project.id" :onlyUsedIndexesMap="onlyUsedIndexesMap" :project="project"
-					:getOpacity="getOpacity" :get-object-position="getObjectPosition" />
-				<ProjectMenuItem :key="project.id" :leftPositions="leftPositions" :rightPositions="rightPositions"
-					:project="project" :usedIndexesMap="usedIndexesMap" :onSelectorMove="handleSelectorMove" />
+				<ProjectCoverItem 
+					:key="project.id" 
+					:project="project"
+					:getOpacity="getOpacity" 
+					:get-object-position="getObjectPosition" />
+				<ProjectMenuItem 
+					:key="project.id"
+					:project="project"
+					:onSelectorMove="handleSelectorMove" />
 			</div>
 		</div>
 	</div>
@@ -19,9 +30,9 @@
 
 <script>
 
-import projectsData from "@/assets/json/projects.json";
 import ProjectMenuItem from "@/components/ProjectMenuItem.vue";
 import ProjectCoverItem from "@/components/ProjectCoverItem.vue";
+import ProjectUtils from "@/utils/Projectutils";
 
 export default {
 	components: {
@@ -40,56 +51,24 @@ export default {
 			currentIndex: 0,
 		};
 	},
-	computed: {
-		leftPositions() {
-			return this.project ? this.project.image_positions.slice(0, 8) : [];
-		},
-		rightPositions() {
-			return this.project ? this.project.image_positions.slice(8, 16) : [];
-		},
-		usedIndexesMap() {
-			let imageIndex = 1;
-			return this.project
-				? this.project.image_positions.map((pos) =>
-					pos.use ? imageIndex++ : null
-				)
-				: [];
-		},
-		onlyUsedIndexesMap() {
-			return this.usedIndexesMap.filter((idx) => idx !== null);
-		},
-		filteredIndex() {
-			const currentImageIndex = this.usedIndexesMap[this.currentIndex];
-			return this.onlyUsedIndexesMap.indexOf(currentImageIndex);
-		},
-	},
 	methods: {
 		async loadProject() {
-			this.project = projectsData.projects.find((p) => p.id === this.projectId) || null;
+			this.project = ProjectUtils.getProject(this.projectId);
 
 			if (this.project) {
-				const firstUsedIndex = this.usedIndexesMap.findIndex(
-					(item) => item !== null && item === this.project.image_cover
-				);
+				const firstUsedIndex = ProjectUtils.getProjectCoverIndex(this.project);
 				this.currentIndex = firstUsedIndex !== -1 ? firstUsedIndex : 0;
 				await this.$nextTick();
 			}
 		},
 		getOpacity(index) {
-			return index === this.filteredIndex ? 1 : 0;
+			return index === this.currentIndex ? 1 : 0;
 		},
-		getObjectPosition(map, index) {
-			const usedPositions = this.project.image_positions
-				.filter((pos) => pos.use && pos.object_pos) // Ne garder que celles avec `use: true` et un `object_pos` défini
-				.map((pos) => pos.object_pos);
-
-			return usedPositions[index] || "50% 50%"; // Si l'index dépasse, renvoyer une chaîne vide
+		getObjectPosition(index) {
+			return ProjectUtils.getObjectPosition(this.project, index);
 		},
-		getLowImageSrc(map, index) {
-			const imageIndex = map[index];
-			return imageIndex !== null
-				? `${this.project.image_low_src}${imageIndex}.webp`
-				: "";
+		getLowImageSrc(index) {
+			return ProjectUtils.getLowImageSrc(this.project, index);
 		},
 		handleSelectorMove(index) {
 			this.currentIndex = index;

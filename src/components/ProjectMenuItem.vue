@@ -1,47 +1,29 @@
 <template>
 	<div class="project-menu">
 		<div class="project-selector" :style="selectorStyle"></div>
-		<div class="left">
-			<div v-for="(position, index) in leftPositions" :key="index"
-				:class="['project-item', { 'use': position.use }]" @click="position.use && handleMoveSelector(index)">
-				<ImageItem v-if="position.use" :src="getImageSrc(usedIndexesMap, index)"
-					:lowResSrc="getLowImageSrc(usedIndexesMap, index)" alt="" class="project-img shadow" />
-			</div>
-		</div>
-		<div class="right">
-			<div v-for="(position, index) in rightPositions" :key="index"
-				:class="['project-item', { 'use': position.use }]"
-				@click="position.use && handleMoveSelector(leftPositions.length + index)">
-				<ImageItem v-if="position.use" :src="getImageSrc(usedIndexesMap, leftPositions.length + index)"
-					:lowResSrc="getLowImageSrc(usedIndexesMap, leftPositions.length + index)" alt=""
-					class="project-img shadow" />
-			</div>
+		<div v-for="(position, index) in project.image_positions" 
+			:key="index"
+			:class="['project-item', { 'use': position.use }]"
+			@click="position.use && handleMoveSelector(index)"
+		>
+			<ImageItem v-if="position.use" 
+				:src="getImageSrc(index)"
+				:lowResSrc="getLowImageSrc(index)" alt="" class="project-img shadow" />
 		</div>
 	</div>
 </template>
 
 <script>
 import ImageItem from "@/components/ImageItem.vue";
+import ProjectUtils from "@/utils/Projectutils";
 
 export default {
 	components: {
 		ImageItem,
 	},
 	props: {
-		leftPositions: {
-			type: Array,
-			required: true,
-		},
-		rightPositions: {
-			type: Array,
-			required: true,
-		},
 		project: {
 			type: Object,
-			required: true,
-		},
-		usedIndexesMap: {
-			type: Array,
 			required: true,
 		},
 		onSelectorMove: {
@@ -52,9 +34,7 @@ export default {
 	data() {
 		return {
 			selectorStyle: { top: "0px", left: "0px" },
-			currentSelectorIndex: this.usedIndexesMap.findIndex(
-				(item) => item !== null && item === this.project.image_cover
-			),
+			currentSelectorIndex: ProjectUtils.getProjectCoverIndex(this.project)
 		};
 	},
 	methods: {
@@ -66,6 +46,7 @@ export default {
 			if (targetItem && projectMenu) {
 				const itemRect = targetItem.getBoundingClientRect();
 				const menuRect = projectMenu.getBoundingClientRect();
+
 				const scrollLeft = projectMenu.scrollLeft;
 				const scrollTop = projectMenu.scrollTop;
 
@@ -82,17 +63,11 @@ export default {
 				this.onSelectorMove(index);
 			}
 		},
-		getImageSrc(map, index) {
-			const imageIndex = map[index];
-			return imageIndex !== null
-				? `${this.project.image_src}${imageIndex}.webp`
-				: "";
+		getImageSrc(index) {
+			return ProjectUtils.getImageSrc(this.project, index);
 		},
-		getLowImageSrc(map, index) {
-			const imageIndex = map[index];
-			return imageIndex !== null
-				? `${this.project.image_low_src}${imageIndex}.webp`
-				: "";
+		getLowImageSrc(index) {
+			return ProjectUtils.getLowImageSrc(this.project, index);
 		},
 		handleResize() {
 			this.setSelectorPosition(this.currentSelectorIndex);
@@ -110,26 +85,19 @@ export default {
 
 <style scoped>
 .project-menu {
-	display: flex;
-	flex-direction: row;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: repeat(8, 1fr);
+	grid-column-gap: 0px;
+	grid-row-gap: 0px;
 	height: 80%;
 	width: 15%;
 	min-width: 150px;
 	position: relative;
 }
 
-.project-menu .left,
-.project-menu .right,
 .project-selector {
 	width: 50%;
-}
-
-.project-menu .left,
-.project-menu .right {
-	display: grid;
-	grid-template-rows: repeat(8, minmax(0, 1fr));
-	width: 50%;
-	height: 100%;
 }
 
 .project-selector {
@@ -161,19 +129,13 @@ export default {
 
 @media screen and (max-width: 1024px) {
 	.project-menu {
-		flex-direction: column;
-	}
-
-	.project-menu {
+		display: grid;
+		grid-template-columns: repeat(8, 1fr);
+		grid-template-rows: repeat(2, 1fr);
+		grid-column-gap: 0px;
+		grid-row-gap: 0px;
 		width: 100%;
 		height: 150px;
-	}
-
-	.project-menu .left,
-	.project-menu .right {
-		grid-template-columns: repeat(8, minmax(0, 1fr));
-		grid-template-rows: none;
-		width: 100%;
 	}
 
 	.project-selector {
@@ -184,6 +146,9 @@ export default {
 
 @media screen and (max-width: 768px) {
 	.project-menu {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
 		width: 100%;
 		height: 150px;
 		overflow-x: scroll;
@@ -191,16 +156,11 @@ export default {
 		scrollbar-width: none;
 	}
 
-	.project-menu .left,
-	.project-menu .right {
-		display: inline-flex;
-		width: 100%;
-	}
-
 	.project-item,
 	.project-selector {
 		width: 20%;
 		min-width: 20%;
+		height: 50%;
 	}
 
 	.project-item:not(.use) {

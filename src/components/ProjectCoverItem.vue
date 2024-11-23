@@ -1,10 +1,15 @@
 <template>
 	<div class="project-cover rounded shadow">
-		<ImageItem v-for="(index, idx) in onlyUsedIndexesMap" :key="idx" class="project-cover-img"
-			:src="getImageSrc(onlyUsedIndexesMap, index - 1)" 
-			:lowResSrc="getLowImageSrc(onlyUsedIndexesMap, index - 1)"
-			:style="{ opacity: getOpacity(index - 1)}" 
-			:imgStyle="{ objectPosition: getObjectPosition(onlyUsedIndexesMap, index - 1) }"/>
+		<div v-for="(position, index) in project.image_positions" >
+			<ImageItem v-if="position.use"
+				:key="index"
+				class="project-cover-img"
+				:src="getImageSrc(index)" 
+				:lowResSrc="getLowImageSrc(index)"
+				:style="{ opacity: getOpacity(index)}"
+				:imgStyle="{ objectPosition: getObjectPosition(index) }"
+				/>
+		</div>
 		<div class="project-description">
 			<div class="left glass shadow">
 				<h3>{{ project.title }}</h3>
@@ -19,16 +24,13 @@
 
 <script>
 import ImageItem from "@/components/ImageItem.vue";
+import ProjectUtils from "@/utils/Projectutils";
 
 export default {
 	components: {
 		ImageItem,
 	},
 	props: {
-		onlyUsedIndexesMap: {
-			type: Array,
-			required: true,
-		},
 		project: {
 			type: Object,
 			required: true,
@@ -43,17 +45,11 @@ export default {
 		},
 	},
 	methods: {
-		getImageSrc(map, index) {
-			const imageIndex = map[index];
-			return imageIndex !== null
-				? `${this.project.image_src}${imageIndex}.webp`
-				: "";
+		getImageSrc(index) {
+			return ProjectUtils.getImageSrc(this.project, index);
 		},
-		getLowImageSrc(map, index) {
-			const imageIndex = map[index];
-			return imageIndex !== null
-				? `${this.project.image_low_src}${imageIndex}.webp`
-				: "";
+		getLowImageSrc(index) {
+			return ProjectUtils.getLowImageSrc(this.project, index);
 		},
 	},
 };

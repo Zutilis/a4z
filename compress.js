@@ -29,7 +29,7 @@ async function generateLowResImages() {
       try {
         await sharp(file)
           .resize({ width: 1000 }) // Ajustez la taille selon vos besoins
-          .toFormat('webp', { quality: 80 }) // Ajustez le format et la qualité selon vos besoins
+          .toFormat('webp', { quality: 90 }) // Ajustez le format et la qualité selon vos besoins
           .toFile(outputFile);
 
         console.log(`Image basse résolution générée : ${outputFile}`);
