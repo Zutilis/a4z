@@ -24,7 +24,7 @@
 
 <script>
 import ImageItem from "@/components/ImageItem.vue";
-import ProjectUtils from "@/utils/Projectutils";
+import ProjectUtils from "@/utils/ProjectUtils";
 
 export default {
 	components: {
@@ -39,10 +39,6 @@ export default {
 			type: Function,
 			required: true,
 		},
-		getObjectPosition: {
-			type: Function,
-			required: true,
-		},
 	},
 	methods: {
 		getImageSrc(index) {
@@ -50,6 +46,9 @@ export default {
 		},
 		getLowImageSrc(index) {
 			return ProjectUtils.getLowImageSrc(this.project, index);
+		},
+		getObjectPosition(index) {
+			return ProjectUtils.getObjectPosition(this.project, index);
 		},
 	},
 };

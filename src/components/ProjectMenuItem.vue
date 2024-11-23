@@ -7,15 +7,19 @@
 			@click="position.use && handleMoveSelector(index)"
 		>
 			<ImageItem v-if="position.use" 
+				class="project-img shadow" 
+				alt=""
 				:src="getImageSrc(index)"
-				:lowResSrc="getLowImageSrc(index)" alt="" class="project-img shadow" />
+				:lowResSrc="getLowImageSrc(index)" 
+				:imgStyle="{ objectPosition: getObjectPosition(index) }"
+			/>
 		</div>
 	</div>
 </template>
 
 <script>
 import ImageItem from "@/components/ImageItem.vue";
-import ProjectUtils from "@/utils/Projectutils";
+import ProjectUtils from "@/utils/ProjectUtils";
 
 export default {
 	components: {
@@ -68,6 +72,9 @@ export default {
 		},
 		getLowImageSrc(index) {
 			return ProjectUtils.getLowImageSrc(this.project, index);
+		},
+		getObjectPosition(index) {
+			return ProjectUtils.getObjectPosition(this.project, index);
 		},
 		handleResize() {
 			this.setSelectorPosition(this.currentSelectorIndex);

@@ -17,8 +17,8 @@
 				<ProjectCoverItem 
 					:key="project.id" 
 					:project="project"
-					:getOpacity="getOpacity" 
-					:get-object-position="getObjectPosition" />
+					:getOpacity="getOpacity"
+				/>
 				<ProjectMenuItem 
 					:key="project.id"
 					:project="project"
@@ -32,7 +32,7 @@
 
 import ProjectMenuItem from "@/components/ProjectMenuItem.vue";
 import ProjectCoverItem from "@/components/ProjectCoverItem.vue";
-import ProjectUtils from "@/utils/Projectutils";
+import ProjectUtils from "@/utils/ProjectUtils";
 
 export default {
 	components: {
@@ -64,9 +64,6 @@ export default {
 		getOpacity(index) {
 			return index === this.currentIndex ? 1 : 0;
 		},
-		getObjectPosition(index) {
-			return ProjectUtils.getObjectPosition(this.project, index);
-		},
 		getLowImageSrc(index) {
 			return ProjectUtils.getLowImageSrc(this.project, index);
 		},
@@ -96,6 +93,7 @@ export default {
 	height: 100%;
 	width: 100%;
 	padding: var(--padding-vertical) var(--padding-horizontal);
+	overflow: hidden;
 }
 
 .project-content {
