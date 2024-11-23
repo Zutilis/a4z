@@ -80,10 +80,10 @@ export default {
 }
 
 .project-description .left {
-	padding: .5rem .8rem;
+	padding: var(--padding-label);
 }
 .project-description p {
-	padding: .6rem .9rem;
+	padding: var(--padding-label);
 }
 
 .project-description h4 {

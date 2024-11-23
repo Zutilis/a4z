@@ -246,7 +246,7 @@ main {
 	gap: 5px;
 	position: absolute;
 	box-sizing: border-box;
-	padding: .2rem .5rem;
+	padding: var(--padding-label);
 	top: 10px;
 	right: 10px;
 }
