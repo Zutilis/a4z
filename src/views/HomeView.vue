@@ -10,11 +10,21 @@
 			<div class="slider-images">
 				<div v-for="(project, index) in projects" :key="project.id"
 					:class="['slider-img-item', getImageClass(index)]">
-					<router-link :to="{ name: 'project', params: { id: project.id } }"
-						class="slider-img-link"></router-link>
-					<ImageItem :ref="'imageItem-' + index" :src="`${project.image_src}${project.image_cover}.webp`"
-						:lowResSrc="`${project.image_low_src}${project.image_cover}.webp`" imgClass="slider-img" alt=""
-						class="slider-img rounded shadow" @click="handleImageClick(index)" />
+					<router-link 
+						:to="{ name: 'project', params: { id: project.id } }"
+						class="slider-img-link"
+						:tabindex="getRouterTabIndex(index)"></router-link>
+					<ImageItem 
+						:ref="'imageItem-' + index" 
+						:src="`${project.image_src}${project.image_cover}.webp`"
+						:lowResSrc="`${project.image_low_src}${project.image_cover}.webp`" 
+						imgClass="slider-img" 
+						alt=""
+						class="slider-img rounded shadow" 
+						:tabindex="getImageItemTabIndex(index)"
+						@keyup.enter="handleImageClick(index)"
+						@click="handleImageClick(index)" 
+					/>
 					<div :class="['slider-label', 'shadow', 'glass', getLabelClass(project.date)]">
 						<span class="notify"></span>
 						<p>{{ project.date }}</p>
@@ -27,11 +37,19 @@
 					<h4>{{ sliderSubtitle }}</h4>
 				</div>
 				<div class="slider-nav">
-					<div class="slider-previous" @click="throttledSlidePrevious">
+					<div class="slider-previous" 
+						tabindex="4" 
+						@keyup.enter="previous" 
+						@click="previous"
+					>
 						<img src="/svg/triangle.svg" alt="" :class="[{ bounce: isBouncePrevious }]" />
 						<img src="/svg/triangle.svg" alt="" :class="[{ bounce: isBouncePrevious }]" />
 					</div>
-					<div class="slider-next" @click="throttledSlideNext">
+					<div class="slider-next" 
+						tabindex="5" 
+						@keyup.enter="next" 
+						@click="next"
+					>
 						<img src="/svg/triangle.svg" alt="" :class="[{ bounce: isBounceNext }]" />
 						<img src="/svg/triangle.svg" alt="" :class="[{ bounce: isBounceNext }]" />
 					</div>
@@ -76,13 +94,13 @@ export default {
 		sliderOpacity(index) {
 			return index === this.currentIndex ? 1 : 0;
 		},
-		throttledSlideNext() {
+		next() {
 			if (!this.isThrottled) {
 				this.slideNext();
 				this.startThrottle();
 			}
 		},
-		throttledSlidePrevious() {
+		previous() {
 			if (!this.isThrottled) {
 				this.slidePrevious();
 				this.startThrottle();
@@ -107,6 +125,16 @@ export default {
 		getLabelClass(date) {
 			return date === "Prochainement" ? "soon" : "";
 		},
+		getImageItemTabIndex(index) {
+			switch (this.getImageClass(index)) {
+				case "previous": return 1;
+				case "next": return 3;
+				default: return -1;
+			}
+		},
+		getRouterTabIndex(index) {
+			return this.getImageClass(index) === "main" ? 2 : -1;
+		},
 		getImageClass(index) {
 			const diff = (index - this.currentIndex + this.projects.length) % this.projects.length;
 			switch (diff) {
@@ -129,9 +157,9 @@ export default {
 
 			const diff = (index - this.currentIndex + this.projects.length) % this.projects.length;
 			if (diff === 1) {
-				this.throttledSlideNext();
+				this.next();
 			} else if (diff === this.projects.length - 1) {
-				this.throttledSlidePrevious();
+				this.previous();
 			} else if (diff === 0) {
 
 			}

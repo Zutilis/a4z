@@ -5,10 +5,12 @@
 			:key="index"
 			:class="['project-item', { 'use': position.use }]"
 			@click="position.use && handleMoveSelector(index)"
+			@keyup.enter="position.use && handleMoveSelector(index)"
 		>
 			<ImageItem v-if="position.use" 
 				class="project-img shadow" 
 				alt=""
+				tabindex="0" role="button"
 				:src="getImageSrc(index)"
 				:lowResSrc="getLowImageSrc(index)" 
 				:imgStyle="{ objectPosition: getObjectPosition(index) }"

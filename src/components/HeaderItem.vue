@@ -1,48 +1,51 @@
 <template>
 	<header>
 		<div class="header-nav">
-			<router-link to="/" class="left" @click.native.stop="closeMenu">
+			<router-link to="/" class="left" @click.native.stop="closeMenu" tabindex="1">
 				<ImageItem src="/images/high/main/logo.webp" lowResSrc="/images/low/main/logo.webp" alt=""
 					class="header-logo" />
 			</router-link>
 			<div class="right">
-				<h4 class="header-burger" @click="toggleHeaderContent">Menu</h4>
+				<h4 class="header-burger" tabindex="1" @click="toggleHeaderContent" @keyup.enter="toggleHeaderContent">
+					Menu</h4>
 			</div>
 		</div>
 		<nav class="header-content" :class="{ 'active': isHeaderContentVisible }">
 			<div class="header-bg"></div>
 			<div class="header-links">
 				<div class="left">
-					<router-link to="/project/a4ztrap" class="header-link" @click.native.stop="closeMenu">
+					<router-link to="/project/a4ztrap" class="header-link" tabindex="1" @keyup.enter="closeMenu" @click.native.stop="closeMenu">
 						<h3>A4Z Trap</h3>
 					</router-link>
-					<router-link to="/partners/" class="header-link" @click.native.stop="closeMenu">
+					<router-link to="/partners/" class="header-link" tabindex="1" @keyup.enter="closeMenu" @click.native.stop="closeMenu">
 						<h3>Partenaires</h3>
 					</router-link>
-					<a href="mailto:contact@a4z.fr" target="_blank" class="header-link">
+					<a href="mailto:contact@a4z.fr" target="_blank" class="header-link" tabindex="1">
 						<h3>Contact</h3>
 					</a>
 				</div>
 				<div class="right">
-					<router-link to="/project/gazo/" class="header-link" @click.native.stop="closeMenu">
+					<router-link to="/project/gazo/" class="header-link" tabindex="1" @keyup.enter="closeMenu" @click.native.stop="closeMenu">
 						<h4>Gazo</h4>
 					</router-link>
-					<router-link to="/project/fave/" class="header-link" @click.native.stop="closeMenu">
+					<router-link to="/project/fave/" class="header-link" tabindex="1" @keyup.enter="closeMenu" @click.native.stop="closeMenu">
 						<h4>Favé</h4>
 					</router-link>
-					<router-link to="/project/bekar/" class="header-link" @click.native.stop="closeMenu">
+					<router-link to="/project/bekar/" class="header-link" tabindex="1" @keyup.enter="closeMenu" @click.native.stop="closeMenu">
 						<h4>Bekar</h4>
 					</router-link>
-					<router-link to="/project/lybro/" class="header-link" @click.native.stop="closeMenu">
+					<router-link to="/project/lybro/" class="header-link" tabindex="1" @keyup.enter="closeMenu" @click.native.stop="closeMenu">
 						<h4>Lybro</h4>
 					</router-link>
 				</div>
 			</div>
 			<div class="header-socials">
-				<a href="https://www.instagram.com/a4z.fr/" target="_blank" @click.native.stop="closeMenu" class="header-social">
+				<a href="https://www.instagram.com/a4z.fr/" target="_blank" tabindex="1" @keyup.enter="closeMenu" @click.native.stop="closeMenu"
+					class="header-social">
 					<img src="/svg/instagram.svg" alt="">
 				</a>
-				<a href="https://www.tiktok.com/@a4z.fr" target="_blank" @click.native.stop="closeMenu" class="header-social">
+				<a href="https://www.tiktok.com/@a4z.fr" target="_blank"tabindex="1" @keyup.enter="closeMenu" @click.native.stop="closeMenu"
+					class="header-social">
 					<img src="/svg/tiktok.svg" alt="">
 				</a>
 			</div>
