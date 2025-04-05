@@ -327,15 +327,14 @@ main {
 
 .slider-previous img,
 .slider-next img {
-	height: 3.75rem;
-	width: 3.75rem;
+	height: 2.5rem;
+	width: 2.5rem;
 }
 
 @keyframes bouncePrevious1 {
-
 	0%,
 	100% {
-		transform: translateX(-1.75rem) rotate(-90deg);
+		transform: translateX(-1rem) rotate(-90deg);
 	}
 
 	50% {
@@ -344,7 +343,7 @@ main {
 }
 
 .slider-previous img:nth-child(2) {
-	transform: translateX(-1.75rem) rotate(-90deg);
+	transform: translateX(-1rem) rotate(-90deg);
 }
 
 .slider-previous img:nth-child(2).bounce {
@@ -352,7 +351,6 @@ main {
 }
 
 @keyframes bouncePrevious2 {
-
 	0%,
 	100% {
 		transform: rotate(-90deg);
@@ -373,10 +371,9 @@ main {
 }
 
 @keyframes bounceNext1 {
-
 	0%,
 	100% {
-		transform: translateX(1.75rem) rotate(90deg);
+		transform: translateX(1rem) rotate(90deg);
 	}
 
 	50% {
@@ -385,7 +382,7 @@ main {
 }
 
 .slider-next img:nth-child(1) {
-	transform: translateX(1.75rem) rotate(90deg);
+	transform: translateX(1rem) rotate(90deg);
 }
 
 .slider-next img:nth-child(1).bounce {
@@ -393,7 +390,6 @@ main {
 }
 
 @keyframes bounceNext2 {
-
 	0%,
 	100% {
 		transform: rotate(90deg);
@@ -420,7 +416,7 @@ main {
 	}
 	.slider-footer {
 		flex-direction: column;
-		gap: 5vh;
+		gap: 4vh;
 	}
 
 	.slider-label {
@@ -429,9 +425,9 @@ main {
 
 	.slider-nav {
 		position: relative;
-		gap: 5%;
+		gap: 20%;
 		width: auto;
-		padding: 1rem 1.5em;
+		padding: 1rem 2.5em;
 
 		/* glass */
 		border-radius: 20px;
