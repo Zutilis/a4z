@@ -1,7 +1,7 @@
 {
-  "name": "vue-project",
-  "version": "0.0.0",
+  "name": "a4z",
   "private": true,
+  "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -9,14 +9,14 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "glob": "^11.0.0",
-    "gsap": "^3.12.5",
-    "vue": "^3.5.12",
-    "vue-router": "^4.4.5"
+    "vue": "^3.5.13",
+    "vue-router": "^4.5.1"
   },
   "devDependencies": {
-    "@vitejs/plugin-vue": "^5.1.4",
-    "sharp": "^0.33.5",
-    "vite": "^5.4.10"
+    "@vitejs/plugin-vue": "^5.2.3",
+    "autoprefixer": "^10.4.21",
+    "path": "^0.12.7",
+    "postcss": "^8.5.3",
+    "vite": "^6.3.5"
   }
 }

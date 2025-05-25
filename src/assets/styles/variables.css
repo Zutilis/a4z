@@ -1,0 +1,57 @@
+:root {
+	/* Font families */
+	--font-kensington: 'Kensington', sans-serif;
+	--font-pouler: 'Pouler', sans-serif;
+
+	/* Font sizes (Kensington) */
+	--fs-kensington-xl: 6.25rem; /* 100px */
+	--fs-kensington-lg: 2.8125rem; /* 45px */
+
+	/* Font sizes (Pouler) */
+	--fs-pouler-lg: 1.5625rem; /* 25px */
+	--fs-pouler-md: 1.125rem; /* 18px */
+	--fs-pouler-sm: 0.8125rem; /* 13px */
+
+	/* Line heights (Kensington) */
+	--lh-kensington-xl: 0.9375rem; /* 15px */
+	--lh-kensington-lg: 2.1875rem; /* 35px */
+
+	/* Line heights (Pouler) */
+	--lh-pouler-lg: 1.375rem; /* 22px */
+	--lh-pouler-md: 0.9375rem; /* 15px */
+	--lh-pouler-sm: 0.9375rem; /* 15px */
+
+	/* Colors (inchangés) */
+	--color-light-blue: #B2D5EC;
+	--color-navy-blue: #111B29;
+	--color-black: #0B0B0B;
+	--color-beige-gray: #DBDBDB;
+
+	/* Thème clair (par défaut) */
+	--color-bg: var(--color-light-blue);
+	--color-text: var(--color-navy-blue);
+	--color-burger-button-bg: transparent;
+	--color-burger-button-border: var(--color-navy-blue);
+	--color-burger-button-text: var(--color-navy-blue);
+	--color-ticket-button-bg: var(--color-navy-blue);
+	--color-ticket-button-border: var(--color-navy-blue);
+	--color-ticket-button-text: var(--color-beige-gray);
+
+	/* Shadows */
+	--shadow-black-on-white: 2px 2px 0 var(--color-black);
+	--shadow-black-on-black: 2px 2px 0 var(--color-white);
+
+	/* Spacing */
+	--space-container-mobile: 1.25rem;
+}
+
+[data-theme="dark"] {
+	--color-bg: var(--color-navy-blue);
+	--color-text: var(--color-beige-gray);
+	--color-burger-button-bg: transparent;
+	--color-burger-button-border: var(--color-beige-gray);
+	--color-burger-button-text: var(--color-beige-gray);
+	--color-ticket-button-bg: var(--color-beige-gray);
+	--color-ticket-button-border: var(--color-beige-gray);
+	--color-ticket-button-text: var(--color-navy-blue);
+}

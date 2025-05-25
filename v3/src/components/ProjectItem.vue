@@ -32,7 +32,7 @@
 
 import ProjectMenuItem from "@/components/ProjectMenuItem.vue";
 import ProjectCoverItem from "@/components/ProjectCoverItem.vue";
-import ProjectUtils from "@/utils/ProjectUtils";
+import ProjectUtils from "../utils/ProjectUtils";
 
 export default {
 	components: {

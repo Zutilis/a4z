@@ -21,7 +21,7 @@
 
 <script>
 import ImageItem from "@/components/ImageItem.vue";
-import ProjectUtils from "@/utils/ProjectUtils";
+import ProjectUtils from "../utils/ProjectUtils";
 
 export default {
 	components: {
