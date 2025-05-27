@@ -31,10 +31,10 @@
 	--color-bg: var(--color-light-blue);
 	--color-text: var(--color-navy-blue);
 	--color-burger-button-bg: transparent;
-	--color-burger-button-border: var(--color-navy-blue);
-	--color-burger-button-text: var(--color-navy-blue);
-	--color-ticket-button-bg: var(--color-navy-blue);
-	--color-ticket-button-border: var(--color-navy-blue);
+	--color-burger-button-border: var(--color-black);
+	--color-burger-button-text: var(--color-black);
+	--color-ticket-button-bg: var(--color-black);
+	--color-ticket-button-border: var(--color-black);
 	--color-ticket-button-text: var(--color-beige-gray);
 
 	/* Shadows */

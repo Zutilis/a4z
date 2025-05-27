@@ -6,7 +6,7 @@
 <script setup>
 import { watch } from 'vue'
 import { useRoute } from 'vue-router'
-import Navbar from './components/Navbar.vue'
+import Navbar from '@/components/Menu/Navbar.vue'
 
 const route = useRoute()
 

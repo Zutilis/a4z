@@ -1,10 +1,15 @@
 * {
+	margin: 0;
+	padding: 0;
 	box-sizing: border-box;
+}
+
+html, body {
+	overflow-x: hidden;
 }
 
 body {
 	background: var(--color-bg);
-	margin: 0 auto;
 	transition: background .3s ease-in-out;
 }
 
@@ -17,38 +22,36 @@ a {
 ul {
 	position: relative;
 	list-style: none;
-	margin: 0;
-	padding: 0;
 }
 
 .kensington-xl {
 	font-family: var(--font-kensington);
 	font-size: var(--fs-kensington-xl);
-	line-height: 1;
 	text-transform: uppercase;
+	line-height: 1;
 }
 
 .kensington-lg {
 	font-family: var(--font-kensington);
 	font-size: var(--fs-kensington-lg);
-	/* line-height: var(--lh-kensington-lg); */
 	text-transform: uppercase;
+	line-height: .9;
 }
 
 .pouler-lg {
 	font-family: var(--font-pouler);
 	font-size: var(--fs-pouler-lg);
-	/* line-height: var(--lh-pouler-lg); */
+	line-height: 1;
 }
 
 .pouler-md {
 	font-family: var(--font-pouler);
 	font-size: var(--fs-pouler-md);
-	/* line-height: var(--lh-pouler-md); */
+	line-height: 1;
 }
 
 .pouler-sm {
 	font-family: var(--font-pouler);
 	font-size: var(--fs-pouler-sm);
-	/* line-height: var(--lh-pouler-sm); */
+	line-height: 1;
 }
