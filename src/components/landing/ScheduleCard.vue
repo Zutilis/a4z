@@ -4,7 +4,6 @@
 			<p class="schedule-time kensington-lg">
 				{{ time }}
 			</p>
-
 			<p class="schedule-label pouler-sm">
 				{{ label }}
 			</p>
@@ -21,9 +20,18 @@
 import NavyCard from '@/components/NavyCard.vue';
 
 defineProps({
-	time: String,
-	label: String,
-	details: String,
+	time: {
+		type: String,
+		required: true,
+	},
+	label: {
+		type: String,
+		required: true,
+	},
+	details: {
+		type: String,
+		required: true,
+	},
 })
 </script>
 

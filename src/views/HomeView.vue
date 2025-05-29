@@ -20,14 +20,26 @@
 		</div>
 	</section>
 
-	<div class="debug-spacer">
-		<p>Test</p>
-	</div>
+	<Slider title="Les stands" subtitle="17h - 20h">
+		<StandCard name="Purpleplace" type="Vetements" img="src/assets/img/stand/purpleplace.png"/>
+		<StandCard name="Ja'z Barber" type="Barber" img="src/assets/img/stand/jazbarber.jpg"/>
+		<StandCard name="Thys" type="Custom sneakers" img="src/assets/img/stand/thys.jpg"/>
+	</Slider>
+
+	<!-- <Slider title="La line-up" subtitle="20h - 00h" mode="wrap">
+		<LineupCard name="Beendo Z" song="Pas bête" img="src/assets/img/lineup/beendo.png"/>
+		<LineupCard name="Livaï" song="Nous deux c'est mieux <3" img="src/assets/img/lineup/livai.png"/>
+		<LineupCard name="Knotty" song="Une nuit de +" img="src/assets/img/lineup/knotty.png"/>
+		<LineupCard name="Ayuur" song="Sur un fil" img="src/assets/img/lineup/ayuur.png"/>
+	</Slider> -->
 </template>
 
 <script setup>
-import ScheduleCard from '@/components/Landing/ScheduleCard.vue';
+import ScheduleCard from '@/components/landing/ScheduleCard.vue';
+import StandCard from '@/components/stand/StandCard.vue';
+import LineupCard from '@/components/lineup/LineupCard.vue';
 import BeigeCard from '@/components/BeigeCard.vue';
+import Slider from '@/components/Slider.vue';
 </script>
 
 <style scoped>
@@ -61,6 +73,7 @@ import BeigeCard from '@/components/BeigeCard.vue';
 	height: 100vh;
 	padding: 0 var(--space-container-mobile);
 	gap: 2rem;
+	margin-bottom: calc(5rem + 2rem);
 }
 
 .event-intro {

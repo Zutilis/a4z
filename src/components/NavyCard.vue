@@ -22,7 +22,7 @@ defineOptions({ inheritAttrs: false })
 	background-color: var(--color-navy-blue);
 	color: var(--color-light-blue);
 	border-radius: 1rem;
-	padding: 1rem;
+	padding: 1rem .75rem;
 	width: 100%;
 }
 </style>
