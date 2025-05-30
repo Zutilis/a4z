@@ -1,9 +1,10 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '@/views/HomeView.vue'
+import LineupView from '@/views/LineupView.vue'
 
 const routes = [
   { path: '/', name: 'home', component: HomeView },
-  { path: '/foods', name: 'foods', component: HomeView },
+  { path: '/line-up', name: 'line-up', component: LineupView },
 ]
 
 const router = createRouter({

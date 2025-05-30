@@ -44,6 +44,8 @@ defineProps({
 		margin-top: .5rem;
 		width: 55%;
 		border-radius: 50%;
+		aspect-ratio: 1 / 1;
+		object-fit: cover;
 		pointer-events: none;
 	}
 </style>

@@ -16,7 +16,7 @@
 
 		<ul class="menu-list kensington-xl">
 			<li><router-link to="/stands">Les stands</router-link></li>
-			<li><router-link to="/lineup">La line-up</router-link></li>
+			<li><router-link to="/line-up">La line-up</router-link></li>
 			<li><router-link to="/food">Food</router-link></li>
 			<li><router-link to="/partners">Partenaires</router-link></li>
 		</ul>

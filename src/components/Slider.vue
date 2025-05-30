@@ -30,7 +30,7 @@ defineProps({
 })
 </script>
 
-<style scoped>
+<style>
 .slider-section {
 	display: flex;
 	flex-direction: column;
