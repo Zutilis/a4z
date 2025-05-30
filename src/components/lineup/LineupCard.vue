@@ -40,7 +40,7 @@ defineProps({
 	}
 
 	.lineup-name {
-		color: var(--color-beige-gray);
+		color: var(--color-beige);
 	}
 
 	.lineup-img {

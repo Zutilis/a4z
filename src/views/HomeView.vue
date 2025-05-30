@@ -20,13 +20,17 @@
 		</div>
 	</section>
 
-	<Slider title="Les stands" subtitle="17h - 20h">
+	<Slider title="Les stands" subtitle="17h - 20h"
+		footerTitle="Tous les stands >" footerTo="/stands"
+	>
 		<StandCard name="Purpleplace" type="Vetements" img="src/assets/img/stand/purpleplace.png"/>
 		<StandCard name="Ja'z Barber" type="Barber" img="src/assets/img/stand/jazbarber.jpg"/>
 		<StandCard name="Thys" type="Custom sneakers" img="src/assets/img/stand/thys.jpg"/>
 	</Slider>
 
-	<Slider title="La line-up" subtitle="20h - 00h" mode="wrap">
+	<Slider title="La line-up" subtitle="20h - 00h" mode="wrap" 
+		footerTitle="Toute la line-up >" footerTo="/line-up"
+	>
 		<LineupCard name="Beendo Z" song="Pas bête" img="src/assets/img/lineup/beendo.png"/>
 		<LineupCard name="Livaï" song="Nous deux c'est mieux <3" img="src/assets/img/lineup/livai.png"/>
 		<LineupCard name="Knotty" song="Une nuit de +" img="src/assets/img/lineup/knotty.png"/>
@@ -42,7 +46,7 @@ import BeigeCard from '@/components/BeigeCard.vue';
 import Slider from '@/components/Slider.vue';
 </script>
 
-<style scoped>
+<style>
 .hero-image-container {
 	position: absolute;
 	inset: 0;

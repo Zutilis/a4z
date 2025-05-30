@@ -13,7 +13,7 @@ const route = useRoute()
 watch(
   () => route.path,
   (path) => {
-    const theme = path === '/foods' ? 'dark' : 'light'
+    const theme = path === '/partners' || path === '/food' ? 'dark' : 'light'
     document.documentElement.setAttribute('data-theme', theme)
   },
   { immediate: true }

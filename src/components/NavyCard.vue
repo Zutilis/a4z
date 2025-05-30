@@ -10,10 +10,10 @@
 defineOptions({ inheritAttrs: false })
 </script>
 
-<style scoped>
+<style>
 .navy-card-wrapper {
 	background-color: var(--color-black);
-	box-shadow: 2px 5px 15px rgba(0, 0, 0, 0.5);
+	box-shadow: var(--shadow-black-on-navy-blue);
 	border-radius: .75rem;
 	padding: .5rem;
 }

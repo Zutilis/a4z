@@ -1,27 +1,35 @@
 <template>
 	<section class="slider-section">
-		<div class="slider-header" v-if="title || subtitle || $slots.header">
-			<slot name="header" v-if="title">
-				<p class="kensington-xl">{{ title }}</p>
-			</slot>
-			<slot name="header" v-if="subtitle">
-				<p class="pouler-lg">{{ subtitle }}</p>
-			</slot>
+		<div class="slider-header" v-if="title || subtitle">
+			<p class="kensington-xl" v-if="title">{{ title }}</p>
+			<p class="pouler-lg" v-if="subtitle">{{ subtitle }}</p>
 		</div>
+
+		<slot name="before"></slot>
 
 		<div
 			class="slider-container"
 			:class="{ 'is-wrap': mode === 'wrap', 'is-slider': mode === 'slider' }"
 		>
-			<slot />
+			<slot></slot>
+		</div>
+
+		<div class="slider-footer" v-if="footerTitle && footerTo">
+			<BeigeCard class="pouler-sm">
+				<router-link :to="footerTo">{{ footerTitle }}</router-link>
+			</BeigeCard>
 		</div>
 	</section>
 </template>
 
 <script setup>
+import BeigeCard from '@/components/BeigeCard.vue'
+
 defineProps({
 	title: String,
 	subtitle: String,
+	footerTitle: String,
+	footerTo: String,
 	mode: {
 		type: String,
 		default: 'slider',
@@ -34,7 +42,7 @@ defineProps({
 .slider-section {
 	display: flex;
 	flex-direction: column;
-	gap: 1rem;
+	gap: 1.5rem;
 	margin-bottom: 5rem;
 }
 
@@ -46,11 +54,24 @@ defineProps({
 	padding-inline: var(--space-container-mobile);
 }
 
+.slider-footer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding-inline: var(--space-container-mobile);
+}
+
+.slider-footer .beige-card {
+	width: 50%;
+	text-align: center;
+}
+
 /* Common styles */
 .slider-container {
 	display: flex;
 	gap: 1rem;
-	padding: 0.75rem var(--space-container-mobile) 1.5rem;
+	padding: 0 var(--space-container-mobile) .75rem;
 }
 
 /* Horizontal scroll mode */
@@ -68,18 +89,17 @@ defineProps({
 
 .slider-container.is-slider > * {
 	flex: 0 0 auto;
-	width: calc((100% - var(--space-container-mobile)) / 2);
+	width: calc((100% - 1rem) / 2);
 	scroll-snap-align: start;
 }
 
 /* Wrap mode (like a grid) */
 .slider-container.is-wrap {
 	flex-wrap: wrap;
-	justify-content: center;
 }
 
 .slider-container.is-wrap > * {
-	width: calc((100% - var(--space-container-mobile)) / 2);
+	width: calc((100% - 1rem) / 2);
 	max-width: 300px;
 }
 </style>

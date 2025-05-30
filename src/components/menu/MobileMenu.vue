@@ -80,26 +80,32 @@
 
 .mobile-header-btn.mobile-header-close {
 	background: transparent;
-	border: 1px solid var(--color-beige-gray);
+	border: 1px solid var(--color-beige);
 }
 
 .mobile-header-btn.mobile-header-close svg {
-	stroke: var(--color-beige-gray);
+	stroke: var(--color-beige);
 	stroke-width: 1;
 	stroke-linecap: round;
 }
 
 .mobile-header-btn.mobile-header-ticket {
-	background: var(--color-beige-gray);
-	border: 1px solid var(--color-beige-gray);
+	background: var(--color-beige);
+	border: 1px solid var(--color-beige);
 }
 
 .mobile-header-btn.mobile-header-ticket svg {
 	fill: var(--color-navy-blue);
 }
 
+.menu-list {
+	display: flex;
+	flex-direction: column;
+	gap: .5rem;
+}
+
 .menu-list a {
-	color: var(--color-beige-gray);
+	color: var(--color-beige);
 }
 
 .socials {
@@ -117,6 +123,6 @@
 .socials svg {
 	width: 100%;
 	height: 100%;
-	fill: var(--color-beige-gray);
+	fill: var(--color-beige);
 }
 </style>

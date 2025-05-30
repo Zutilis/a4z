@@ -8,12 +8,12 @@
 defineOptions({ inheritAttrs: false })
 </script>
 
-<style scoped>
+<style>
 .beige-card {
-	background-color: var(--color-beige-gray);
-	box-shadow: 2px 5px 15px rgba(0, 0, 0, 0.5);
+	background-color: var(--color-beige);
+	box-shadow: var(--shadow-black-on-white);
 	border-radius: .75rem;
-	padding: .5rem;
+	padding: .75rem 1rem;
 	width: 100%;
 }
 </style>

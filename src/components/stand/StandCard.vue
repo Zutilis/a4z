@@ -37,7 +37,7 @@ defineProps({
 	}
 
 	.stand-name {
-		color: var(--color-beige-gray);
+		color: var(--color-beige);
 	}
 
 	.stand-img {
