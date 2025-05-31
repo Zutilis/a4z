@@ -1,5 +1,5 @@
 <template>
-	<div ref="container" class="scroll-container">
+	<div ref="container" class="scroll-wrapper">
 		<p ref="textEl" class="scroll-text" :class="{ 'is-scrolling': isScrolling }" 
 			:style="textStyle" v-bind="$attrs">
 			{{ text }}
@@ -43,8 +43,9 @@ onMounted(async () => {
 </script>
 
 <style scoped>
-.scroll-container {
+.scroll-wrapper {
 	display: inline-block;
+	position: relative;
 	width: 100%;
 	height: fit-content;
 	overflow: hidden;

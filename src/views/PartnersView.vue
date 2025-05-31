@@ -42,7 +42,7 @@ import data from '@/assets/json/data.json'
 	}
 
 	.partners-items img {
-		max-height: 8rem;
+		max-height: 6rem;
 		width: 70%;
 		object-fit: contain;
 	}
