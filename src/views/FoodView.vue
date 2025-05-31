@@ -28,55 +28,55 @@
 </template>
 
 <script setup>
-import Card from '@/components/Card.vue'
+import Card from '@/components/card/Card.vue'
 import data from '@/assets/json/data.json'
 </script>
 
 <style>
-.food-section {
-	margin: 115px 0 5rem;
-}
+	.food-section {
+		margin-top: var(--space-navbar-header);
+	}
 
-.food-header {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	padding-inline: var(--space-container-mobile);
-	color: var(--color-text);
-}
+	.food-header {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding-inline: var(--space-container-mobile);
+		color: var(--color-text);
+	}
 
-.food-items {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	padding: 1.5rem var(--space-container-mobile) 0;
-	gap: 1rem;
-}
+	.food-items {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding: 1.5rem var(--space-container-mobile) 0;
+		gap: 1rem;
+	}
 
-.food-item {
-	display: flex;
-	width: 100%;
-	gap: 1rem;
-	align-items: stretch;
-}
+	.food-item {
+		display: flex;
+		width: 100%;
+		gap: 1rem;
+		align-items: stretch;
+	}
 
-.food-item-header {
-	text-align: center;
-}
+	.food-item-header {
+		text-align: center;
+	}
 
-.food-item-col {
-	flex: 1;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-}
+	.food-item-col {
+		flex: 1;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
 
-.food-img {
-	width: 100%;
-	height: 100%;
-	max-height: 5rem;
-	mix-blend-mode: luminosity;
-	object-fit: cover;
-	border-radius: 1rem;
-}
+	.food-img {
+		width: 100%;
+		height: 100%;
+		max-height: 5rem;
+		mix-blend-mode: luminosity;
+		object-fit: cover;
+		border-radius: 1rem;
+	}
 </style>

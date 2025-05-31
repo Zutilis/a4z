@@ -11,14 +11,14 @@
 </template>
 
 <script setup>
-import LineupCard from '@/components/lineup/LineupCard.vue';
+import LineupCard from '@/components/card/LineupCard.vue';
 import Slider from '@/components/Slider.vue';
 
 import data from '@/assets/json/data.json'
 </script>
 
-<style scoped>
+<style>
 	.slider-section {
-		margin-top: 115px;
+		margin-top: var(--space-navbar-header);
 	}
 </style>

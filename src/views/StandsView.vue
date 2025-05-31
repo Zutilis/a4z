@@ -25,8 +25,9 @@
 
 <script setup>
 import { ref, computed } from 'vue'
+
+import StandCard from '@/components/card/StandCard.vue'
 import Slider from '@/components/Slider.vue'
-import StandCard from '@/components/stand/StandCard.vue'
 import data from '@/assets/json/data.json'
 
 const selectedFilter = ref('Tout')
@@ -41,38 +42,38 @@ const filteredStands = computed(() => {
 </script>
 
 <style>
-.slider-section {
-	margin-top: 115px;
-}
+	.slider-section {
+		margin-top: var(--space-navbar-header);
+	}
 
-.filters {
-	display: flex;
-	gap: .75rem;
-	padding: .75rem var(--space-container-mobile);
-	overflow-x: auto;
-	overflow-y: visible;
-}
+	.filters {
+		display: flex;
+		gap: .75rem;
+		padding: .75rem var(--space-container-mobile);
+		overflow-x: auto;
+		overflow-y: visible;
+	}
 
-.filters::-webkit-scrollbar {
-	display: none;
-}
+	.filters::-webkit-scrollbar {
+		display: none;
+	}
 
-.filter-btn {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	background-color: var(--color-beige);
-	color: var(--color-navy-blue);
-	box-shadow: var(--shadow-black-on-white);
-	border-radius: .75rem;
-	padding: .5rem 1rem;
-	text-wrap: nowrap;
-	border: none;
-}
+	.filter-btn {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background-color: var(--color-beige);
+		color: var(--color-navy-blue);
+		box-shadow: var(--shadow);
+		border-radius: .75rem;
+		padding: .5rem 1rem;
+		text-wrap: nowrap;
+		border: none;
+	}
 
-.filter-btn.active {
-	background-color: var(--color-navy-blue);
-	box-shadow: var(--shadow-black-on-navy-blue);
-	color: var(--color-beige);
-}
+	.filter-btn.active {
+		background-color: var(--color-navy-blue);
+		box-shadow: var(--shadow);
+		color: var(--color-beige);
+	}
 </style>

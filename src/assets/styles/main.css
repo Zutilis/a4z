@@ -13,6 +13,10 @@ body {
 	transition: background .3s ease-in-out;
 }
 
+section {
+	margin-bottom: 5rem;
+}
+
 a {
 	display: inline-block;
 	color: inherit;

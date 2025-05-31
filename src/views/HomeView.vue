@@ -43,64 +43,59 @@
 </template>
 
 <script setup>
-import ScheduleCard from '@/components/landing/ScheduleCard.vue'
-import StandCard from '@/components/stand/StandCard.vue'
-import LineupCard from '@/components/lineup/LineupCard.vue'
+import ScheduleCard from '@/components/card/ScheduleCard.vue'
+import StandCard from '@/components/card/StandCard.vue'
+import LineupCard from '@/components/card/LineupCard.vue'
+import Card from '@/components/card/Card.vue'
 import Slider from '@/components/Slider.vue'
-import Card from '@/components/Card.vue'
 import data from '@/assets/json/data.json'
 </script>
 
 <style>
-.hero-image-container {
-	position: absolute;
-	inset: 0;
-	width: 100%;
-	height: 100vh;
-	mix-blend-mode: luminosity;
-	pointer-events: none;
-}
+	.hero-image-container {
+		position: absolute;
+		inset: 0;
+		width: 100%;
+		height: 100vh;
+		mix-blend-mode: luminosity;
+		pointer-events: none;
+	}
 
-.hero-image {
-	position: relative;
-	top: 0;
-	left: 50%;
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
-	object-position: 40%;
-	filter: url(#wavy);
-	transform: scale(1.05) translateX(-50%);
-	pointer-events: none;
-}
+	.hero-image {
+		position: relative;
+		top: 0;
+		left: 50%;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		object-position: 40%;
+		filter: url(#wavy);
+		transform: scale(1.05) translateX(-50%);
+		pointer-events: none;
+	}
 
-.landing-section {
-	display: flex;
-	justify-content: center;
-	flex-direction: column;
-	position: relative;
-	height: 100vh;
-	padding: 0 var(--space-container-mobile);
-	gap: 2rem;
-	margin-bottom: calc(5rem + 2rem);
-}
+	.landing-section {
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+		position: relative;
+		height: 100vh;
+		padding: 0 var(--space-container-mobile);
+		margin-bottom: 7rem;
+		gap: 2rem;
+	}
 
-.event-intro {
-	display: flex;
-	flex-direction: column;
-	text-align: center;
-	gap: .75rem;
-	padding: 2rem 1rem;
-}
+	.event-intro {
+		display: flex;
+		flex-direction: column;
+		text-align: center;
+		gap: .75rem;
+		padding: 2rem 1rem;
+	}
 
-.event-schedule {
-	display: flex;
-	flex-direction: column;
-	gap: 0.5rem;
-}
-
-.debug-spacer {
-	width: 100%;
-	margin-top: 150vh;
-}
+	.event-schedule {
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+	}
 </style>

@@ -38,11 +38,14 @@
 	--color-ticket-button-text: var(--color-beige);
 
 	/* Shadows */
-	--shadow-black-on-white: 2px 3px 10px rgba(0, 0, 0, 0.5);
-	--shadow-black-on-navy-blue: 2px 3px 10px rgba(0, 0, 0, 0.5);
+	--shadow: 2px 3px 10px rgba(0, 0, 0, 0.5);
+
+	/* Header */
+	--h-navbar-header: 7.5rem;
 
 	/* Spacing */
 	--space-container-mobile: 1.25rem;
+	--space-navbar-header: 8.5rem;
 }
 
 [data-theme="dark"] {
