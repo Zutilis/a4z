@@ -1,5 +1,5 @@
 <template>
-	<NavyCard class="lineup-item">
+	<Card class="lineup-item">
 		<p class="lineup-name kensington-lg">
 			{{ name }}
 		</p>
@@ -8,11 +8,11 @@
 		<p class="pouler-md">
 			Sam. 12 juillet
 		</p>
-	</NavyCard>
+	</Card>
 </template>
 
 <script setup>
-import NavyCard from '@/components/NavyCard.vue';
+import Card from '@/components/Card.vue';
 import AutoScrollText from '@/components/AutoScrollText.vue';
 
 defineProps({
@@ -39,7 +39,7 @@ defineProps({
 		align-items: center;
 	}
 
-	.lineup-name {
+	[data-theme="light"] .lineup-name {
 		color: var(--color-beige);
 	}
 

@@ -1,50 +1,46 @@
 <template>
-	<Slider title="Les stands" subtitle="17h - 20h" mode="wrap">
-		<template #before>
-			<div class="filters">
-				<button
-					v-for="category in categories"
-					:key="category"
-					:class="['filter-btn pouler-md', { active: activeCategory === category }]"
-					@click="activeCategory = category"
-				>
-					{{ category }}
-				</button>
-			</div>
-		</template>
+  <Slider title="Les stands" subtitle="17h - 20h" mode="wrap">
+    <template #before>
+      <div class="filters">
+        <button
+          v-for="filter in data.stands_filters"
+          :key="filter"
+          :class="['filter-btn pouler-md', { active: selectedFilter === filter }]"
+          @click="selectedFilter = filter"
+        >
+          {{ filter }}
+        </button>
+      </div>
+    </template>
 
-		<StandCard
-			v-for="stand in filteredStands"
-			:key="stand.name"
-			:name="stand.name"
-			:type="stand.type"
-			:img="stand.img"
-		/>
-	</Slider>
+    <StandCard
+      v-for="stand in filteredStands"
+      :key="stand.name"
+      :name="stand.name"
+      :type="stand.type"
+      :img="stand.img"
+    />
+  </Slider>
 </template>
 
 <script setup>
 import { ref, computed } from 'vue'
-import StandCard from '@/components/stand/StandCard.vue'
 import Slider from '@/components/Slider.vue'
+import StandCard from '@/components/stand/StandCard.vue'
+import data from '@/assets/json/data.json'
 
-const stands = [
-	{ name: 'Purpleplace', type: 'Vetements', img: 'src/assets/img/stand/purpleplace.png' },
-	{ name: "Ja'z Barber", type: 'Coiffeur', img: 'src/assets/img/stand/jazbarber.jpg' },
-	{ name: 'Thys', type: 'Custom sneakers', img: 'src/assets/img/stand/thys.jpg' },
-]
+const selectedFilter = ref('Tout')
 
-const categories = ['Tout', 'Vetements', 'Coiffeur', 'Custom sneakers', 'Nails Art', 'Tatoos', 'Test1', 'Test2']
-const activeCategory = ref('Tout')
+const filteredStands = computed(() => {
+	if (selectedFilter.value === 'Tout') return data.stands
 
-const filteredStands = computed(() =>
-	activeCategory.value === 'Tout'
-		? stands
-		: stands.filter((s) => s.type.toLowerCase() === activeCategory.value.toLowerCase())
-)
+	return data.stands.filter((stand) =>
+		stand.type.toLowerCase().trim() === selectedFilter.value.toLowerCase().trim()
+	)
+})
 </script>
 
-<style scoped>
+<style>
 .slider-section {
 	margin-top: 115px;
 }
@@ -62,6 +58,9 @@ const filteredStands = computed(() =>
 }
 
 .filter-btn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	background-color: var(--color-beige);
 	color: var(--color-navy-blue);
 	box-shadow: var(--shadow-black-on-white);

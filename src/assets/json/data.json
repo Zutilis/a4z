@@ -1,0 +1,78 @@
+{
+	"stands_filters": [
+		"Tout", "Vêtements", "Barber", "Custom Sneakers"
+	],
+	"stands": [
+		{
+			"name": "Purpleplace",
+			"type": "Vêtements",
+			"img": "/images/stands/purpleplace.png"
+		},
+		{
+			"name": "Ja'z Barber",
+			"type": "Barber",
+			"img": "/images/stands/jazbarber.jpg"
+		},
+		{
+			"name": "Thys",
+			"type": "Custom Sneakers",
+			"img": "/images/stands/thys.jpg"
+		}
+	],
+	"line-up": [
+		{
+			"name": "Beendo Z",
+			"song": "Pas bête",
+			"date": "Sam. 12 Juillet",
+			"img": "/images/line-up/beendoz.png"
+		},
+		{
+			"name": "Livaï",
+			"song": "Nous deux c'est mieux <3",
+			"date": "Sam. 12 Juillet",
+			"img": "/images/line-up/livai.png"
+		},
+		{
+			"name": "Knotty",
+			"song": "Une nuit de +",
+			"date": "Sam. 12 Juillet",
+			"img": "/images/line-up/knotty.png"
+		},
+		{
+			"name": "Ayuur",
+			"song": "Sur un fil",
+			"date": "Sam. 12 Juillet",
+			"img": "/images/line-up/ayuur.png"
+		}
+	],
+	"partners": [
+		{
+			"name": "Ville de Roanne",
+			"img": "/images/partners/roanne.png"
+		},
+		{
+			"name": "Credit Agricole",
+			"img": "/images/partners/credit-agricole.png"
+		},
+		{
+			"name": "Chorale",
+			"img": "/images/partners/chorale.png"
+		}
+	],
+	"food": [
+		{
+			"name": "Snackinblack",
+			"details": "Burgers - 18h - 23h",
+			"img": "/images/food/snackinblack.jpg"
+		},
+		{
+			"name": "Pizza Cosy",
+			"details": "Pizzas - 18h - 23h",
+			"img": "/images/food/pizzacosy.webp"
+		},
+		{
+			"name": "Buvette sur place",
+			"details": "Drinks - 17h - 00h"
+		}
+	]
+}

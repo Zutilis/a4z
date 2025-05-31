@@ -1,5 +1,5 @@
 <template>
-	<NavyCard class="schedule-item">
+	<Card class="schedule-item">
 		<div class="schedule-time-block">
 			<p class="schedule-time kensington-lg">
 				{{ time }}
@@ -13,11 +13,11 @@
 				{{ details }}
 			</p>
 		</div>
-	</NavyCard>
+	</Card>
 </template>
 
 <script setup>
-import NavyCard from '@/components/NavyCard.vue';
+import Card from '@/components/Card.vue';
 
 defineProps({
 	time: {
@@ -49,7 +49,7 @@ defineProps({
 	max-width: 40%;
 }
 
-.schedule-time {
+[data-theme="light"]  .schedule-time {
 	color: var(--color-beige);
 	text-transform: lowercase !important;
 }

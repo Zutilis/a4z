@@ -6,45 +6,33 @@
 		</div>
 
 		<div class="food-items">
-			<BeigeCard class="food-item">
+			<Card
+				v-for="item in data.food"
+				:key="item.name"
+				class="food-item"
+				variant="beige"
+				locked="true"
+			>
 				<div class="food-item-col">
 					<div class="food-item-header">
-						<p class="kensington-lg">Snackinblack</p>
-						<p class="pouler-sm">Burgers - 18h - 23h</p>
+						<p class="kensington-lg">{{ item.name }}</p>
+						<p class="pouler-sm">{{ item.details }}</p>
 					</div>
 				</div>
-				<div class="food-item-col">
-					<img src="@/assets/img/food/snackinblack.jpg" alt="" class="food-img">
+				<div class="food-item-col" v-if="item.img">
+					<img :src="item.img" :alt="item.name" class="food-img">
 				</div>
-			</BeigeCard>
-			<BeigeCard class="food-item">
-				<div class="food-item-col">
-					<div class="food-item-header">
-						<p class="kensington-lg">Pizza Cosy</p>
-						<p class="pouler-sm">Pizzas - 18h - 23h</p>
-					</div>
-				</div>
-				<div class="food-item-col">
-					<img src="@/assets/img/food/pizzacosy.webp" alt="" class="food-img">
-				</div>
-			</BeigeCard>
-			<BeigeCard class="food-item">
-				<div class="food-item-col">
-					<div class="food-item-header">
-						<p class="kensington-lg">Buvette sur place</p>
-						<p class="pouler-sm">Drinks - 17h - 00h</p>
-					</div>
-				</div>
-			</BeigeCard>
+			</Card>
 		</div>
 	</section>
 </template>
 
 <script setup>
-import BeigeCard from '@/components/BeigeCard.vue'
+import Card from '@/components/Card.vue'
+import data from '@/assets/json/data.json'
 </script>
 
-<style scoped>
+<style>
 .food-section {
 	margin: 115px 0 5rem;
 }

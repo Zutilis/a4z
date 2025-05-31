@@ -1,15 +1,15 @@
 <template>
-	<NavyCard class="stand-item">
+	<Card class="stand-item">
 		<AutoScrollText :text="name" class="stand-name kensington-lg"/>
 		<p class="pouler-sm">
 			{{ type }}
 		</p>
 		<img :src="img" alt="" class="stand-img">
-	</NavyCard>
+	</Card>
 </template>
 
 <script setup>
-import NavyCard from '@/components/NavyCard.vue';
+import Card from '@/components/Card.vue';
 import AutoScrollText from '@/components/AutoScrollText.vue';
 
 defineProps({
@@ -36,7 +36,7 @@ defineProps({
 		align-items: center;
 	}
 
-	.stand-name {
+	[data-theme="light"] .stand-name {
 		color: var(--color-beige);
 	}
 

@@ -15,15 +15,15 @@
 		</div>
 
 		<div class="slider-footer" v-if="footerTitle && footerTo">
-			<BeigeCard class="pouler-sm">
+			<Card class="pouler-md" variant="beige" locked="true">
 				<router-link :to="footerTo">{{ footerTitle }}</router-link>
-			</BeigeCard>
+			</Card>
 		</div>
 	</section>
 </template>
 
 <script setup>
-import BeigeCard from '@/components/BeigeCard.vue'
+import Card from '@/components/Card.vue'
 
 defineProps({
 	title: String,
@@ -52,18 +52,21 @@ defineProps({
 	align-items: center;
 	justify-content: space-between;
 	padding-inline: var(--space-container-mobile);
+	color: var(--color-text);
 }
 
 .slider-footer {
 	display: flex;
 	flex-direction: column;
-	align-items: center;
-	justify-content: center;
+	align-self: center;
+	justify-self: center;
 	padding-inline: var(--space-container-mobile);
 }
 
-.slider-footer .beige-card {
-	width: 50%;
+.slider-footer > * {
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	text-align: center;
 }
 
