@@ -7,3 +7,7 @@ import './assets/styles/variables.css'
 import './assets/styles/main.css'
 
 createApp(App).use(router).mount('#app')
+
+window.addEventListener('DOMContentLoaded', () => {
+	document.body.classList.add('loaded')
+})

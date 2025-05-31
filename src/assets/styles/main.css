@@ -10,7 +10,11 @@ html, body {
 
 body {
 	background: var(--color-bg);
-	transition: background .3s ease-in-out;
+	transition: none;
+}
+
+body.loaded {
+	transition: background 0.5s ease-in-out;
 }
 
 section {

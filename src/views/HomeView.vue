@@ -6,7 +6,7 @@
 				<feDisplacementMap in2="turbulence" in="SourceGraphic" scale="35" xChannelSelector="R" yChannelSelector="G" />
 			</filter>
 		</svg>
-		<img src="/images/landing.jpg" alt="" class="hero-image">
+		<img src="/images/landing.webp" alt="" class="hero-image">
 	</div>
 
 	<section class="landing-section">

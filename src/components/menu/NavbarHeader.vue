@@ -9,7 +9,7 @@
 		</button>
 
 		<router-link to="/" class="navbar-header-logo">
-			<img src="/images/a4ztrap.png" alt="A4Z Trap Logo" />
+			<img src="/images/a4ztrap.webp" alt="A4Z Trap Logo" />
 		</router-link>
 		<a href="https://billetterie.a4z.fr/" target="_blank" class="navbar-header-btn navbar-header-ticket">
 			<svg viewBox="0 0 32 31" fill="none" xmlns="http://www.w3.org/2000/svg">

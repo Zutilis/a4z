@@ -15,10 +15,10 @@
 		</div>
 
 		<ul class="menu-list kensington-xl">
-			<li><router-link to="/stands">Les stands</router-link></li>
-			<li><router-link to="/line-up">La line-up</router-link></li>
-			<li><router-link to="/food">Food</router-link></li>
-			<li><router-link to="/partners">Partenaires</router-link></li>
+			<li><router-link to="/stands" @click="handleLinkClick">Les stands</router-link></li>
+			<li><router-link to="/line-up" @click="handleLinkClick">La line-up</router-link></li>
+			<li><router-link to="/food" @click="handleLinkClick">Food</router-link></li>
+			<li><router-link to="/partners" @click="handleLinkClick">Partenaires</router-link></li>
 		</ul>
 
 		<div class="socials">
@@ -48,6 +48,14 @@
 		</div>
 	</nav>
 </template>
+
+<script setup>
+const emit = defineEmits(['close'])
+
+function handleLinkClick() {
+	emit('close')
+}
+</script>
 
 <style scoped>
 .mobile-menu {
