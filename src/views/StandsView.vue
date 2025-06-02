@@ -3,12 +3,12 @@
 		<template #before>
 			<div class="filters-wrapper">
 				<div class="filters">
-					<button 
+					<div 
 						v-for="filter in data.stands_filters" :key="filter"
 						:class="['filter-btn pouler-md', { active: selectedFilter === filter }]"
 						@click="selectedFilter = filter">
 						{{ filter }}
-					</button>
+					</div>
 				</div>
 			</div>
 		</template>

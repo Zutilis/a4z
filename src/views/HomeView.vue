@@ -10,7 +10,7 @@
 	</div>
 
 	<section class="landing-section">
-		<Card class="event-intro" variant="beige" locked="true">
+		<Card class="event-intro" variant="beige" locked>
 			<p class="pouler-md">12 juillet 2025 - Fontalon - Roanne</p>
 			<p class="kensington-xl">A4Z Trap #2</p>
 		</Card>
@@ -54,11 +54,14 @@ import data from '@/assets/json/data.json'
 <style>
 	.hero-image-container {
 		position: absolute;
-		inset: 0;
 		width: 100%;
 		height: 100vh;
 		mix-blend-mode: luminosity;
 		pointer-events: none;
+		top: 0;
+		right: 0;
+		left: 0;
+		bottom: 0;
 	}
 
 	.hero-image {

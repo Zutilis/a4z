@@ -11,7 +11,7 @@
 				:key="item.name"
 				class="food-item"
 				variant="beige"
-				locked="true"
+				locked
 			>
 				<div class="food-item-col">
 					<div class="food-item-header">

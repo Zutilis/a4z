@@ -15,7 +15,7 @@
 		</div>
 
 		<div class="slider-footer" v-if="footerTitle && footerTo">
-			<Card class="pouler-md" variant="beige" locked="true">
+			<Card class="pouler-md" variant="beige" locked>
 				<router-link :to="footerTo">{{ footerTitle }}</router-link>
 			</Card>
 		</div>
@@ -70,7 +70,6 @@ defineProps({
 	text-align: center;
 }
 
-/* Common styles */
 .slider-container {
 	display: flex;
 	gap: 1rem;

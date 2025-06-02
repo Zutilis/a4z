@@ -29,16 +29,21 @@
 	height: var(--h-navbar-header);
 	padding: 0rem var(--space-container-mobile);
 	z-index: 998;
-	inset: 0;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
 }
 
 .navbar-header-logo {
 	height: 55%;
+	width: 50%;
+}
 
-	img {
-		width: 100%;
-		height: 100%;
-	}
+.navbar-header-logo img {
+	object-fit: contain;
+	width: 100%;
+	height: 100%;
 }
 
 .navbar-header-btn {
@@ -59,7 +64,7 @@
 
 .navbar-header-btn.navbar-header-burger svg,
 .navbar-header-btn.navbar-header-close svg {
-	stroke: var(--color-burger-button-text);
+	stroke: var(--color-burger-button-text) !important;
 	stroke-width: 1;
 	stroke-linecap: round;
 }
@@ -70,6 +75,6 @@
 }
 
 .navbar-header-btn.navbar-header-ticket svg {
-	fill: var(--color-ticket-button-text);
+	fill: var(--color-ticket-button-text) !important;
 }
 </style>

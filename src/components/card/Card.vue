@@ -48,7 +48,7 @@ const cardClass = computed(() => useNavy.value ? 'navy-card' : 'beige-card')
 
 <style>
 .card-wrapper {
-	border-radius: .75rem;
+	border-radius: 1rem;
 	padding: .5rem;
 	width: 100%;
 }
