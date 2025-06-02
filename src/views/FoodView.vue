@@ -34,14 +34,15 @@ import data from '@/assets/json/data.json'
 
 <style>
 	.food-section {
-		margin-top: var(--space-navbar-header);
+		margin-top: var(--space-y-header);
+		min-height: calc(100vh - var(--space-y-header));
 	}
 
 	.food-header {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		padding-inline: var(--space-container-mobile);
+		padding-inline: var(--space-x-page);
 		color: var(--color-text);
 	}
 
@@ -49,7 +50,7 @@ import data from '@/assets/json/data.json'
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		padding: 1.5rem var(--space-container-mobile) 0;
+		padding: 1.5rem var(--space-x-page) 0;
 		gap: 1rem;
 	}
 

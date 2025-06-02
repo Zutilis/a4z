@@ -1,27 +1,13 @@
 :root {
-	/* Font families */
 	--font-kensington: 'Kensington', sans-serif;
 	--font-pouler: 'Pouler', sans-serif;
 
-	/* Font sizes (Kensington) */
 	--fs-kensington-xl: 6.25rem; /* 100px */
 	--fs-kensington-lg: 2.8125rem; /* 45px */
-
-	/* Font sizes (Pouler) */
 	--fs-pouler-lg: 1.5625rem; /* 25px */
 	--fs-pouler-md: 1.125rem; /* 18px */
 	--fs-pouler-sm: 0.8125rem; /* 13px */
 
-	/* Line heights (Kensington) */
-	--lh-kensington-xl: 0.9375rem; /* 15px */
-	--lh-kensington-lg: 2.1875rem; /* 35px */
-
-	/* Line heights (Pouler) */
-	--lh-pouler-lg: 1.375rem; /* 22px */
-	--lh-pouler-md: 0.9375rem; /* 15px */
-	--lh-pouler-sm: 0.9375rem; /* 15px */
-
-	/* Colors (inchangés) */
 	--color-light-blue: #B2D5EC;
 	--color-navy-blue: #111B29;
 	--color-black: #0B0B0B;
@@ -42,10 +28,10 @@
 
 	/* Header */
 	--h-navbar-header: 7.5rem;
+	--space-x-page: 1.25rem;
+	--space-y-header: 8.5rem;
 
-	/* Spacing */
-	--space-container-mobile: 1.25rem;
-	--space-navbar-header: 8.5rem;
+	--slider-items-count: 2;
 }
 
 [data-theme="dark"] {
@@ -57,4 +43,28 @@
 	--color-ticket-button-bg: var(--color-beige);
 	--color-ticket-button-border: var(--color-beige);
 	--color-ticket-button-text: var(--color-navy-blue);
+}
+
+@media screen and (min-width: 768px) {
+	:root {
+		--fs-kensington-xl: 7rem;
+		--fs-kensington-lg: 3.25rem;
+		--fs-pouler-lg: 2.5rem;
+		--fs-pouler-md: 1.25rem;
+		--fs-pouler-sm: 1rem;
+
+		--space-x-page: 3rem;
+		--slider-items-count: 3;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	:root {
+		--fs-kensington-xl: 8rem;
+		--fs-kensington-lg: 3.7rem;
+		--fs-pouler-lg: 2.9rem;
+		--fs-pouler-md: 1.75rem;
+		--fs-pouler-sm: 1.25rem;
+		--slider-items-count: 4;
+	}
 }

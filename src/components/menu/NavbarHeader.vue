@@ -20,14 +20,14 @@
 	</div>
 </template>
 
-<style scoped>
+<style>
 .navbar-header {
 	display: flex;
 	position: fixed;
 	justify-content: space-between;
 	align-items: center;
 	height: var(--h-navbar-header);
-	padding: 0rem var(--space-container-mobile);
+	padding: 0rem var(--space-x-page);
 	z-index: 998;
 	top: 0;
 	right: 0;

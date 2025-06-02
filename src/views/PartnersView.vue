@@ -20,7 +20,8 @@ import data from '@/assets/json/data.json'
 
 <style>
 	.partners-section {
-		margin-top: var(--space-navbar-header);
+		margin-top: var(--space-y-header);
+		min-height: calc(100vh - var(--space-y-header));
 	}
 
 	.partners-header {
@@ -28,7 +29,7 @@ import data from '@/assets/json/data.json'
 		flex-direction: column;
 		align-items: center;
 		justify-content: space-between;
-		padding-inline: var(--space-container-mobile);
+		padding-inline: var(--space-x-page);
 		color: var(--color-text);
 	}
 
@@ -37,7 +38,7 @@ import data from '@/assets/json/data.json'
 		align-items: center;
 		justify-content: center;
 		flex-direction: column;
-		padding: 1.5rem var(--space-container-mobile) 0;
+		padding: 1.5rem var(--space-x-page) 0;
 		gap: 3rem;
 	}
 

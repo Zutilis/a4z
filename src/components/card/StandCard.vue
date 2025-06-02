@@ -43,6 +43,7 @@ defineProps({
 	.stand-img {
 		margin-top: .75rem;
 		width: 55%;
+		max-width: 8rem;
 		border-radius: 50%;
 		aspect-ratio: 1 / 1;
 		object-fit: cover;

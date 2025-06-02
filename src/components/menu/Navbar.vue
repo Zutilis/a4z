@@ -17,7 +17,7 @@ const isMenuOpen = ref(false)
 const toggleMenu = () => isMenuOpen.value = !isMenuOpen.value
 </script>
 
-<style scoped>
+<style>
 .fade-enter-active,
 .fade-leave-active {
 	transition: opacity 0.3s ease;

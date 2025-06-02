@@ -19,6 +19,7 @@ import data from '@/assets/json/data.json'
 
 <style>
 	.slider-section {
-		margin-top: var(--space-navbar-header);
+		margin-top: var(--space-y-header);
+		min-height: calc(100vh - var(--space-y-header));
 	}
 </style>

@@ -44,8 +44,11 @@ defineProps({
 	}
 
 	.lineup-img {
-		height: 7.5rem;
+		/* height: 7.5rem; */
+		height: 10vw;
+		min-height: 8rem;
 		max-width: 100%;
+		object-fit: contain;
 		mix-blend-mode: luminosity;
 		pointer-events: none;
 	}

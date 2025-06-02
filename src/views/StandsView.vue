@@ -43,7 +43,8 @@ const filteredStands = computed(() => {
 
 <style>
 .slider-section {
-	margin-top: var(--space-navbar-header);
+	margin-top: var(--space-y-header);
+	min-height: calc(100vh - var(--space-y-header));
 }
 
 .filters-wrapper {
@@ -53,7 +54,7 @@ const filteredStands = computed(() => {
 .filters {
 	display: flex;
 	gap: .75rem;
-	padding: .75rem var(--space-container-mobile);
+	padding: .75rem var(--space-x-page);
 	overflow-x: auto;
 	overflow-y: visible;
 }

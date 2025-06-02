@@ -10,10 +10,12 @@
 	</div>
 
 	<section class="landing-section">
-		<Card class="event-intro" variant="beige" locked>
-			<p class="pouler-md">12 juillet 2025 - Fontalon - Roanne</p>
-			<p class="kensington-xl">A4Z Trap #2</p>
-		</Card>
+		<div class="event-intro" >
+			<Card variant="beige" locked>
+				<p class="pouler-md">12 juillet 2025 - Fontalon - Roanne</p>
+				<p class="kensington-xl">A4Z Trap #2</p>
+			</Card>
+		</div>
 
 		<div class="event-schedule">
 			<ScheduleCard time="17h - 20h" label="Les stands" details="Marques indés – barber – nails – tournoi FIFA – ..." />
@@ -80,19 +82,24 @@ import data from '@/assets/json/data.json'
 	.landing-section {
 		display: flex;
 		justify-content: center;
+		align-items: center;
 		flex-direction: column;
 		position: relative;
 		height: 100vh;
-		padding: 0 var(--space-container-mobile);
+		padding: 0 var(--space-x-page);
 		margin-bottom: 7rem;
 		gap: 2rem;
 	}
 
 	.event-intro {
+		width: 100%;
+	}
+
+	.event-intro .card {
 		display: flex;
 		flex-direction: column;
 		text-align: center;
-		gap: .75rem;
+		gap: 1rem;
 		padding: 2rem 1rem;
 	}
 
@@ -100,5 +107,13 @@ import data from '@/assets/json/data.json'
 		display: flex;
 		flex-direction: column;
 		gap: 0.5rem;
+		width: 100%;
 	}
+
+	@media screen and (min-width: 1024px) {
+		.event-intro, .event-schedule {
+			width: 50%;
+		}
+	}
+
 </style>

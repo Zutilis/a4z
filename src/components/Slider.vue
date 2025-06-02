@@ -51,7 +51,7 @@ defineProps({
 	flex-direction: column;
 	align-items: center;
 	justify-content: space-between;
-	padding-inline: var(--space-container-mobile);
+	padding-inline: var(--space-x-page);
 	color: var(--color-text);
 }
 
@@ -60,7 +60,7 @@ defineProps({
 	flex-direction: column;
 	align-self: center;
 	justify-self: center;
-	padding-inline: var(--space-container-mobile);
+	padding-inline: var(--space-x-page);
 }
 
 .slider-footer > * {
@@ -73,7 +73,7 @@ defineProps({
 .slider-container {
 	display: flex;
 	gap: 1rem;
-	padding: 0 var(--space-container-mobile) .75rem;
+	padding: 0 var(--space-x-page) .75rem;
 }
 
 /* Horizontal scroll mode */
@@ -81,7 +81,7 @@ defineProps({
 	overflow-x: auto;
 	overflow-y: visible;
 	scroll-snap-type: x mandatory;
-	scroll-padding-inline: var(--space-container-mobile);
+	scroll-padding-inline: var(--space-x-page);
 	scrollbar-width: none;
 }
 
@@ -91,17 +91,18 @@ defineProps({
 
 .slider-container.is-slider > * {
 	flex: 0 0 auto;
-	width: calc((100% - 1rem) / 2);
+	width: calc((100% - 1rem) / var(--slider-items-count));
 	scroll-snap-align: start;
 }
 
 /* Wrap mode (like a grid) */
 .slider-container.is-wrap {
 	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
 }
 
 .slider-container.is-wrap > * {
-	width: calc((100% - 1rem) / 2);
-	max-width: 300px;
+	width: calc((100% - 1rem) / var(--slider-items-count));
 }
 </style>

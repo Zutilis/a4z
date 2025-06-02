@@ -57,14 +57,14 @@ function handleLinkClick() {
 }
 </script>
 
-<style scoped>
+<style>
 .mobile-menu {
 	position: fixed;
 	display: flex;
 	flex-direction: column;
 	overflow-y: auto;
 	background-color: var(--color-navy-blue);
-	padding: 0 var(--space-container-mobile);
+	padding: 0 var(--space-x-page);
 	height: 100%;
 	z-index: 9999;
 	top: 0;
@@ -113,7 +113,7 @@ function handleLinkClick() {
 .menu-list {
 	display: flex;
 	flex-direction: column;
-	margin-top: calc(var(--space-navbar-header) - var(--h-navbar-header));
+	margin-top: calc(var(--space-y-header) - var(--h-navbar-header));
 	gap: .5rem;
 }
 
