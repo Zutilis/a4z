@@ -32,7 +32,7 @@ import Card from '@/components/card/Card.vue'
 import data from '@/assets/json/data.json'
 </script>
 
-<style>
+<style scoped>
 	.food-section {
 		margin-top: var(--space-y-header);
 		min-height: calc(100vh - var(--space-y-header));

@@ -16,12 +16,19 @@
 	/* Thème clair (par défaut) */
 	--color-bg: var(--color-light-blue);
 	--color-text: var(--color-navy-blue);
-	--color-burger-button-bg: transparent;
+	/* --color-burger-button-bg: transparent;
 	--color-burger-button-border: var(--color-black);
 	--color-burger-button-text: var(--color-black);
 	--color-ticket-button-bg: var(--color-black);
 	--color-ticket-button-border: var(--color-black);
-	--color-ticket-button-text: var(--color-beige);
+	--color-ticket-button-text: var(--color-beige); */
+
+	--color-burger-button-bg: transparent;
+	--color-burger-button-border: var(--color-beige);
+	--color-burger-button-text: var(--color-beige);
+	--color-ticket-button-bg: var(--color-beige);
+	--color-ticket-button-border: var(--color-beige);
+	--color-ticket-button-text: var(--color-navy-blue);
 
 	/* Shadows */
 	--shadow: 2px 3px 10px rgba(0, 0, 0, 0.5);
