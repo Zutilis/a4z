@@ -9,5 +9,5 @@ import './assets/styles/main.css'
 createApp(App).use(router).mount('#app')
 
 window.addEventListener('DOMContentLoaded', () => {
-	document.body.classList.add('loaded')
+	document.body.classList.remove('no-transition')
 })
