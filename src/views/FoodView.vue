@@ -32,7 +32,7 @@ import Card from '@/components/card/Card.vue'
 import data from '@/assets/json/data.json'
 </script>
 
-<style scoped>
+<style>
 	.food-section {
 		margin-top: var(--space-y-header);
 		min-height: calc(100vh - var(--space-y-header));
@@ -48,15 +48,26 @@ import data from '@/assets/json/data.json'
 
 	.food-items {
 		display: flex;
-		flex-direction: column;
 		align-items: center;
+		flex-direction: column;
 		padding: 1.5rem var(--space-x-page) 0;
 		gap: 1rem;
 	}
 
+	@media screen and (min-width: 768px) {
+		.food-items > * {
+			width: 75%;
+		}
+	}
+
+	@media screen and (min-width: 1024px) {
+		.food-items > * {
+			width: 50%;
+		}
+	}
+
 	.food-item {
 		display: flex;
-		width: 100%;
 		gap: 1rem;
 		align-items: stretch;
 	}
