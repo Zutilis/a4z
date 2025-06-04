@@ -56,7 +56,7 @@ import data from '@/assets/json/data.json'
 
 	@media screen and (min-width: 768px) {
 		.food-items > * {
-			width: 75%;
+			width: 65%;
 		}
 	}
 

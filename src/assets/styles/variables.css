@@ -52,6 +52,13 @@
 	--color-ticket-button-text: var(--color-navy-blue);
 }
 
+@media screen and (max-width: 320px) {
+	:root {
+		--space-x-page: 1rem;
+		--slider-items-count: 1;
+	}
+}
+
 @media screen and (min-width: 768px) {
 	:root {
 		--fs-kensington-xl: 7rem;
@@ -59,7 +66,6 @@
 		--fs-pouler-lg: 2.5rem;
 		--fs-pouler-md: 1.25rem;
 		--fs-pouler-sm: 1rem;
-
 		--space-x-page: 3rem;
 		--slider-items-count: 3;
 	}

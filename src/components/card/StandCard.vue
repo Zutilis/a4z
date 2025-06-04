@@ -1,9 +1,7 @@
 <template>
 	<Card class="stand-item">
 		<AutoScrollText :text="name" class="stand-name kensington-lg"/>
-		<p class="pouler-sm">
-			{{ type }}
-		</p>
+		<AutoScrollText :text="type" class="pouler-sm"/>
 		<img :src="img" alt="" class="stand-img">
 	</Card>
 </template>

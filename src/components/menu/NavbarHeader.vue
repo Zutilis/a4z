@@ -49,6 +49,7 @@
 .navbar-header-btn {
 	width: 3.4375rem;
 	height: 3.4375rem;
+	aspect-ratio: 1 / 1;
 	padding: .85rem;
 	border-radius: 50%;
 	display: flex;

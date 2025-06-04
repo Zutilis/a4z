@@ -1,15 +1,12 @@
 <template>
-	<div class="hero-image-container">
+	<section class="landing-section">
 		<svg xmlns="http://www.w3.org/2000/svg" style="display: none" viewBox="0 0 220 220">
 			<filter id="wavy">
 				<feTurbulence type="turbulence" baseFrequency="0.01" numOctaves="8" result="turbulence" />
 				<feDisplacementMap in2="turbulence" in="SourceGraphic" scale="35" xChannelSelector="R" yChannelSelector="G" />
 			</filter>
 		</svg>
-		<img src="/images/landing.webp" alt="" class="hero-image">
-	</div>
 
-	<section class="landing-section">
 		<div class="event-intro" >
 			<Card variant="beige" locked>
 				<p class="pouler-md">12 juillet 2025 - Fontalon - Roanne</p>
@@ -54,41 +51,38 @@ import data from '@/assets/json/data.json'
 </script>
 
 <style>
-	.hero-image-container {
-		position: absolute;
-		width: 100%;
-		height: 100vh;
-		mix-blend-mode: luminosity;
-		pointer-events: none;
-		top: 0;
-		right: 0;
-		left: 0;
-		bottom: 0;
-	}
-
-	.hero-image {
-		position: relative;
-		top: 0;
-		left: 50%;
-		width: 100%;
-		height: 100%;
-		object-fit: cover;
-		object-position: 40%;
-		filter: url(#wavy);
-		transform: scale(1.05) translateX(-50%);
-		pointer-events: none;
-	}
-
 	.landing-section {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		flex-direction: column;
 		position: relative;
-		height: 100vh;
-		padding: 0 var(--space-x-page);
-		margin-bottom: 7rem;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		padding: var(--space-y-header) 0;
 		gap: 2rem;
+		min-height: 100vh;
+		margin-bottom: 7rem;
+		overflow-y: visible;
+	}
+
+	.landing-section::before {
+		content: '';
+		position: absolute;
+		inset: 0;
+		background-image: url('/images/landing.webp');
+		background-size: cover;
+		background-position: center 40%;
+		background-repeat: no-repeat;
+		filter: url(#wavy);
+		mix-blend-mode: luminosity;
+		z-index: 0;
+		pointer-events: none;
+		transform: scale(1.1);
+	}
+
+	.event-intro, .event-schedule {
+		padding: 0 var(--space-x-page);
+		position: relative;
+		z-index: 2;
 	}
 
 	.event-intro {
@@ -105,6 +99,7 @@ import data from '@/assets/json/data.json'
 
 	.event-schedule {
 		display: flex;
+		padding: 0 var(--space-x-page);
 		flex-direction: column;
 		gap: 0.5rem;
 		width: 100%;

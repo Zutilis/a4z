@@ -1,13 +1,9 @@
 <template>
 	<Card class="lineup-item">
-		<p class="lineup-name kensington-lg">
-			{{ name }}
-		</p>
+		<AutoScrollText :text="name" class="lineup-name kensington-lg"/>
 		<AutoScrollText :text="song" class="pouler-sm"/>
 		<img :src="img" alt="" class="lineup-img">
-		<p class="pouler-md">
-			Sam. 12 juillet
-		</p>
+		<AutoScrollText text="Sam. 12 juillet" class="pouler-md"/>
 	</Card>
 </template>
 
@@ -44,7 +40,6 @@ defineProps({
 	}
 
 	.lineup-img {
-		/* height: 7.5rem; */
 		height: 10vw;
 		min-height: 8rem;
 		max-width: 100%;
