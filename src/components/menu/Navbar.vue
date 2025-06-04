@@ -1,6 +1,6 @@
 <template>
 	<header>
-		<NavbarHeader @toggle="toggleMenu" />
+		<NavbarHeader :isOpen="isMenuOpen" @toggle="toggleMenu" />
 
 		<Transition name="fade">
 			<MobileMenu v-if="isMenuOpen" @close="toggleMenu" />
@@ -10,8 +10,8 @@
 
 <script setup>
 import { ref } from 'vue'
-import NavbarHeader from './NavbarHeader.vue'
-import MobileMenu from './MobileMenu.vue'
+import NavbarHeader from '@/components/menu/NavbarHeader.vue'
+import MobileMenu from '@/components/menu//MobileMenu.vue'
 
 const isMenuOpen = ref(false)
 const toggleMenu = () => isMenuOpen.value = !isMenuOpen.value

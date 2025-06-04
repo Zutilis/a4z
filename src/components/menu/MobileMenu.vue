@@ -1,19 +1,5 @@
 <template>
 	<nav class="mobile-menu">
-		<div class="menu-header">
-			<button class="mobile-header-btn mobile-header-close" @click="handleLinkClick">
-				<svg viewBox="0 0 24 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-					<path d="M19 5L5 19M5.00001 5L19 19" />
-				</svg>
-			</button>
-			<a href="https://billetterie.a4z.fr/" target="_blank" class="mobile-header-btn mobile-header-ticket">
-				<svg viewBox="0 0 32 31" fill="none" xmlns="http://www.w3.org/2000/svg">
-					<path
-						d="M22.996 11.25h-13.996c-0.414 0-0.75 0.336-0.75 0.75v0 7.605c0 0.414 0.336 0.75 0.75 0.75h13.996c0.414-0 0.75-0.336 0.75-0.75v0-7.605c-0-0.414-0.336-0.75-0.75-0.75v0zM22.246 18.855h-12.496v-6.105h12.496zM30 13.75c0.414-0 0.75-0.336 0.75-0.75v0-5c-0-0.414-0.336-0.75-0.75-0.75h-28c-0.414 0-0.75 0.336-0.75 0.75v0 5c0 0.414 0.336 0.75 0.75 0.75v0c1.243 0 2.25 1.007 2.25 2.25s-1.007 2.25-2.25 2.25v0c-0.414 0-0.75 0.336-0.75 0.75v0 5c0 0.414 0.336 0.75 0.75 0.75h28c0.414-0 0.75-0.336 0.75-0.75v0-5c-0-0.414-0.336-0.75-0.75-0.75v0c-1.243 0-2.25-1.007-2.25-2.25s1.007-2.25 2.25-2.25v0zM29.25 19.674v3.576h-26.5v-3.576c1.724-0.361 3-1.869 3-3.674s-1.276-3.313-2.975-3.67l-0.024-0.004v-3.576h26.5v3.576c-1.724 0.361-3 1.869-3 3.674s1.276 3.313 2.975 3.67l0.024 0.004z" />
-				</svg>
-			</a>
-		</div>
-
 		<ul class="menu-list kensington-xl">
 			<li><router-link to="/stands" @click="handleLinkClick">Les stands</router-link></li>
 			<li><router-link to="/line-up" @click="handleLinkClick">La line-up</router-link></li>
@@ -50,6 +36,8 @@
 </template>
 
 <script setup>
+import NavbarHeader from '@/components/menu/NavbarHeader.vue'
+
 const emit = defineEmits(['close'])
 
 function handleLinkClick() {
@@ -64,9 +52,9 @@ function handleLinkClick() {
 	flex-direction: column;
 	overflow-y: auto;
 	background-color: var(--color-navy-blue);
-	padding: 0 var(--space-x-page);
+	padding: var(--space-y-header) var(--space-x-page) 0;
 	height: 100%;
-	z-index: 9999;
+	z-index: 998;
 	top: 0;
 	right: 0;
 	left: 0;
@@ -78,36 +66,6 @@ function handleLinkClick() {
 	justify-content: space-between;
 	align-items: center;
 	height: var(--h-navbar-header);
-}
-
-.mobile-header-btn {
-	width: 3.4375rem;
-	height: 3.4375rem;
-	padding: .85rem;
-	border-radius: 50%;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
-
-.mobile-header-btn.mobile-header-close {
-	background: transparent;
-	border: 1px solid var(--color-beige);
-}
-
-.mobile-header-btn.mobile-header-close svg {
-	stroke: var(--color-beige);
-	stroke-width: 1;
-	stroke-linecap: round;
-}
-
-.mobile-header-btn.mobile-header-ticket {
-	background: var(--color-beige);
-	border: 1px solid var(--color-beige);
-}
-
-.mobile-header-btn.mobile-header-ticket svg {
-	fill: var(--color-navy-blue);
 }
 
 .menu-list {

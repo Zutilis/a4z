@@ -1,16 +1,25 @@
 <template>
 	<div class="navbar-header">
 		<button class="navbar-header-btn navbar-header-burger" @click="$emit('toggle')">
-			<svg viewBox="0 0 24 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-				<path d="M4 18L20 18" />
-				<path d="M4 12L20 12" />
-				<path d="M4 6L20 6" />
-			</svg>
+			<Transition name="fade" mode="out-in">
+				<svg v-if="!isOpen" viewBox="0 0 24 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M4 18L20 18" />
+					<path d="M4 12L20 12" />
+					<path d="M4 6L20 6" />
+				</svg>
+
+				<svg v-else viewBox="0 0 24 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M19 5L5 19M5.00001 5L19 19" />
+				</svg>
+			</Transition>
 		</button>
 
-		<router-link to="/" class="navbar-header-logo">
-			<img src="/images/a4ztrap.webp" alt="A4Z Trap Logo" />
-		</router-link>
+		<Transition name="fade">
+			<router-link v-if="!isOpen" to="/" class="navbar-header-logo">
+				<img src="/images/a4ztrap.webp" alt="A4Z Trap Logo" />
+			</router-link>
+		</Transition>
+
 		<a href="https://billetterie.a4z.fr/" target="_blank" class="navbar-header-btn navbar-header-ticket">
 			<svg viewBox="0 0 32 31" fill="none" xmlns="http://www.w3.org/2000/svg">
 				<path
@@ -20,6 +29,12 @@
 	</div>
 </template>
 
+<script setup>
+defineProps({
+	isOpen: Boolean
+})
+</script>
+
 <style>
 .navbar-header {
 	display: flex;
@@ -28,7 +43,7 @@
 	align-items: center;
 	height: var(--h-navbar-header);
 	padding: 0rem var(--space-x-page);
-	z-index: 998;
+	z-index: 999;
 	top: 0;
 	right: 0;
 	left: 0;
