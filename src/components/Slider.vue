@@ -91,7 +91,7 @@ defineProps({
 
 .slider-container.is-slider > * {
 	flex: 0 0 auto;
-	width: calc((100% - 1rem) / var(--slider-items-count));
+	width: calc((100% - (1rem * (var(--slider-items-count) - 1))) / var(--slider-items-count));
 	scroll-snap-align: start;
 }
 
@@ -103,6 +103,6 @@ defineProps({
 }
 
 .slider-container.is-wrap > * {
-	width: calc((100% - 1rem) / var(--slider-items-count));
+	width: calc((100% - (1rem * (var(--slider-items-count) - 1))) / var(--slider-items-count));
 }
 </style>
