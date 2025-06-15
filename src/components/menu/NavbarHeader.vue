@@ -38,16 +38,11 @@ defineProps({
 <style>
 .navbar-header {
 	display: flex;
-	position: fixed;
+	position: relative;
 	justify-content: space-between;
 	align-items: center;
 	height: var(--h-navbar-header);
 	padding: 0rem var(--space-x-page);
-	z-index: 999;
-	top: 0;
-	right: 0;
-	left: 0;
-	bottom: 0;
 }
 
 .navbar-header-logo {

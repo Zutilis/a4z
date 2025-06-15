@@ -47,18 +47,11 @@ function handleLinkClick() {
 
 <style>
 .mobile-menu {
-	position: fixed;
+	position: relative;
 	display: flex;
 	flex-direction: column;
-	overflow-y: auto;
-	background-color: var(--color-navy-blue);
-	padding: var(--space-y-header) var(--space-x-page) 0;
+	padding-inline: var(--space-x-page);
 	height: 100%;
-	z-index: 998;
-	top: 0;
-	right: 0;
-	left: 0;
-	bottom: 0;
 }
 
 .menu-header {
