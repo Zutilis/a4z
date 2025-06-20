@@ -4,7 +4,7 @@
 			<div class="filters-wrapper">
 				<div class="filters">
 					<div 
-						v-for="filter in data.stands_filters" :key="filter"
+						v-for="filter in filters" :key="filter"
 						:class="['filter-btn pouler-md', { active: selectedFilter === filter }]"
 						@click="selectedFilter = filter">
 						{{ filter }}
@@ -14,11 +14,12 @@
 		</template>
 
 		<StandCard 
-			v-for="stand in filteredStands" 
+			v-for="stand in stands" 
 			:key="stand.name" 
+			:id="stand.id"
 			:name="stand.name" 
 			:type="stand.type"
-			:img="stand.img" 
+			:avatar="stand.avatar" 
 		/>
 	</Slider>
 </template>
@@ -32,7 +33,13 @@ import data from '@/assets/json/data.json'
 
 const selectedFilter = ref('Tout')
 
-const filteredStands = computed(() => {
+const filters = computed(() => {
+	const types = data.stands.map((s) => s.type.trim())
+	const unique = [...new Set(types)]
+	return ['Tout', ...unique]
+})
+
+const stands = computed(() => {
 	if (selectedFilter.value === 'Tout') return data.stands
 
 	return data.stands.filter((stand) =>
@@ -74,6 +81,7 @@ const filteredStands = computed(() => {
 	padding: .5rem 1rem;
 	text-wrap: nowrap;
 	border: none;
+	cursor: pointer;
 }
 
 .filter-btn.active {

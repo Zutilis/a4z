@@ -68,6 +68,7 @@ defineProps({
 	align-items: center;
 	justify-content: center;
 	text-align: center;
+	cursor: pointer;
 }
 
 .slider-container {

@@ -4,29 +4,64 @@
 	],
 	"stands": [
 		{
+			"id": "purpleplace",
 			"name": "Purpleplace",
 			"type": "Vêtements",
-			"img": "/images/stands/purpleplace.png"
+			"avatar": "/images/stands/purpleplace.png"
 		},
 		{
-			"name": "Ja'z Barber",
-			"type": "Barber",
-			"img": "/images/stands/jazbarber.jpg"
-		},
-		{
-			"name": "Thys",
+			"id": "thys",
+			"name": "Thys Custom",
 			"type": "Custom Sneakers",
-			"img": "/images/stands/thys.jpg"
+			"avatar": "/images/stands/thys.jpg"
 		},
 		{
-			"name": "Thys",
-			"type": "Custom Sneakers",
-			"img": "/images/stands/thys.jpg"
+			"id": "custom-vinyle",
+			"name": "Custom Vinyle",
+			"type": "Custom Vinyle",
+			"avatar": "/images/stands/customvinyle.jpg"
 		},
 		{
-			"name": "Thys",
-			"type": "Custom Sneakers",
-			"img": "/images/stands/thys.jpg"
+			"id": "koora",
+			"name": "Koora",
+			"type": "Vêtements",
+			"avatar": "/images/stands/koora.png"
+		},
+		{
+			"id": "marginal",
+			"name": "Marginal Mouvement",
+			"type": "Vêtements",
+			"avatar": "/images/stands/marginal.png"
+		},
+		{
+			"id": "maison-disato",
+			"name": "Maison Disato",
+			"type": "Vêtements",
+			"avatar": "/images/stands/maisondisato.jpg"
+		},
+		{
+			"id": "yunna",
+			"name": "Yunna",
+			"type": "Vêtements",
+			"avatar": "/images/stands/yunna.png"
+		},
+		{
+			"id": "blancnacre",
+			"name": "Blanc Nacre",
+			"type": "Vêtements",
+			"avatar": "/images/stands/blancnacre.jpg"
+		},
+		{
+			"id": "7even",
+			"name": "7even",
+			"type": "Vêtements",
+			"avatar": "/images/stands/7even.png"
+		},
+		{
+			"id": "lowlita-ongles",
+			"name": "Lowlita Ongles",
+			"type": "Nail Art",
+			"avatar": "/images/stands/lowlitaongles.jpg"
 		}
 	],
 	"line-up": [
@@ -57,16 +92,24 @@
 	],
 	"partners": [
 		{
+			"name": "Bureau Info-jeunes",
+			"img": "/images/partners/bij.png",
+			"href": "https://www.aggloroanne.fr/ma-collectivite/enfance-jeunesse-et-enseignements/enfance-jeunesse/info-jeunes-roanne-207.html"
+		},
+		{
+			"name": "Le Grand Palais",
+			"img": "/images/partners/grandpalais.png",
+			"href": "https://www.legrandpalais.fr/"
+		},
+		{
 			"name": "Ville de Roanne",
-			"img": "/images/partners/roanne.png"
+			"img": "/images/partners/vdr.png",
+			"href": "https://www.aggloroanne.fr/ma-collectivite/ville-et-agglo/ville-de-roanne-143.html"
 		},
 		{
-			"name": "Credit Agricole",
-			"img": "/images/partners/credit-agricole.png"
-		},
-		{
-			"name": "Grand Palais",
-			"img": "/images/partners/grand-palais.png"
+			"name": "Credit Agricole Loire Haut-Loire",
+			"img": "/images/partners/ca.png",
+			"href": "https://www.credit-agricole.fr/ca-loirehauteloire/particulier.html"
 		}
 	],
 	"food": [

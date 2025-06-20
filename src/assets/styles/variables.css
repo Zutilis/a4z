@@ -12,6 +12,7 @@
 	--color-navy-blue: #111B29;
 	--color-black: #0B0B0B;
 	--color-beige: #DBDBDB;
+	--color-white: #ffffff;
 
 	/* Thème clair (par défaut) */
 	--color-bg: var(--color-light-blue);

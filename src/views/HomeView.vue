@@ -24,9 +24,10 @@
 		<StandCard
 			v-for="stand in data.stands"
 			:key="stand.name"
+			:id="stand.id"
 			:name="stand.name"
 			:type="stand.type"
-			:img="stand.img"
+			:avatar="stand.avatar"
 		/>
 	</Slider>
 

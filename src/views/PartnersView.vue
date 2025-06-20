@@ -4,12 +4,18 @@
 			<p class="kensington-xl">Partenaires</p>
 		</div>
 		<div class="partners-items">
-			<img 
-				v-for="partner in data.partners" 
-				:key="partner.name" 
-				:src="partner.img" 
-				:alt="partner.name" 
-			/>
+			<a
+				v-for="partner in data.partners"
+				:key="partner.name"
+				:href="partner.href"
+				target="_blank"
+				rel="noopener noreferrer"
+			>
+				<img
+					:src="partner.img"
+					:alt="partner.name"
+				/>
+			</a>
 		</div>
 	</section>
 </template>
@@ -31,20 +37,21 @@ import data from '@/assets/json/data.json'
 		justify-content: space-between;
 		padding-inline: var(--space-x-page);
 		color: var(--color-text);
+		margin-bottom: 5rem;
 	}
 
 	.partners-items {
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		flex-direction: column;
-		padding: 1.5rem var(--space-x-page) 0;
-		gap: 3rem;
+		flex-direction: row;
+		flex-wrap: wrap;
+		padding-inline: var(--space-x-page);
+		gap: 5rem;
 	}
 
 	.partners-items img {
 		max-height: 6rem;
-		width: 70%;
-		object-fit: contain;
+		object-fit: cover;
 	}
 </style>
