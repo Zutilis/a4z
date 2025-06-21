@@ -11,23 +11,54 @@
 </template>
 
 <script setup>
-import { ref, watch, nextTick } from 'vue'
+import { ref, watch, nextTick, onMounted, onUnmounted } from 'vue'
 import NavbarHeader from '@/components/menu/NavbarHeader.vue'
 import MobileMenu from '@/components/menu/MobileMenu.vue'
 
 const headerRef = ref(null)
 const isMenuOpen = ref(false)
-const toggleMenu = () => isMenuOpen.value = !isMenuOpen.value
+const previousTheme = ref(null)
+
+const updateBodyHeight = () => {
+	const headerEl = headerRef.value
+	const headerHeight = headerEl?.offsetHeight || 0
+	const viewportHeight = window.innerHeight
+
+	if (headerHeight < viewportHeight) {
+		headerEl.style.height = '100vh'
+		document.body.style.height = '100vh'
+	} else {
+		headerEl.style.height = 'fit-content'
+		document.body.style.height = `${headerHeight}px`
+	}
+}
+
+const toggleMenu = () => {
+	isMenuOpen.value = !isMenuOpen.value
+}
 
 watch(isMenuOpen, async (open) => {
 	await nextTick()
 
 	if (open) {
-		const height = headerRef.value?.offsetHeight || 0
-		document.body.style.height = `${height}px`
+		updateBodyHeight()
+		window.addEventListener('resize', updateBodyHeight)
+
+		previousTheme.value = document.documentElement.getAttribute('data-theme')
+		document.documentElement.setAttribute('data-theme', 'dark')
+
+		window.scrollTo({ top: 0, behavior: 'auto' })
 	} else {
+		const headerEl = headerRef.value
+		headerEl.style.height = 'fit-content'
 		document.body.style.height = ''
+		document.documentElement.setAttribute('data-theme', previousTheme.value ?? 'light')
+		window.removeEventListener('resize', updateBodyHeight)
 	}
+})
+
+onUnmounted(() => {
+	window.removeEventListener('resize', updateBodyHeight)
 })
 </script>
 

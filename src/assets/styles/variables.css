@@ -4,6 +4,7 @@
 
 	--fs-kensington-xl: 6.25rem; /* 100px */
 	--fs-kensington-lg: 2.8125rem; /* 45px */
+	--fs-kensington-md: 2rem; /* 45px */
 	--fs-pouler-lg: 1.5625rem; /* 25px */
 	--fs-pouler-md: 1.125rem; /* 18px */
 	--fs-pouler-sm: 0.8125rem; /* 13px */
@@ -17,19 +18,20 @@
 	/* Thème clair (par défaut) */
 	--color-bg: var(--color-light-blue);
 	--color-text: var(--color-navy-blue);
-	/* --color-burger-button-bg: transparent;
+
+	--color-burger-button-bg: transparent;
 	--color-burger-button-border: var(--color-black);
 	--color-burger-button-text: var(--color-black);
 	--color-ticket-button-bg: var(--color-black);
 	--color-ticket-button-border: var(--color-black);
-	--color-ticket-button-text: var(--color-beige); */
+	--color-ticket-button-text: var(--color-beige);
 
-	--color-burger-button-bg: transparent;
+	/* --color-burger-button-bg: transparent;
 	--color-burger-button-border: var(--color-beige);
 	--color-burger-button-text: var(--color-beige);
 	--color-ticket-button-bg: var(--color-beige);
 	--color-ticket-button-border: var(--color-beige);
-	--color-ticket-button-text: var(--color-navy-blue);
+	--color-ticket-button-text: var(--color-navy-blue); */
 
 	/* Shadows */
 	--shadow: 2px 3px 10px rgba(0, 0, 0, 0.5);

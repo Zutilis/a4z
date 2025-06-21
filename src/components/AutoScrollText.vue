@@ -1,14 +1,19 @@
 <template>
 	<div ref="container" class="scroll-wrapper">
-		<p ref="textEl" class="scroll-text" :class="{ 'is-scrolling': isScrolling }" 
-			:style="textStyle" v-bind="$attrs">
+		<p
+			ref="textEl"
+			class="scroll-text"
+			:class="{ 'is-scrolling': isScrolling }"
+			:style="textStyle"
+			v-bind="$attrs"
+		>
 			{{ text }}
 		</p>
 	</div>
 </template>
 
 <script setup>
-import { ref, onMounted, nextTick, computed } from 'vue'
+import { ref, onMounted, onUnmounted, nextTick, computed } from 'vue'
 
 defineOptions({ inheritAttrs: false })
 
@@ -20,17 +25,14 @@ const isScrolling = ref(false)
 const container = ref(null)
 const textEl = ref(null)
 const offset = ref('0px')
-const speed = ref('8s');
+const speed = ref('8s')
 
 const textStyle = computed(() => ({
 	'--scroll-offset': offset.value,
 	'--speed': speed.value,
 }))
 
-onMounted(async () => {
-	await document.fonts.ready
-	await nextTick()
-
+const updateScroll = () => {
 	const containerWidth = container.value?.offsetWidth || 0
 	const textWidth = textEl.value?.clientWidth || 0
 
@@ -38,7 +40,23 @@ onMounted(async () => {
 		offset.value = `-${textWidth - containerWidth}px`
 		speed.value = `${textWidth * 0.05}s`
 		isScrolling.value = true
+	} else {
+		isScrolling.value = false
+		offset.value = '0px'
+		speed.value = '0s'
 	}
+}
+
+onMounted(async () => {
+	await document.fonts.ready
+	await nextTick()
+	updateScroll()
+
+	window.addEventListener('resize', updateScroll)
+})
+
+onUnmounted(() => {
+	window.removeEventListener('resize', updateScroll)
 })
 </script>
 

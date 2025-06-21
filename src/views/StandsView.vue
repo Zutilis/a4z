@@ -16,10 +16,10 @@
 		<StandCard 
 			v-for="stand in stands" 
 			:key="stand.name" 
-			:id="stand.id"
 			:name="stand.name" 
 			:type="stand.type"
 			:avatar="stand.avatar" 
+			:href="stand.href"
 		/>
 	</Slider>
 </template>

@@ -1,5 +1,5 @@
 <template>
-	<router-link :to="'/stand/'+id">
+	<a :href="href" target="_blank">
 		<Card class="stand-item">
 			<AutoScrollText :text="name" class="stand-name kensington-lg"/>
 			<AutoScrollText :text="type" class="pouler-sm"/>
@@ -10,7 +10,7 @@
 					:class="{ cover: useCover }">
 			</div>
 		</Card>
-	</router-link>
+	</a>
 </template>
 
 <script setup>
@@ -18,13 +18,13 @@ import Card from '@/components/card/Card.vue'
 import AutoScrollText from '@/components/AutoScrollText.vue'
 
 const props = defineProps({
-	id: String,
 	name: String,
 	type: String,
 	avatar: String,
+	href: String,
 })
 
-const useCover = ['custom-vinyle', 'lowlita-ongles'].includes(props.id)
+const useCover = ['Custom Vinyle', 'Lowlita Ongles'].includes(props.name)
 </script>
 
 <style>

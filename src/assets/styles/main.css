@@ -58,6 +58,13 @@ ul {
 	line-height: .9;
 }
 
+.kensington-md {
+	font-family: var(--font-kensington);
+	font-size: var(--fs-kensington-md);
+	text-transform: uppercase;
+	line-height: 1;
+}
+
 .pouler-lg {
 	font-family: var(--font-pouler);
 	font-size: var(--fs-pouler-lg);

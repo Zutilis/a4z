@@ -1,67 +1,64 @@
 {
-	"stands_filters": [
-		"Tout", "Vêtements", "Barber", "Custom Sneakers"
-	],
 	"stands": [
 		{
-			"id": "purpleplace",
 			"name": "Purpleplace",
 			"type": "Vêtements",
-			"avatar": "/images/stands/purpleplace.png"
+			"avatar": "/images/stands/purpleplace.png",
+			"href": "https://www.instagram.com/purpleplaceclothing/"
 		},
 		{
-			"id": "thys",
 			"name": "Thys Custom",
 			"type": "Custom Sneakers",
-			"avatar": "/images/stands/thys.jpg"
+			"avatar": "/images/stands/thys.jpg",
+			"href": "https://www.instagram.com/thyscustom/"
 		},
 		{
-			"id": "custom-vinyle",
 			"name": "Custom Vinyle",
 			"type": "Custom Vinyle",
-			"avatar": "/images/stands/customvinyle.jpg"
+			"avatar": "/images/stands/customvinyle.jpg",
+			"href": "https://www.instagram.com/custom_vinyle/"
 		},
 		{
-			"id": "koora",
 			"name": "Koora",
 			"type": "Vêtements",
-			"avatar": "/images/stands/koora.png"
+			"avatar": "/images/stands/koora.png",
+			"href": "https://www.instagram.com/koora.brand/"
 		},
 		{
-			"id": "marginal",
 			"name": "Marginal Mouvement",
 			"type": "Vêtements",
-			"avatar": "/images/stands/marginal.png"
+			"avatar": "/images/stands/marginal.png",
+			"href": "https://www.instagram.com/marginal_mouvement/"
 		},
 		{
-			"id": "maison-disato",
 			"name": "Maison Disato",
 			"type": "Vêtements",
-			"avatar": "/images/stands/maisondisato.jpg"
+			"avatar": "/images/stands/maisondisato.jpg",
+			"href": "https://www.instagram.com/maisondisato/"
 		},
 		{
-			"id": "yunna",
 			"name": "Yunna",
 			"type": "Vêtements",
-			"avatar": "/images/stands/yunna.png"
+			"avatar": "/images/stands/yunna.png",
+			"href": "https://www.instagram.com/yunnafrance/"
 		},
 		{
-			"id": "blancnacre",
 			"name": "Blanc Nacre",
 			"type": "Vêtements",
-			"avatar": "/images/stands/blancnacre.jpg"
+			"avatar": "/images/stands/blancnacre.jpg",
+			"href": "https://www.instagram.com/blancnacre_officiel/"
 		},
 		{
-			"id": "7even",
 			"name": "7even",
 			"type": "Vêtements",
-			"avatar": "/images/stands/7even.png"
+			"avatar": "/images/stands/7even.png",
+			"href": "https://www.instagram.com/_7e.v.en_/"
 		},
 		{
-			"id": "lowlita-ongles",
 			"name": "Lowlita Ongles",
 			"type": "Nail Art",
-			"avatar": "/images/stands/lowlitaongles.jpg"
+			"avatar": "/images/stands/lowlitaongles.jpg",
+			"href": "https://www.instagram.com/lowlita_ongles/"
 		}
 	],
 	"line-up": [
@@ -126,6 +123,24 @@
 		{
 			"name": "Buvette sur place",
 			"details": "Drinks - 17h - 00h"
+		}
+	],
+	"faq": [
+		{
+			"question": "Lieu",
+			"answer": "Rendez-vous à la Salle Fontalon, Rue des Vernes, 42300 Roanne."
+		},
+		{
+			"question": "Heures d'ouverture",
+			"answer": "On se capte dès 17h à l'ouverture des portes. A 21h on ferme les portes, traine pas."
+		},
+		{
+			"question": "Âge minimum",
+			"answer": "Tu dois avoir 15 ans ou plus pour rentrer."
+		},
+		{
+			"question": "Violences et harcèlement sexuels et sexistes (VHSS)",
+			"answer": "En cas d'alerte, tourne-toi vers le personnel de la buvette ou vers les bénévoles, reconnaissables par leur t-shirt."
 		}
 	]
 }
