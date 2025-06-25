@@ -13,6 +13,12 @@
 			"href": "https://www.instagram.com/thyscustom/"
 		},
 		{
+			"name": "Celestcuts",
+			"type": "Barber",
+			"avatar": "/images/stands/celestcuts.jpg",
+			"href": "https://www.instagram.com/celestcuts/"
+		},
+		{
 			"name": "Custom Vinyle",
 			"type": "Custom Vinyle",
 			"avatar": "/images/stands/customvinyle.jpg",
@@ -29,6 +35,18 @@
 			"type": "Vêtements",
 			"avatar": "/images/stands/marginal.png",
 			"href": "https://www.instagram.com/marginal_mouvement/"
+		},
+		{
+			"name": "Lowlita Ongles",
+			"type": "Nail Art",
+			"avatar": "/images/stands/lowlitaongles.jpg",
+			"href": "https://www.instagram.com/lowlita_ongles/"
+		},
+		{
+			"name": "Friperie A4Z",
+			"type": "Friperie",
+			"avatar": "/images/stands/friperie.jpg",
+			"href": "https://www.instagram.com/oldey_/"
 		},
 		{
 			"name": "Maison Disato",
@@ -53,12 +71,6 @@
 			"type": "Vêtements",
 			"avatar": "/images/stands/7even.png",
 			"href": "https://www.instagram.com/_7e.v.en_/"
-		},
-		{
-			"name": "Lowlita Ongles",
-			"type": "Nail Art",
-			"avatar": "/images/stands/lowlitaongles.jpg",
-			"href": "https://www.instagram.com/lowlita_ongles/"
 		}
 	],
 	"line-up": [

@@ -22,7 +22,7 @@
 
 	<Slider title="Les stands" subtitle="17h - 20h" footerTitle="Tous les stands >" footerTo="/stands">
 		<StandCard
-			v-for="stand in data.stands"
+			v-for="stand in data.stands.slice(0, 6)"
 			:key="stand.name"
 			:name="stand.name"
 			:type="stand.type"

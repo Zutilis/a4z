@@ -3,7 +3,6 @@
 		<div class="infos-header">
 			<p class="kensington-xl">Infos Pratiques</p>
 		</div>
-
 		<div class="infos-items">
 			<div
 				class="infos-question"
@@ -13,7 +12,7 @@
 				<div class="infos-question-header" @click="toggle(index)">
 					<p class="kensington-lg">{{ item.question }}</p>
 					<svg
-						:class="{ open: openIndex === index }"
+						:class="{ open: openIndexes.has(index) }"
 						viewBox="0 0 24 24"
 						fill="none"
 						xmlns="http://www.w3.org/2000/svg"
@@ -21,12 +20,12 @@
 						<path d="M6 9L12 15L18 9" />
 					</svg>
 				</div>
-
-				<transition name="faq">
-					<div class="infos-answer pouler-md" v-if="openIndex === index">
-						<p>{{ item.answer }}</p>
-					</div>
-				</transition>
+				<div
+					class="infos-answer pouler-md"
+					:class="{ open: openIndexes.has(index) }"
+				>
+					<p>{{ item.answer }}</p>
+				</div>
 			</div>
 		</div>
 	</section>
@@ -36,10 +35,15 @@
 import { ref } from 'vue'
 import data from '@/assets/json/data.json'
 
-const openIndex = ref(null)
+const openIndexes = ref(new Set())
 
 const toggle = (index) => {
-	openIndex.value = openIndex.value === index ? null : index
+	if (openIndexes.value.has(index)) {
+		openIndexes.value.delete(index)
+	} else {
+		openIndexes.value.add(index)
+	}
+	openIndexes.value = new Set(openIndexes.value)
 }
 </script>
 
@@ -63,7 +67,6 @@ const toggle = (index) => {
 
 	.infos-question {
 		margin-bottom: 1rem;
-		cursor: pointer;
 	}
 
 	.infos-question-header {
@@ -71,6 +74,7 @@ const toggle = (index) => {
 		flex-direction: row;
 		justify-content: space-between;
 		align-items: center;
+		cursor: pointer;
 		padding: 1rem 0;
 		color: var(--color-beige);
 		border-bottom: 1px solid var(--color-beige);
@@ -103,23 +107,16 @@ const toggle = (index) => {
 
 	.infos-answer {
 		overflow: hidden;
-		padding: 1rem 0;
-		color: var(--color-text);
-	}
-
-	/* Transition CSS pour le déroulé */
-	.faq-enter-active,
-	.faq-leave-active {
-		transition: all 0.3s ease;
-	}
-	.faq-enter-from,
-	.faq-leave-to {
+		color: var(--color-beige);
 		max-height: 0;
 		opacity: 0;
+		transition: all 0.3s ease;
+		padding: 0;
 	}
-	.faq-enter-to,
-	.faq-leave-from {
-		max-height: 500px;
+
+	.infos-answer.open {
+		max-height: 300px;
 		opacity: 1;
+		padding: 1rem 0;
 	}
 </style>
