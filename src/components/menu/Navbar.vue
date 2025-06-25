@@ -46,12 +46,11 @@ watch(isMenuOpen, async (open) => {
 
 		previousTheme.value = document.documentElement.getAttribute('data-theme')
 		document.documentElement.setAttribute('data-theme', 'dark')
-
-		window.scrollTo({ top: 0, behavior: 'auto' })
 	} else {
 		const headerEl = headerRef.value
 		headerEl.style.height = 'fit-content'
 		document.body.style.height = ''
+		
 		document.documentElement.setAttribute('data-theme', previousTheme.value ?? 'light')
 		window.removeEventListener('resize', updateBodyHeight)
 	}
