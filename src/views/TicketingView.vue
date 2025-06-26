@@ -9,12 +9,6 @@
 				<p class="kensington-xl">Sam. 28 juin, 18h</p>
 			</Card>
 		</div>
-		<!-- <iframe 
-			id="haWidget" 
-			allowtransparency="true" 
-			src="https://www.helloasso.com/associations/almost4zutified/evenements/a4z-trap-2/widget" 
-			style="width: 100%; border: none;" 
-			onload="window.addEventListener( 'message', e => { const dataHeight = e.data.height; const haWidgetElement = document.getElementById('haWidget'); haWidgetElement.height = dataHeight + 'px'; } )" ></iframe> -->
 	</section>
 </template>
 
