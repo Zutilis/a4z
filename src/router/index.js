@@ -5,6 +5,7 @@ import StandsView from '@/views/StandsView.vue'
 import PartnersView from '@/views/PartnersView.vue'
 import FoodView from '@/views/FoodView.vue'
 import InfosView from '@/views/InfosView.vue'
+import TicketingView from '@/views/TicketingView.vue'
 
 const routes = [
   { path: '/', name: 'home', component: HomeView },
@@ -13,6 +14,7 @@ const routes = [
   { path: '/partners', name: 'partenaires', component: PartnersView },
   { path: '/food', name: 'food', component: FoodView },
   { path: '/infos', name: 'infos', component: InfosView },
+  { path: '/ticketing', name: 'billetterie', component: TicketingView },
 ]
 
 const router = createRouter({
