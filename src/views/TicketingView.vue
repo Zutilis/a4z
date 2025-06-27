@@ -98,7 +98,8 @@ onBeforeUnmount(() => {
 	.ticket-items .card {
 		display: flex;
 		flex-direction: column;
-		gap: .5rem;
+		gap: 1rem;
+		padding: 2rem 1rem;
 	}
 
 	#haWidget {
