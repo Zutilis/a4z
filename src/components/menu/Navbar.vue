@@ -1,7 +1,7 @@
 <template>
 	<header :class="{ 'menu-open': isMenuOpen }" ref="headerRef" tabindex="-1">
 		<div class="menu-inner">
-			<NavbarHeader :isOpen="isMenuOpen" @toggle="toggleMenu" />
+			<NavbarHeader :isOpen="isMenuOpen" @toggle="toggleMenu" @close="() => isMenuOpen = false" />
 
 			<Transition name="fade">
 				<MobileMenu v-if="isMenuOpen" @close="toggleMenu" />
@@ -11,7 +11,7 @@
 </template>
 
 <script setup>
-import { ref, watch, nextTick, onMounted, onUnmounted } from 'vue'
+import { ref, watch, nextTick, onUnmounted } from 'vue'
 import NavbarHeader from '@/components/menu/NavbarHeader.vue'
 import MobileMenu from '@/components/menu/MobileMenu.vue'
 
