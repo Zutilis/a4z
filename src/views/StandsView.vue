@@ -89,25 +89,4 @@ const stands = computed(() => {
 	box-shadow: var(--shadow);
 	color: var(--color-beige);
 }
-
-.filters-wrapper::before,
-.filters-wrapper::after {
-	content: '';
-	position: absolute;
-	top: 0;
-	width: 1.5rem;
-	height: 100%;
-	pointer-events: none;
-	z-index: 1;
-}
-
-.filters-wrapper::before {
-	left: 0;
-	background: linear-gradient(to right, var(--color-bg), transparent);
-}
-
-.filters-wrapper::after {
-	right: 0;
-	background: linear-gradient(to left, var(--color-bg), transparent);
-}
 </style>

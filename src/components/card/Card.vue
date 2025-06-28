@@ -47,13 +47,17 @@ const cardClass = computed(() => useNavy.value ? 'navy-card' : 'beige-card')
 </script>
 
 <style>
+.card-wrapper, .card {
+	transition: background-color .3s ease-in-out;
+}
+
 .card-wrapper {
 	border-radius: 1rem;
-	padding: .5rem;
 	width: 100%;
 }
 
 .navy-wrapper {
+	padding: .5rem;
 	background-color: var(--color-black);
 	box-shadow: var(--shadow);
 }
@@ -65,11 +69,11 @@ const cardClass = computed(() => useNavy.value ? 'navy-card' : 'beige-card')
 
 .card {
 	border-radius: 1rem;
-	padding: 1rem;
 	width: 100%;
 }
 
 .navy-card {
+	padding: 1rem;
 	background-color: var(--color-navy-blue);
 	color: var(--color-light-blue);
 }
@@ -77,5 +81,6 @@ const cardClass = computed(() => useNavy.value ? 'navy-card' : 'beige-card')
 .beige-card {
 	background-color: var(--color-beige);
 	color: var(--color-navy-blue);
+	padding: 1.5rem;
 }
 </style>

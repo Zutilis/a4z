@@ -97,7 +97,7 @@ const toggle = (index) => {
 		stroke-width: 1;
 		stroke-linecap: round;
 
-		transition: transform 0.3s ease;
+		transition: transform .3s ease;
 		transform: rotate(0deg);
 	}
 
@@ -110,7 +110,7 @@ const toggle = (index) => {
 		color: var(--color-beige);
 		max-height: 0;
 		opacity: 0;
-		transition: all 0.3s ease;
+		transition: all .3s ease;
 		padding: 0;
 	}
 

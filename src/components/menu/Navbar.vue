@@ -69,7 +69,7 @@ header {
 	top: 0;
 	left: 0;
 	right: 0;
-	transition: background-color 0.3s ease;
+	transition: background-color .3s ease;
 }
 
 header.menu-open {
@@ -90,7 +90,7 @@ header.menu-open .menu-inner {
 
 .fade-enter-active,
 .fade-leave-active {
-	transition: opacity 0.3s ease;
+	transition: opacity .3s ease;
 }
 
 .fade-enter-from,
