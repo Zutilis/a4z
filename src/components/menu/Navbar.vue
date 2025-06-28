@@ -27,6 +27,7 @@ const updateBodyHeight = () => {
 	if (headerHeight < viewportHeight) {
 		headerEl.style.height = '100vh'
 		document.body.style.height = '100vh'
+		
 	} else {
 		headerEl.style.height = 'fit-content'
 		document.body.style.height = `${headerHeight}px`
@@ -44,12 +45,16 @@ watch(isMenuOpen, async (open) => {
 		updateBodyHeight()
 		window.addEventListener('resize', updateBodyHeight)
 
+		document.body.style.overflowY = 'hidden'
+
 		previousTheme.value = document.documentElement.getAttribute('data-theme')
 		document.documentElement.setAttribute('data-theme', 'dark')
 	} else {
 		const headerEl = headerRef.value
 		headerEl.style.height = 'fit-content'
+
 		document.body.style.height = ''
+		document.body.style.overflowY = 'auto'
 		
 		document.documentElement.setAttribute('data-theme', previousTheme.value ?? 'light')
 		window.removeEventListener('resize', updateBodyHeight)
