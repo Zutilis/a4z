@@ -146,19 +146,19 @@
 	"faq": [
 		{
 			"question": "Lieu",
-			"answer": "Rendez-vous à la Salle Fontalon, Rue des Vernes, 42300 Roanne."
+			"answer": "Rendez-vous à la Salle Fontalon, rue des Vernes, 42300 Roanne."
 		},
 		{
 			"question": "Heures d'ouverture",
-			"answer": "On se capte dès 17h à l'ouverture des portes. A 21h on ferme les portes, traine pas."
+			"answer": "On se retrouve dès 17h pour l’ouverture des portes. À 21h, on les ferme — traîne pas."
 		},
 		{
 			"question": "Âge minimum",
-			"answer": "Tu dois avoir 15 ans ou plus pour rentrer."
+			"answer": "Tu dois avoir 15 ans ou plus pour entrer."
 		},
 		{
-			"question": "Violences et harcèlement sexuels et sexistes (VHSS)",
-			"answer": "En cas d'alerte, tourne-toi vers le personnel de la buvette ou vers les bénévoles, reconnaissables par leur t-shirt."
+			"question": "Violences et harcèlement sexistes et sexuels (VHSS)",
+			"answer": "En cas de problème, tourne-toi vers le personnel de la buvette ou vers les bénévoles, reconnaissables par leur t-shirt."
 		}
 	]
 }
