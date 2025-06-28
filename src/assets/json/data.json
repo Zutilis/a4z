@@ -3,79 +3,79 @@
 		{
 			"name": "Purpleplace",
 			"type": "Vêtements",
-			"avatar": "/images/stands/purpleplace.png",
+			"avatar": "/images/stands/purpleplace.webp",
 			"href": "https://www.instagram.com/purpleplaceclothing/"
 		},
 		{
 			"name": "Thys Custom",
 			"type": "Custom Sneakers",
-			"avatar": "/images/stands/thys.jpg",
+			"avatar": "/images/stands/thys.webp",
 			"href": "https://www.instagram.com/thyscustom/"
 		},
 		{
 			"name": "Celestcuts",
 			"type": "Barber",
-			"avatar": "/images/stands/celestcuts.jpg",
+			"avatar": "/images/stands/celestcuts.webp",
 			"href": "https://www.instagram.com/celestcuts/"
 		},
 		{
 			"name": "Custom Vinyle",
 			"type": "Custom Vinyle",
-			"avatar": "/images/stands/customvinyle.jpg",
+			"avatar": "/images/stands/customvinyle.webp",
 			"href": "https://www.instagram.com/custom_vinyle/"
 		},
 		{
 			"name": "Koora",
 			"type": "Vêtements",
-			"avatar": "/images/stands/koora.png",
+			"avatar": "/images/stands/koora.webp",
 			"href": "https://www.instagram.com/koora.brand/"
 		},
 		{
 			"name": "Centric",
 			"type": "Vêtements",
-			"avatar": "/images/stands/centric.png",
+			"avatar": "/images/stands/centric.webp",
 			"href": "https://www.instagram.com/centric.concept/"
 		},
 		{
 			"name": "Marginal Mouvement",
 			"type": "Vêtements",
-			"avatar": "/images/stands/marginal.png",
+			"avatar": "/images/stands/marginal.webp",
 			"href": "https://www.instagram.com/marginal_mouvement/"
 		},
 		{
 			"name": "Lowlita Ongles",
 			"type": "Nail Art",
-			"avatar": "/images/stands/lowlitaongles.jpg",
+			"avatar": "/images/stands/lowlitaongles.webp",
 			"href": "https://www.instagram.com/lowlita_ongles/"
 		},
 		{
 			"name": "Friperie A4Z",
 			"type": "Friperie",
-			"avatar": "/images/stands/friperie.jpg",
+			"avatar": "/images/stands/friperie.webp",
 			"href": "https://www.instagram.com/oldey_/"
 		},
 		{
 			"name": "Maison Disato",
 			"type": "Vêtements",
-			"avatar": "/images/stands/maisondisato.jpg",
+			"avatar": "/images/stands/maisondisato.webp",
 			"href": "https://www.instagram.com/maisondisato/"
 		},
 		{
 			"name": "Yunna",
 			"type": "Vêtements",
-			"avatar": "/images/stands/yunna.png",
+			"avatar": "/images/stands/yunna.webp",
 			"href": "https://www.instagram.com/yunnafrance/"
 		},
 		{
 			"name": "Blanc Nacre",
 			"type": "Vêtements",
-			"avatar": "/images/stands/blancnacre.jpg",
+			"avatar": "/images/stands/blancnacre.webp",
 			"href": "https://www.instagram.com/blancnacre_officiel/"
 		},
 		{
 			"name": "7even",
 			"type": "Vêtements",
-			"avatar": "/images/stands/7even.png",
+			"avatar": "/images/stands/7even.webp",
 			"href": "https://www.instagram.com/_7e.v.en_/"
 		}
 	],
@@ -84,46 +84,46 @@
 			"name": "Beendo Z",
 			"song": "Pas bête",
 			"date": "Sam. 12 Juillet",
-			"img": "/images/line-up/beendoz.png"
+			"img": "/images/line-up/beendoz.webp"
 		},
 		{
 			"name": "Livaï",
 			"song": "Nous deux c'est mieux <3",
 			"date": "Sam. 12 Juillet",
-			"img": "/images/line-up/livai.png"
+			"img": "/images/line-up/livai.webp"
 		},
 		{
 			"name": "Knotty",
 			"song": "Une nuit de +",
 			"date": "Sam. 12 Juillet",
-			"img": "/images/line-up/knotty.png"
+			"img": "/images/line-up/knotty.webp"
 		},
 		{
 			"name": "Ayuur",
 			"song": "Sur un fil",
 			"date": "Sam. 12 Juillet",
-			"img": "/images/line-up/ayuur.png"
+			"img": "/images/line-up/ayuur.webp"
 		}
 	],
 	"partners": [
 		{
 			"name": "Bureau Info-jeunes",
-			"img": "/images/partners/bij.png",
+			"img": "/images/partners/bij.webp",
 			"href": "https://www.aggloroanne.fr/ma-collectivite/enfance-jeunesse-et-enseignements/enfance-jeunesse/info-jeunes-roanne-207.html"
 		},
 		{
 			"name": "Le Grand Palais",
-			"img": "/images/partners/grandpalais.png",
+			"img": "/images/partners/grandpalais.webp",
 			"href": "https://www.legrandpalais.fr/"
 		},
 		{
 			"name": "Ville de Roanne",
-			"img": "/images/partners/vdr.png",
+			"img": "/images/partners/vdr.webp",
 			"href": "https://www.aggloroanne.fr/ma-collectivite/ville-et-agglo/ville-de-roanne-143.html"
 		},
 		{
 			"name": "Credit Agricole Loire Haut-Loire",
-			"img": "/images/partners/ca.png",
+			"img": "/images/partners/ca.webp",
 			"href": "https://www.credit-agricole.fr/ca-loirehauteloire/particulier.html"
 		}
 	],
@@ -131,7 +131,7 @@
 		{
 			"name": "Snackinblack",
 			"details": "Burgers - 18h - 23h",
-			"img": "/images/food/snackinblack.jpg"
+			"img": "/images/food/snackinblack.webp"
 		},
 		{
 			"name": "Pizza Cosy",

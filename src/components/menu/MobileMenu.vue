@@ -1,11 +1,11 @@
 <template>
 	<nav class="mobile-menu">
 		<ul class="menu-list kensington-xl">
-			<li><router-link to="/stands" @click="handleLinkClick">Les stands</router-link></li>
-			<li><router-link to="/line-up" @click="handleLinkClick">La line-up</router-link></li>
-			<li><router-link to="/food" @click="handleLinkClick">Food</router-link></li>
-			<li><router-link to="/partners" @click="handleLinkClick">Partenaires</router-link></li>
-			<li><router-link to="/infos" @click="handleLinkClick">Infos Pratiques</router-link></li>
+			<li><router-link to="/stands" @click="handleLinkClick" aria-label="Accèder à la page des stands">Les stands</router-link></li>
+			<li><router-link to="/line-up" @click="handleLinkClick" aria-label="Accèder à la page de la line-up">La line-up</router-link></li>
+			<li><router-link to="/food" @click="handleLinkClick" aria-label="Accèder à la page de la restauration">Food</router-link></li>
+			<li><router-link to="/partners" @click="handleLinkClick" aria-label="Accèder à la page des partenaires">Partenaires</router-link></li>
+			<li><router-link to="/infos" @click="handleLinkClick" aria-label="Accèder à la page des infos pratiques">Infos Pratiques</router-link></li>
 		</ul>
 
 		<div class="socials">
