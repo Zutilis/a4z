@@ -40,12 +40,13 @@ const countdown = ref('')
 const iframeRef = ref(null)
 
 const targetDate = new Date('2025-06-28T18:00:00')
+const LIVE_OFFSET_MS = 3 * 60 * 1000
 
 const updateCountdown = () => {
 	const now = new Date()
 	const diff = targetDate - now
 
-	if (diff <= 0) {
+	if (diff <= LIVE_OFFSET_MS) {
 		isLive.value = true
 		countdown.value = ''
 		return
@@ -74,7 +75,6 @@ onMounted(() => {
 onBeforeUnmount(() => {
 	clearInterval(interval)
 })
-
 </script>
 
 <style>
