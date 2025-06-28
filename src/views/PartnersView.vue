@@ -22,6 +22,12 @@
 
 <script setup>
 import data from '@/assets/json/data.json'
+import { setHead } from '@/composables/setHead'
+
+setHead(
+	'Nos Partenaires | A4Z Trap #2 – Soirée Rap le 12 juillet à Roanne',
+	'Découvrez les partenaires qui soutiennent le festival A4Z Trap #2 à Roanne. Institutions, marques et acteurs locaux engagés pour cette deuxième édition le 12 juillet à la salle Fontalon.'
+)
 </script>
 
 <style>

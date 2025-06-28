@@ -49,6 +49,12 @@ import LineupCard from '@/components/card/LineupCard.vue'
 import Card from '@/components/card/Card.vue'
 import Slider from '@/components/Slider.vue'
 import data from '@/assets/json/data.json'
+import { setHead } from '@/composables/setHead'
+
+setHead(
+	'A4Z Trap #2 – Soirée Rap le 12 juillet à Roanne | Association A4Z', 
+	"A4Z Trap revient à Roanne le 12 juillet ! Le festival rap organisé par l'association A4Z (almost4zutified) avec Beendo Z, Livaï et d'autres artistes en showcase à la salle Fontalon."
+)
 </script>
 
 <style>

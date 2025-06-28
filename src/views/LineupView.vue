@@ -15,6 +15,12 @@ import LineupCard from '@/components/card/LineupCard.vue';
 import Slider from '@/components/Slider.vue';
 
 import data from '@/assets/json/data.json'
+import { setHead } from '@/composables/setHead'
+
+setHead(
+	'La Line-Up | A4Z Trap #2 – Soirée Rap le 12 juillet à Roanne', 
+	"Découvrez la programmation complète du festival A4Z Trap #2 à Roanne, avec Beendo Z, Livaï et d'autres artistes rap en showcase le 12 juillet à la salle Fontalon."
+)
 </script>
 
 <style scoped>

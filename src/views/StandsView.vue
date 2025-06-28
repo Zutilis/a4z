@@ -30,6 +30,12 @@ import { ref, computed } from 'vue'
 import StandCard from '@/components/card/StandCard.vue'
 import Slider from '@/components/Slider.vue'
 import data from '@/assets/json/data.json'
+import { setHead } from '@/composables/setHead'
+
+setHead(
+	'Les Stands | A4Z Trap #2 – Soirée Rap le 12 juillet à Roanne',
+	'Découvrez les stands présents au festival A4Z Trap #2 à Roanne. Marques indés, nail art, barber, friperie et autres à retrouver le 12 juillet à la salle Fontalon.'
+)
 
 const selectedFilter = ref('Tout')
 

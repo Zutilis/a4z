@@ -28,6 +28,12 @@
 <script setup>
 import { ref, onMounted, onBeforeUnmount } from 'vue'
 import Card from '@/components/card/Card.vue'
+import { setHead } from '@/composables/setHead'
+
+setHead(
+	'La billetterie | A4Z Trap #2 – Soirée Rap le 12 juillet à Roanne',
+	'Accédez à la billetterie officielle du festival A4Z Trap #2 à Roanne. Informations et réservations pour le 12 juillet à la salle Fontalon.'
+)
 
 const isLive = ref(false)
 const countdown = ref('')

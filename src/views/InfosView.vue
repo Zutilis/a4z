@@ -33,7 +33,13 @@
 
 <script setup>
 import { ref } from 'vue'
+import { setHead } from '@/composables/setHead'
 import data from '@/assets/json/data.json'
+
+setHead(
+	'Les infos pratiques | A4Z Trap #2 – Soirée Rap le 12 juillet à Roanne', 
+	'Découvrez toutes les informations pratiques (horaires, accès, sécurité) du festival A4Z Trap #2 à Roanne, avec Beendo Z, Livaï et d\'autres artistes rap en showcase le 12 juillet à la salle Fontalon.'
+)
 
 const openIndexes = ref(new Set())
 

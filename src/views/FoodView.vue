@@ -30,6 +30,12 @@
 <script setup>
 import Card from '@/components/card/Card.vue'
 import data from '@/assets/json/data.json'
+import { setHead } from '@/composables/setHead'
+
+setHead(
+	'La Food | A4Z Trap #2 – Soirée Rap le 12 juillet à Roanne',
+	'Découvrez les food trucks présents sur le site du festival A4Z Trap #2 à Roanne. Restauration variée et buvette disponibles le 12 juillet à la salle Fontalon.'
+)
 </script>
 
 <style>
