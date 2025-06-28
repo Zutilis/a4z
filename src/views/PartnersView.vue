@@ -34,7 +34,7 @@ setHead(
 <style>
 	.partners-section {
 		margin-top: var(--space-y-header);
-		min-height: calc(100vh - var(--space-y-header));
+		min-height: calc(100dvh - var(--space-y-header));
 	}
 
 	.partners-header {

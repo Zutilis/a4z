@@ -11,6 +11,10 @@ html, body {
 	transition: background .3s ease-in-out;
 }
 
+.no-scroll {
+	overflow-y: hidden;
+}
+
 section {
 	margin-bottom: 5rem;
 }

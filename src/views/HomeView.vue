@@ -66,7 +66,7 @@ setHead(
 		justify-content: center;
 		padding: var(--space-y-header) 0;
 		gap: 2rem;
-		min-height: 100vh;
+		min-height: 100dvh;
 		margin-bottom: 7rem;
 		overflow-y: visible;
 	}

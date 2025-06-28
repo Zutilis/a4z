@@ -25,8 +25,8 @@ const updateBodyHeight = () => {
 	const viewportHeight = window.innerHeight
 
 	if (headerHeight < viewportHeight) {
-		headerEl.style.height = '100vh'
-		document.body.style.height = '100vh'
+		headerEl.style.height = '100dvh'
+		document.body.style.height = '100dvh'
 		
 	} else {
 		headerEl.style.height = 'fit-content'
@@ -45,19 +45,19 @@ watch(isMenuOpen, async (open) => {
 		updateBodyHeight()
 		window.addEventListener('resize', updateBodyHeight)
 
-		document.body.style.overflowY = 'hidden'
-
 		previousTheme.value = document.documentElement.getAttribute('data-theme')
 		document.documentElement.setAttribute('data-theme', 'dark')
+
+		document.body.classList.add('no-scroll')
 	} else {
 		const headerEl = headerRef.value
 		headerEl.style.height = 'fit-content'
 
-		document.body.style.height = ''
-		document.body.style.overflowY = 'auto'
-		
 		document.documentElement.setAttribute('data-theme', previousTheme.value ?? 'light')
 		window.removeEventListener('resize', updateBodyHeight)
+
+		document.body.classList.remove('no-scroll')
+		document.body.style.height = ''
 	}
 })
 
@@ -90,7 +90,7 @@ header.menu-open {
 header.menu-open .menu-inner {
 	width: 100%;
 	height: fit-content;
-	min-height: 95vh;
+	min-height: 95dvh;
 }
 
 .fade-enter-active,
