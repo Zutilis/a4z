@@ -24,7 +24,7 @@
 				class="navbar-header-logo"
 				aria-label="Revenir à la page d'accueil"
 			>
-				<img src="/images/a4ztrap.webp" alt="A4Z Trap Logo" />
+				<img src="/images/a4ztrap.webp" alt="A4Z Trap Logo" loading="lazy" height="66" width="252"/>
 			</router-link>
 		</Transition>
 

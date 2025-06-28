@@ -108,22 +108,22 @@
 	"partners": [
 		{
 			"name": "Bureau Info-jeunes",
-			"img": "/images/partners/bij.webp",
+			"img": "/images/partners/bij.png",
 			"href": "https://www.aggloroanne.fr/ma-collectivite/enfance-jeunesse-et-enseignements/enfance-jeunesse/info-jeunes-roanne-207.html"
 		},
 		{
 			"name": "Le Grand Palais",
-			"img": "/images/partners/grandpalais.webp",
+			"img": "/images/partners/grandpalais.png",
 			"href": "https://www.legrandpalais.fr/"
 		},
 		{
 			"name": "Ville de Roanne",
-			"img": "/images/partners/vdr.webp",
+			"img": "/images/partners/vdr.png",
 			"href": "https://www.aggloroanne.fr/ma-collectivite/ville-et-agglo/ville-de-roanne-143.html"
 		},
 		{
 			"name": "Credit Agricole Loire Haut-Loire",
-			"img": "/images/partners/ca.webp",
+			"img": "/images/partners/ca.png",
 			"href": "https://www.credit-agricole.fr/ca-loirehauteloire/particulier.html"
 		}
 	],

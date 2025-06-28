@@ -2,7 +2,7 @@
 	<Card class="lineup-item">
 		<AutoScrollText :text="name" class="lineup-name kensington-lg"/>
 		<AutoScrollText :text="song" class="pouler-sm"/>
-		<img :src="img" alt="" class="lineup-img">
+		<img :src="img" alt="" loading="lazy" class="lineup-img" width="128" height="128">
 		<AutoScrollText text="Sam. 12 juillet" class="pouler-md"/>
 	</Card>
 </template>

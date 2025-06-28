@@ -14,6 +14,7 @@
 				<img
 					:src="partner.img"
 					:alt="partner.name"
+					loading="lazy"
 				/>
 			</a>
 		</div>

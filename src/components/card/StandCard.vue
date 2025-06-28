@@ -7,7 +7,11 @@
 				<img
 					:src="avatar"
 					:alt="name"
-					:class="{ cover: useCover }">
+					:class="{ cover: useCover }"
+					loading="lazy"
+					width="115"
+					height="115"
+				/>
 			</div>
 		</Card>
 	</a>

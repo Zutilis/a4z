@@ -20,7 +20,7 @@
 					</div>
 				</div>
 				<div class="food-item-col" v-if="item.img">
-					<img :src="item.img" :alt="item.name" class="food-img">
+					<img :src="item.img" :alt="item.name" class="food-img" loading="lazy" width="120" height="80">
 				</div>
 			</Card>
 		</div>
