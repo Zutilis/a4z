@@ -19,6 +19,12 @@
 			"href": "https://www.instagram.com/celestcuts/"
 		},
 		{
+			"name": "Lowlita Ongles",
+			"type": "Nail Art",
+			"avatar": "/images/stands/lowlitaongles.webp",
+			"href": "https://www.instagram.com/lowlita_ongles/"
+		},
+		{
 			"name": "Custom Vinyle",
 			"type": "Custom Vinyle",
 			"avatar": "/images/stands/customvinyle.webp",
@@ -43,12 +49,6 @@
 			"href": "https://www.instagram.com/marginal_mouvement/"
 		},
 		{
-			"name": "Lowlita Ongles",
-			"type": "Nail Art",
-			"avatar": "/images/stands/lowlitaongles.webp",
-			"href": "https://www.instagram.com/lowlita_ongles/"
-		},
-		{
 			"name": "Friperie A4Z",
 			"type": "Friperie",
 			"avatar": "/images/stands/friperie.webp",
@@ -61,6 +61,18 @@
 			"href": "https://www.instagram.com/maisondisato/"
 		},
 		{
+			"name": "480px",
+			"type": "Vêtements",
+			"avatar": "/images/stands/480px.webp",
+			"href": "https://www.instagram.com/480px/"
+		},
+		{
+			"name": "7even",
+			"type": "Vêtements",
+			"avatar": "/images/stands/7even.webp",
+			"href": "https://www.instagram.com/_7e.v.en_/"
+		},
+		{
 			"name": "Yunna",
 			"type": "Vêtements",
 			"avatar": "/images/stands/yunna.webp",
@@ -71,12 +83,6 @@
 			"type": "Vêtements",
 			"avatar": "/images/stands/blancnacre.webp",
 			"href": "https://www.instagram.com/blancnacre_officiel/"
-		},
-		{
-			"name": "7even",
-			"type": "Vêtements",
-			"avatar": "/images/stands/7even.webp",
-			"href": "https://www.instagram.com/_7e.v.en_/"
 		}
 	],
 	"line-up": [
