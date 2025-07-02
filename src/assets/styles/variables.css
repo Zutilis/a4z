@@ -14,6 +14,7 @@
 	--color-black: #0B0B0B;
 	--color-beige: #DBDBDB;
 	--color-white: #ffffff;
+	--color-orange: #E8671A;
 
 	/* Thème clair (par défaut) */
 	--color-bg: var(--color-light-blue);

@@ -1,12 +1,16 @@
 <template>
   <Navbar />
-  <RouterView />
+  <main>
+    <RouterView />
+  </main>
+  <TicketingButton />
 </template>
 
 <script setup>
 import { watch } from 'vue'
 import { useRoute } from 'vue-router'
 import Navbar from '@/components/Menu/Navbar.vue'
+import TicketingButton from '@/components/TicketingButton.vue'
 
 const route = useRoute()
 

@@ -15,7 +15,7 @@
 			>
 				<div class="food-item-col">
 					<div class="food-item-header">
-						<p class="kensington-lg">{{ item.name }}</p>
+						<AutoScrollText :text="item.name" class="kensington-lg"/>
 						<p class="pouler-sm">{{ item.details }}</p>
 					</div>
 				</div>
@@ -29,6 +29,8 @@
 
 <script setup>
 import Card from '@/components/card/Card.vue'
+import AutoScrollText from '@/components/AutoScrollText.vue';
+
 import data from '@/assets/json/data.json'
 import { setHead } from '@/composables/setHead'
 
@@ -74,6 +76,8 @@ setHead(
 
 	.food-item {
 		display: flex;
+		align-items: center;
+		justify-content: center;
 		gap: 1rem;
 		align-items: stretch;
 	}
@@ -84,6 +88,7 @@ setHead(
 
 	.food-item-col {
 		flex: 1;
+		max-width: calc(50% + 1rem);
 		display: flex;
 		flex-direction: column;
 		justify-content: center;

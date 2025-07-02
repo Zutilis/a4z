@@ -81,6 +81,6 @@ const cardClass = computed(() => useNavy.value ? 'navy-card' : 'beige-card')
 .beige-card {
 	background-color: var(--color-beige);
 	color: var(--color-navy-blue);
-	padding: 1.5rem;
+	padding: 1rem;
 }
 </style>
