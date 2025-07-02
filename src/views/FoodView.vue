@@ -88,10 +88,14 @@ setHead(
 
 	.food-item-col {
 		flex: 1;
-		max-width: calc(50% + 1rem);
+		max-width: 100%;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
+	}
+
+	.food-item:has(.food-item-col:nth-child(2)) .food-item-col {
+		max-width: calc(50% + 1rem);
 	}
 
 	.food-img {

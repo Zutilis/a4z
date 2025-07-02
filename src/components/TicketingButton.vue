@@ -16,7 +16,7 @@
 		border-radius: 1rem;
 		background-color: var(--color-black);
 		box-shadow: 0px 0px 50px 7px rgba(232,103,26,0.5);
-		bottom: 1.25rem;
+		bottom: 2rem;
 		z-index: 995;
 	}
 
