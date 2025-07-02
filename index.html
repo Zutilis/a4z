@@ -1,6 +1,23 @@
 <!doctype html>
 <html lang="fr">
   <head>
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KFRMP3BW');</script>
+    <script>
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window, document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '1987497001992483');
+      fbq('track', 'PageView');
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -34,37 +51,37 @@
     }
     </script>
     <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "A4Z Trap",
-            "item": "https://a4z.fr/"
-          },
-          {
-            "@type": "ListItem",
-            "position": 2,
-            "name": "Line-up",
-            "item": "https://a4z.fr/line-up"
-          },
-          {
-            "@type": "ListItem",
-            "position": 3,
-            "name": "Stands",
-            "item": "https://a4z.fr/stands"
-          },
-          {
-            "@type": "ListItem",
-            "position": 4,
-            "name": "Infos Pratiques",
-            "item": "https://a4z.fr/infos"
-          }
-        ]
-      }
-      </script>
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "A4Z Trap",
+          "item": "https://a4z.fr/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Line-up",
+          "item": "https://a4z.fr/line-up"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Stands",
+          "item": "https://a4z.fr/stands"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Infos Pratiques",
+          "item": "https://a4z.fr/infos"
+        }
+      ]
+    }
+    </script>
     <meta name="robots" content="index, follow">
     <style>
       html, body {
@@ -77,15 +94,20 @@
   </head>
   <body class="no-transtion">
     <div id="app"></div>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KFRMP3BW"
+      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <noscript><img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=1987497001992483&ev=PageView&noscript=1"
+    /></noscript>
     <script type="module" src="/src/main.js"></script>
+    <script src="https://unpkg.com/lenis@1.1.9/dist/lenis.min.js"></script>
+    <script>
+      const lenis = new Lenis();
+      function raf(time) {
+        lenis.raf(time)
+        requestAnimationFrame(raf)
+      }
+      requestAnimationFrame(raf)
+    </script>
   </body>
 </html>
-<script src="https://unpkg.com/lenis@1.1.9/dist/lenis.min.js"></script>
-<script>
-  const lenis = new Lenis();
-  function raf(time) {
-    lenis.raf(time)
-    requestAnimationFrame(raf)
-  }
-  requestAnimationFrame(raf)
-</script>
