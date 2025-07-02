@@ -18,6 +18,12 @@
 		box-shadow: 0px 0px 50px 7px rgba(232,103,26,0.5);
 		bottom: 2rem;
 		z-index: 995;
+		transition: all 0.3s ease;
+	}
+
+	.ticketing-button-wrapper:hover {
+		transform: translateX(-50%) translateY(.25rem);
+		padding: .5rem;
 	}
 
 	@media screen and (min-width: 1024px) {
