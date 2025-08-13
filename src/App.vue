@@ -3,7 +3,7 @@
   <main>
     <RouterView />
   </main>
-  <TicketingButton />
+  <!-- <TicketingButton /> -->
 </template>
 
 <script setup>
